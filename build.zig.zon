@@ -2,10 +2,10 @@
     .name = "Ashet Technologies Website",
     .version = "0.0.0",
     .dependencies = .{
-        .zine = .{
-            .url = "git+https://github.com/kristoff-it/zine#e33a1d79b09e8532db60347a7ec4bd3413888977",
-            .hash = "12209f9be74fcc805c0f086e4a81ccca041354448f5b3592e04b6a6d1b4a95da5a26",
-        },
+    .zine = .{
+        .url = "git+https://github.com/veggiemonk/zine#1de396698c2f336371668d18c87fee1d32c98e05",
+        .hash = "1220b10ab22d344339c4178565f981e7273d38ee702fbf9b18c1ae67da5eea81f34d",
+    },
     },
     .paths = .{"."},
 }
