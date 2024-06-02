@@ -96,6 +96,38 @@ section code {
   font-family: 'Sono', monospace;
 }
 
+section pre {
+  background-color: black;
+  padding: 0.5em;
+  color: #AE81FF;
+  font-family: 'Sono', monospace;
+}
+
+section pre code {
+  background-color: unset;
+  padding: 0;
+  color: unset;
+}
+
+section pre code {
+  background-color: unset;
+  padding: 0;
+}
+
+code .attribute,
+code .keyword {
+  color: hsl(261deg 100% 50% / 80%);
+  font-weight: bold;
+}
+
+code .type {
+  color: gold;
+}
+
+code .punctuation {
+  color: silver;
+}
+
 section img.product-image {
   border: 2px solid #AE81FF;
 }

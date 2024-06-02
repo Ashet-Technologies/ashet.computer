@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32mm" height="9mm" version="1.1" viewBox="0 0 32 9" xmlns="http://www.w3.org/2000/svg">
+ <g>
+  <title>download</title>
+  <g transform="translate(-1.1377 -.75628)">
+   <path transform="translate(-112.66 -95.643)" x="137.52966" y="96.997162" width="7.8049998" height="7.8049998" d="m137.53 96.997h6.3609a1.4441 1.4441 45 0 1 1.4441 1.4441v4.7144a1.6466 1.6466 135 0 1-1.6466 1.6466h-6.1584z" fill="#7a4de2"/>
+   <path transform="translate(-112.66 -95.643)" x="114.26789" y="96.997162" width="23.26178" height="7.8050303" d="m115.67 96.997h21.862v7.805h-21.978a1.2835 1.2835 45 0 1-1.2835-1.2835v-5.1223a1.3993 1.3993 135 0 1 1.3993-1.3993z" fill="#a57fff"/>
+   <path d="m26.917 7.5052h3.7042v-0.52917h-3.7042m3.7042-2.3812h-1.0583v-1.5875h-1.5875v1.5875h-1.0583l1.8521 1.8521z" fill="#fff" stroke-width=".26458"/>
+   <text x="2.6984103" y="6.8344736" fill="#ffffff" font-family="sans-serif" font-size="4.2333px" stroke-width=".26458" style="line-height:1.25" xml:space="preserve"><tspan x="2.6984103" y="6.8344736" fill="#ffffff" stroke-width=".26458">Download</tspan></text>
+  </g>
+ </g>
+</svg>

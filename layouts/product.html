@@ -3,6 +3,9 @@
 
 <section id="main">
     <h1 var="$page.title"></h1>
+    <div if="$page.custom.get?('subtitle')">
+        <h3 var="$page.custom.get('subtitle', '')"></h3>
+    </div>
     <img class="product-image" src="$page.custom.get!('image')">
     <div var="$page.content"></div>
 </section>

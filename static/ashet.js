@@ -97,3 +97,8 @@ function initializeGalleries() {
     console.log(gallery);
   }
 }
+
+function install()
+{
+  alert('Please install Ashet Application Center™ in order to install this software.');
+}
