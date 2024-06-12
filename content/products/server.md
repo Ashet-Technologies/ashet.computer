@@ -8,5 +8,6 @@
 .custom = {
   .server = true,
   .image = "/img/product-server.png",
+  .url = "/product_detail_missing",
 }
 ---

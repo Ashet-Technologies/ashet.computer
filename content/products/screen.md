@@ -9,5 +9,6 @@
   .category = "Monitors & Peripherials",
   .image = "/img/product-monitor.png",
   .peripherial = true,
+  .url = "/product_detail_missing",
 }
 ---

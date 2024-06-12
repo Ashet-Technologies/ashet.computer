@@ -8,5 +8,6 @@
 .custom = {
   .server = true,
   .image = "/img/product-wopr.png",
+  .url = "https://en.wikipedia.org/wiki/WOPR",
 }
 ---

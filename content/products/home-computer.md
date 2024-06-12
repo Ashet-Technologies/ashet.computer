@@ -15,15 +15,14 @@
 <p>It's a brand new home computer designed to <a href="https://knowyourmeme.com/memes/does-it-spark-joy" class="egg"
     target="_blank">spark joy</a> and bring you the best possible experience.</p> -->
 
-<p>Welcome to The Ashet Home Computer™ - the perfect addition to your home for a truly exceptional computing experience!
-</p>
+Welcome to The Ashet Home Computer™ - the perfect addition to your home for a truly exceptional computing experience!
 
-<p>At Ashet Technologies™, we've designed the Ashet Home Computer™ with one goal in mind: to provide you with a computer
-  that sparks joy and delivers an exceptional user experience. Whether you're working, gaming, or simply browsing the
-  web, our computer has everything you need to get the job done in style.</p>
+At Ashet Technologies™, we've designed the Ashet Home Computer™ with one goal in mind: to provide you with a computer
+that sparks joy and delivers an exceptional user experience. Whether you're working, gaming, or simply browsing the
+web, our computer has everything you need to get the job done in style.
 
-<p>What sets The Ashet Home Computer™ apart from other computers on the market? Here are just a few features that make
-  it the best choice for your home:</p>
+What sets The Ashet Home Computer™ apart from other computers on the market? Here are just a few features that make
+it the best choice for your home:
 
 <ul>
   <li><b>Stunning design:</b> With a sleek, modern look and high-quality components, our computer will complement any
@@ -38,26 +37,20 @@
     preferences.</li>
 </ul>
 
-<p>Don't settle for a boring, run-of-the-mill computer - upgrade to The Ashet Home Computer™ today and experience the
-  difference for yourself!</p>
+Don't settle for a boring, run-of-the-mill computer - upgrade to The Ashet Home Computer™ today and experience the difference for yourself!
 
-<p>Order now and take advantage of our limited-time offer: Get a free monitor with your purchase of The Ashet Home
-  Computer™!</p>
+Order now and take advantage of our limited-time offer: Get a free monitor with your purchase of The Ashet Home Computer™!
 
+## Features
 
+- Powerful RISC-V processor
+- High resolution graphics
+- State of the art storage technology
+- Fast network uplink
+- Wide support for peripherial devices
+- Comes with <a href="product/ashet-os.htm">Ashet&nbsp;OS™</a> preinstalled
 
-<h2>Features</h2>
-
-<ul>
-  <li>Powerful RISC-V processor</li>
-  <li>High resolution graphics</li>
-  <li>State of the art storage technology</li>
-  <li>Fast network uplink</li>
-  <li>Wide support for peripherial devices</li>
-  <li>Comes with <a href="product/ashet-os.htm">Ashet&nbsp;OS™</a> preinstalled</li>
-</ul>
-
-<h2>Technical Details</h2>
+## Technical Details<
 
 <table class="tech-details">
   <tr>
@@ -116,9 +109,8 @@
   </tr>
 </table>
 
-<h2>Documents &amp; Downloads</h2>
+## Documents & Downloads
 
-<ul>
-  <li><a href="https://git.random-projects.net/Ashet-Technologies/ACT-HC" target="_blank">Hardware &amp; Firmware</a>
-  </li>
-</ul>
+
+- [Hardware & Firmware](https://github.com/Ashet-Technologies/Home-Computer)
+

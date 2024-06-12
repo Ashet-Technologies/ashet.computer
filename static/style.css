@@ -255,12 +255,12 @@ section ashet-gallery {
 ashet-gallery ashet-gallery-item {
   position: relative;
   display: inline-block;
-  width: 12rem;
+  width: 16rem;
   height: 9rem;
   border: 1px solid white;
   margin: 0.5em;
   margin-bottom: 1.5em;
-  flex-grow: 1;
+  flex-grow: 0;
 }
 
 /* Display a "Video Play" button on mouse hover */

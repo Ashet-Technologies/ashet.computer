@@ -8,5 +8,6 @@
 .custom = {
   .component = true,
   .image = "/img/chip-tqfp32.pov.png",
+  .url = "/product_detail_missing",
 }
 ---

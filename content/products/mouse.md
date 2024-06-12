@@ -8,5 +8,6 @@
 .custom = {
   .image = "/img/product-mouse.png",
   .peripherial = true,
+  .url = "/product_detail_missing",
 }
 ---

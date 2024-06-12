@@ -82,20 +82,20 @@
 
 <ashet-gallery>
   <ashet-gallery-item>
-    <a target="_blank" href="../img/product/sdrive-00.jpg">
-      <img src="../img/thumbnail/sdrive-00.jpg">
+    <a target="_blank" href="/img/products/sdrive-00.jpg">
+      <img src="/img/products/sdrive-00.jpg">
       <span>Prototype (Side One)</span>
     </a>
   </ashet-gallery-item>
   <ashet-gallery-item>
-    <a target="_blank" href="../img/product/sdrive-01.jpg">
-      <img src="../img/thumbnail/sdrive-01.jpg">
+    <a target="_blank" href="/img/products/sdrive-01.jpg">
+      <img src="/img/products/sdrive-01.jpg">
       <span>Prototype (Side Two)</span>
     </a>
   </ashet-gallery-item>
   <ashet-gallery-item>
-    <a target="_blank" href="../img/product/sdrive-02.mp4">
-      <img src="../img/thumbnail/sdrive-02.jpg">
+    <a target="_blank" href="/img/products/sdrive-02.mp4">
+      <img src="/img/products/sdrive-02.jpg">
       <span>First successful assembly</span>
     </a>
   </ashet-gallery-item>

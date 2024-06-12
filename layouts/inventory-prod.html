@@ -5,7 +5,7 @@
     <h2>Personal Computers</h2>
     <ul loop="$page.subpages()" class="products">
         <div if="$loop.it.custom.get('personal_computer', false)">
-            <a class="product" href="$loop.it.permalink()">
+            <a class="product" href="$loop.it.custom.get('url', $loop.it.permalink())">
                 <img src="$loop.it.custom.get!('image')">
                 <span var="$loop.it.title"></span>
                 <div class="background"></div>
@@ -16,7 +16,7 @@
     <h2>Storage Solutions</h2>
     <ul loop="$page.subpages()" class="products">
         <div if="$loop.it.custom.get('storage_solution', false)">
-            <a class="product" href="$loop.it.permalink()">
+            <a class="product" href="$loop.it.custom.get('url', $loop.it.permalink())">
                 <img src="$loop.it.custom.get!('image')">
                 <span var="$loop.it.title"></span>
                 <div class="background"></div>
@@ -27,7 +27,7 @@
     <h2>Monitors & Peripherials</h2>
     <ul loop="$page.subpages()" class="products">
         <div if="$loop.it.custom.get('peripherial', false)">
-            <a class="product" href="$loop.it.permalink()">
+            <a class="product" href="$loop.it.custom.get('url', $loop.it.permalink())">
                 <img src="$loop.it.custom.get!('image')">
                 <span var="$loop.it.title"></span>
                 <div class="background"></div>
@@ -38,7 +38,7 @@
     <h2>Servers</h2>
     <ul loop="$page.subpages()" class="products">
         <div if="$loop.it.custom.get('server', false)">
-            <a class="product" href="$loop.it.permalink()">
+            <a class="product" href="$loop.it.custom.get('url', $loop.it.permalink())">
                 <img src="$loop.it.custom.get!('image')">
                 <span var="$loop.it.title"></span>
                 <div class="background"></div>

@@ -8,5 +8,6 @@
 .custom = {
   .memory = true,
   .image = "/img/chip-tssop20.pov.png",
+  .url = "/product_detail_missing",
 }
 ---
