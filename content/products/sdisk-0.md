@@ -46,7 +46,7 @@
   while its flash memory chip can store and transport small files, such as photos, contacts, and presentations.</p>
 
 <p>Plus, The Storage Disk™ is fully compatible with all major operating systems, including <a
-    href="ashet-os.htm">Ashet&nbsp;OS™</a>, <a href="https://www.zachtronics.com/shenzhen-io/">Concent&nbsp;OS™</a>, and
+    href="../software/ashet-os">Ashet&nbsp;OS™</a>, <a href="https://www.zachtronics.com/shenzhen-io/">Concept&nbsp;OS™</a>, and
   <a href="https://www.zachtronics.com/exapunks/">Sawayama™&nbsp;EXA&nbsp;OS</a>. So no matter what kind of computer you
   have, you can trust The Storage Disk™ to work seamlessly with
   it.
@@ -75,7 +75,7 @@
       <li>32GB</li>
     </ul>
   </li>
-  <li>Compatible with all <a href="sd-drive.htm">SD-Drive™</a> appliances by Ashet&nbsp;Technologies™</li>
+  <li>Compatible with all <a href="../sd-drive">SD-Drive™</a> appliances by Ashet&nbsp;Technologies™</li>
 </ul>
 
 <h2>Press Kit</h2>
@@ -135,10 +135,10 @@
     <td>3× WS2813</td>
   </tr>
 </table>
-
+<!-- 
 <h2>Documents &amp; Downloads</h2>
 
 <ul>
   <li><a href="https://git.random-projects.net/Ashet-Technologies/ADT-SD-00" target="_blank">Hardware &amp; Firmware</a>
   </li>
-</ul>
+</ul> -->

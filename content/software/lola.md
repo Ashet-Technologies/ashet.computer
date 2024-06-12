@@ -54,7 +54,7 @@ You can also check out these LoLa example source files on GitHub:
 * [Fibonacci Sequence](https://github.com/ikskuh/LoLa/blob/master/examples/lola/fib-iterative.lola)
 * [BubbleSort](https://github.com/ikskuh/LoLa/blob/master/examples/lola/bubble-sort.lola)
 * [Ingame script](https://github.com/ikskuh/LoLa/blob/master/examples/lola/game-code.lola)
-* [Forth-like toy interpreter](https://github.ikskuh/MasterQ32/LoLa/blob/master/examples/lola/forth.lola)
+* [Forth-like toy interpreter](https://github.com/ikskuh/LoLa/blob/master/examples/lola/forth.lola)
 
 ## Releases
 

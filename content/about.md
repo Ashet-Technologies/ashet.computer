@@ -52,7 +52,7 @@
 
 <p>The project is designed as an open source project, so people can easily join and contribute. All source code and
   hardware descriptions can be found at <a
-    href="https://git.random-projects.net/Ashet-Technologies">git.random-projects.net</a>.</p>
+    href="https://github.com/Ashet-Technologies/">github.com/Ashet-Technologies</a>.</p>
 
 <h2>Who are we?</h2>
 

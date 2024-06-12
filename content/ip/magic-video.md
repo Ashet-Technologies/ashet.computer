@@ -10,20 +10,18 @@
   .image = "/img/chip-tqfp44.pov.png",
 }
 ---
-<p>The Magic&nbsp;Video 100™ is our baseline video processor. While designed to be cost efficient, it still delivers good video performance.</p>
+The Magic&nbsp;Video 100™ is our baseline video processor. While designed to be cost efficient, it still delivers good video performance.
 
-<p>Ashet&nbsp;Technologies™ is proud to provide you with this new technology and enables you to create visual appliances with an ease.</p>
+Ashet&nbsp;Technologies™ is proud to provide you with this new technology and enables you to create visual appliances with an ease.
 
-<h2>Features</h2>
+## Features<
 
-<ul>
-  <li>Fixed output resolution of 400x300 pixels</li>
-  <li>Dynamic virtual resolution between 1x1 and 400x300 pixels</li>
-  <li>8 bit per pixel video buffer</li>
-  <li>256 item hi-color palette (RGB565)</li>
-</ul>
+- Fixed output resolution of 400x300 pixels<
+- Dynamic virtual resolution between 1x1 and 400x300 pixels<
+- 8 bit per pixel video buffer<
+- 256 item hi-color palette (RGB565)<
 
-<h2>Documents &amp; Downloads</h2>
+<!-- <h2>Documents &amp; Downloads</h2>
 
 <h3>Documentation</h3>
 
@@ -36,4 +34,4 @@
 <ul>
   <li><a href="" target="_blank">Verilog Implementation</a></li>
   <li><a href="" target="_blank">Driver Sources</a></li>
-</ul>
+</ul> -->

@@ -10,21 +10,19 @@
   .image = "/img/chip-tssop8.pov.png",
 }
 ---
-<p>The FlexTiC™ IP core is a timer and counter core designed for the Ashet&nbsp;Home&nbsp;Computer™.</p>
+The FlexTiC™ IP core is a timer and counter core designed for the Ashet&nbsp;Home&nbsp;Computer™.
 
-<p>It is designed to have a very small footprint to cheaply instantiate it several times in a system.</p>
+It is designed to have a very small footprint to cheaply instantiate it several times in a system.
 
-<p>Ashet&nbsp;Technologies™ is proud to provide you with this new technology and enables you to create consumer and industrial appliances with an ease.</p>
+Ashet&nbsp;Technologies™ is proud to provide you with this new technology and enables you to create consumer and industrial appliances with an ease.
 
-<h2>Features</h2>
+## Features
 
-<ul>
-  <li>Simple 32 bit system interface</li>
-  <li>64 bit counter with safe 32 bit access</li>
-  <li>Configurable 32 bit prescaler</li>
-</ul>
+- Simple 32 bit system interface
+- 64 bit counter with safe 32 bit access
+- Configurable 32 bit prescaler
 
-<h2>Documents &amp; Downloads</h2>
+<!-- <h2>Documents &amp; Downloads</h2>
 
 <h3>Documentation</h3>
 
@@ -37,4 +35,4 @@
 <ul>
   <li><a href="https://git.random-projects.net/Ashet-Technologies/ACT-HC/src/branch/master/src/modules/timer.v" target="_blank">Verilog Implementation</a></li>
   <li><a href="" target="_blank">Driver Sources</a></li>
-</ul>
+</ul> -->

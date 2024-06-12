@@ -23,7 +23,7 @@
   <li>Wide support for I²C devices, including port expanders, display drivers, ...</li>
 </ul>
 
-<h2>Documents &amp; Downloads</h2>
+<!-- <h2>Documents &amp; Downloads</h2>
 
 <h3>Documentation</h3>
 
@@ -36,4 +36,4 @@
 <ul>
   <li><a href="https://git.random-projects.net/Ashet-Technologies/ACT-HC/src/branch/master/src/modules/i2c.v" target="_blank">Verilog Implementation</a></li>
   <li><a href="" target="_blank">Driver Sources</a></li>
-</ul>
+</ul> -->

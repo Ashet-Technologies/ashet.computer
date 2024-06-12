@@ -48,7 +48,7 @@ Order now and take advantage of our limited-time offer: Get a free monitor with 
 - State of the art storage technology
 - Fast network uplink
 - Wide support for peripherial devices
-- Comes with <a href="product/ashet-os.htm">Ashet&nbsp;OS™</a> preinstalled
+- Comes with <a href="/software/ashet-os">Ashet&nbsp;OS™</a> preinstalled
 
 ## Technical Details<
 
@@ -59,7 +59,7 @@ Order now and take advantage of our limited-time offer: Get a free monitor with 
   </tr>
   <tr>
     <td>Operating&nbsp;System</td>
-    <td><a href="product/ashet-os.htm">Ashet&nbsp;OS™</a></td>
+    <td><a href="/software/ashet-os">Ashet&nbsp;OS™</a></td>
   </tr>
   <tr>
     <td>Graphics</td>

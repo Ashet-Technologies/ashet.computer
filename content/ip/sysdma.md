@@ -10,21 +10,19 @@
   .image = "/img/chip-tssop20.pov.png",
 }
 ---
-<p>PicoLink™ is a high performance asynchronous bus technology designed for inter-chip communications.</p>
+PicoLink™ is a high performance asynchronous bus technology designed for inter-chip communications.
 
-<p>While our primary use case is the interlink between the CPU of the Ashet&nbsp;Home&nbsp;Computer™ and its USB co-processor, PicoLink™ is a general purpose parallel protocol with two separate data streams.</p>
+While our primary use case is the interlink between the CPU of the Ashet&nbsp;Home&nbsp;Computer™ and its USB co-processor, PicoLink™ is a general purpose parallel protocol with two separate data streams.
 
-<p>Ashet&nbsp;Technologies™ is proud to provide you with this new technology and enables you to create consumer and industrial appliances with an ease.</p>
+Ashet&nbsp;Technologies™ is proud to provide you with this new technology and enables you to create consumer and industrial appliances with an ease.
 
-<h2>Features</h2>
+## Features
 
-<ul>
-  <li>High-speed parallel electrical interface</li>
-  <li>Simple system interface</li>
-  <li>Two separate data streams allow out-of-band communication</li>
-</ul>
+- High-speed parallel electrical interface
+- Simple system interface
+- Two separate data streams allow out-of-band communication
 
-<h2>Documents &amp; Downloads</h2>
+<!-- <h2>Documents &amp; Downloads</h2>
 
 <h3>Documentation</h3>
 
@@ -37,4 +35,4 @@
 <ul>
   <li><a href="https://git.random-projects.net/Ashet-Technologies/ACT-HC/src/branch/master/src/modules/picolink.v" target="_blank">Verilog Implementation</a></li>
   <li><a href="" target="_blank">Driver Sources</a></li>
-</ul>
+</ul> -->

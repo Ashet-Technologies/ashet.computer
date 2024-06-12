@@ -56,14 +56,14 @@ looking for a reliable storage solution, SD-Drive™ is the perfect choice for y
     <td>Supported disks</td>
     <td>
       <ul>
-        <li>Storage&nbsp;Disk™ <a href="sdisk-0.htm">ADT-SD-00-0</a></li>
-        <li>Storage&nbsp;Disk™ <a href="sdisk-1.htm">ADT-SD-01-0</a></li>
+        <li>Storage&nbsp;Disk™ <a href="../sdisk-0">ADT-SD-00-0</a></li>
+        <!-- <li>Storage&nbsp;Disk™ <a href="sdisk-1.htm">ADT-SD-01-0</a></li> -->
       </ul>
     </td>
   </tr>
 </table>
 
-<h2>Documents &amp; Downloads</h2>
+<!-- <h2>Documents &amp; Downloads</h2> -->
 
 <!--
 <ul>

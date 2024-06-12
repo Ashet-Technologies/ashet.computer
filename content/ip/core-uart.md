@@ -23,7 +23,7 @@
   <li>Easy I/O interface</li>
 </ul>
 
-<h2>Documents &amp; Downloads</h2>
+<!-- <h2>Documents &amp; Downloads</h2>
 
 <h3>Documentation</h3>
 
@@ -36,4 +36,4 @@
 <ul>
   <li><a href="" target="_blank">Verilog Implementation</a></li>
   <li><a href="" target="_blank">Driver Sources</a></li>
-</ul>
+</ul> -->

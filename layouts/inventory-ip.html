@@ -5,7 +5,7 @@
     <h2>Processors</h2>
     <ul loop="$page.subpages()" class="products">
         <div if="$loop.it.custom.get('processor', false)">
-            <a class="product" href="$loop.it.permalink()">
+            <a class="product" href="$loop.it.custom.get('url', $loop.it.permalink())">
                 <img src="$loop.it.custom.get!('image')">
                 <span var="$loop.it.title"></span>
                 <div class="background"></div>
@@ -16,7 +16,7 @@
     <h2>Video Processors</h2>
     <ul loop="$page.subpages()" class="products">
         <div if="$loop.it.custom.get('videoprocessor', false)">
-            <a class="product" href="$loop.it.permalink()">
+            <a class="product" href="$loop.it.custom.get('url', $loop.it.permalink())">
                 <img src="$loop.it.custom.get!('image')">
                 <span var="$loop.it.title"></span>
                 <div class="background"></div>
@@ -27,7 +27,7 @@
     <h2>Communications</h2>
     <ul loop="$page.subpages()" class="products">
         <div if="$loop.it.custom.get('communication', false)">
-            <a class="product" href="$loop.it.permalink()">
+            <a class="product" href="$loop.it.custom.get('url', $loop.it.permalink())">
                 <img src="$loop.it.custom.get!('image')">
                 <span var="$loop.it.title"></span>
                 <div class="background"></div>
@@ -38,7 +38,7 @@
     <h2>Memory</h2>
     <ul loop="$page.subpages()" class="products">
         <div if="$loop.it.custom.get('memory', false)">
-            <a class="product" href="$loop.it.permalink()">
+            <a class="product" href="$loop.it.custom.get('url', $loop.it.permalink())">
                 <img src="$loop.it.custom.get!('image')">
                 <span var="$loop.it.title"></span>
                 <div class="background"></div>
@@ -49,7 +49,7 @@
     <h2>Components</h2>
     <ul loop="$page.subpages()" class="products">
         <div if="$loop.it.custom.get('component', false)">
-            <a class="product" href="$loop.it.permalink()">
+            <a class="product" href="$loop.it.custom.get('url', $loop.it.permalink())">
                 <img src="$loop.it.custom.get!('image')">
                 <span var="$loop.it.title"></span>
                 <div class="background"></div>

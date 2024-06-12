@@ -25,7 +25,7 @@
   commitment to delivering cutting-edge products with a vintage flair.
 </p>
 <p class="frontmatter">
-  Explore our <a href="/products.htm">catalog</a> to find the perfect fit for your needs, and discover the unique blend
+  Explore our <a href="/products">catalog</a> to find the perfect fit for your needs, and discover the unique blend
   of old and new that makes Ashet&nbsp;Technologies™ stand out in a crowded market. We look forward to being your go-to
   source for all things retrocomputing.
 </p>
