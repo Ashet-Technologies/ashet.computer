@@ -27,7 +27,7 @@
       system: let
         pkgs = import nixpkgs {inherit overlays system;};
       in let
-        zig = pkgs.zigpkgs.master;
+        zig = pkgs.zigpkgs."0.13.0";
       in rec {
         packages.default = pkgs.stdenv.mkDerivation {
           name = "ashet.computer";
