@@ -2,3 +2,5 @@
 /.zig-cache/
 /result/
 /.direnv/
+.venv/
+/render/
