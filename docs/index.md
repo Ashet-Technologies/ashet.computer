@@ -68,6 +68,7 @@ CALL FOR FUNDING
 ---
 
 <div class="text-center">
-<a href="about/" class="btn btn-primary" role="button">Indiegogo</a>
-<a href="hardware/" class="btn btn-primary" role="button">Learn More</a>
+    <a href="https://www.indiegogo.com/" class="btn btn-primary" role="button">Indiegogo</a>
+    <a href="about/" class="btn btn-primary" role="button">Our Vision</a>
+    <a href="hardware/" class="btn btn-primary" role="button">Hardware Details</a>
 </div>
