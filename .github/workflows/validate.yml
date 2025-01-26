@@ -11,11 +11,21 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
-      - name: Setup Zig
-        uses: mlugg/setup-zig@v1
+      - name: Install Dependencies
+        uses: awalsh128/cache-apt-pkgs-action@latest
         with:
-          version: 0.13.0
+          packages: python just
+          version: 1.0
 
-      - name: Render
+      - name: Render Website
         run: |
-          zig build
+          just venv
+          just build
+
+      - name: Upload Result
+        uses: actions/upload-artifact@v4
+        with:
+          name: Website
+          path: render/
+    
+  
