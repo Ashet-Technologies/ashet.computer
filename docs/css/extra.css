@@ -1,4 +1,3 @@
-
 body.homepage>div.container>div.row>div.col-md-3 {
     display: none;
 }
@@ -37,4 +36,21 @@ body.homepage>div.container div[role="main"] img {
 
 .card .card-title {
     font-weight: bold;
+}
+
+.gallery {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 20px auto 30px auto;
+}
+
+.gallery a {
+    /* flex-grow: 1; */
+    min-width: 15em;
+    max-width: 25%;
+}
+
+.gallery a>img {
+    margin: 0;
 }

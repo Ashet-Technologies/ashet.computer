@@ -5,13 +5,15 @@ site_url: https://ashet.computer/
 site_description: Home page of the Ashet Home Computer.
 site_author: Ashet Technologies
 
-
 nav:
   - About: about.md
-  - Hardware: 
-    - Overview: hardware.md
-    - Specs: hardware/specs.md
+  - Hardware: hardware.md
   - OS: ashet-os.md
+  - Specs:
+      - Backplane: specs/backplane.md
+      - Mainboard: specs/mainboard.md
+      - Expansion Module: specs/expansions.md
+  - Gallery: gallery.md
   - Community & Resources: community.md
 
 repo_url: https://github.com/Ashet-Technologies/ashet.computer/

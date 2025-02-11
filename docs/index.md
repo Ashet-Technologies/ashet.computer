@@ -52,7 +52,7 @@
         <li>Fully Open Architecture</li>
         <li>Built-in Debug Probe</li>
         <li>Fully Documented</li>
-        <li>Decision Documentation</li>
+        <li>Decision Making Documentation</li>
         </ul>
     </div>
 </div>

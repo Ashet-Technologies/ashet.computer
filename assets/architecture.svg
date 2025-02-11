@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420">
+
+    <style>
+        rect {
+            fill: white;
+            stroke: black;
+        }
+
+        line {
+            stroke: red;
+        }
+
+        text {
+            fill: gray;
+            text-anchor: middle;
+            dominant-baseline: middle;
+        }
+    </style>
+
+    <svg x="10" y="10">
+        <svg x="0" y="0">
+            <rect x="5" y="5" width="90" height="40" />
+            <text x="50" y="25">
+                <tspan>Mainboard</tspan>
+            </text>
+        </svg>
+        <svg x="100" y="0">
+            <rect x="5" y="5" width="90" height="40" />
+            <text x="50" y="25">
+                <tspan x="50" y="17">Expansion</tspan>
+                <tspan x="50" y="33">(Video)</tspan>
+            </text>
+        </svg>
+        <svg x="200" y="0">
+            <rect x="5" y="5" width="90" height="40" />
+            <text x="50" y="25">
+                <tspan x="50" y="17">Expansion</tspan>
+                <tspan x="50" y="33">(Audio)</tspan>
+            </text>
+        </svg>
+        <svg x="300" y="0">
+            <rect x="5" y="5" width="90" height="40" />
+            <text x="50" y="25">
+                <tspan x="50" y="17">Expansion</tspan>
+                <tspan x="50" y="33">(Generic)</tspan>
+            </text>
+        </svg>
+
+        <svg x="50" y="45">
+            <line x1="0" x2="0" y1="0" y2="40" />
+            <line x1="100" x2="100" y1="0" y2="40" />
+            <line x1="200" x2="200" y1="0" y2="40" />
+            <line x1="300" x2="300" y1="0" y2="40" />
+        </svg>
+
+        <svg x="0" y="80">
+            <rect x="5" y="5" width="390" height="40" />
+            <text x="200" y="25">
+                <tspan>Backplane</tspan>
+            </text>
+        </svg>
+
+    </svg>
+</svg>
