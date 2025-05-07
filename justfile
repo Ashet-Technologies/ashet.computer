@@ -2,6 +2,9 @@
 serve:
     .venv/bin/mkdocs serve
 
+serve-public:
+    .venv/bin/mkdocs serve -a 0.0.0.0:8080
+
 build: assets
     .venv/bin/mkdocs build \
         --site-dir ./render \

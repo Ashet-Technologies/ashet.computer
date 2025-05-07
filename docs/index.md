@@ -14,6 +14,14 @@
 
 ---
 
+The Ashet Home Computer is an expandable and hackable computer in the spirits of the 80's home computers.
+
+Fully understandable by a single person, yet powerful enough to run a graphical desktop OS, it tries to bridge the gap between Arduinos and a RaspberryPi.
+
+It is designed and engineered for fun and learning, which best go hand in hand.
+
+---
+
 <h2 class="display-5 text-center">Features</h2>
 
 <div class="cardset">
@@ -63,7 +71,13 @@
 
 <h2 class="display-5 text-center">Project Status</h2>
 
-CALL FOR FUNDING
+The design phase is done. The final concept for the hardware is defined and achievable.
+
+The OS boots on the RP2350 and allows to start desktop applications.
+
+The next steps are completing a prototype which provides all planned features in a stripped down manner. Afterwards, the project can enter the product design phase, where a marketable computer is designed and production is clarified.
+
+For this, funding is required which will be done via a crowdfunding platform like Indiegogo, Kickstarter or similar.
 
 ---
 
