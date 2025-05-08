@@ -1,0 +1,89 @@
+---
+.title = "About the Ashet Home Computer",
+.date = @date("2025-05-08T10:24:00"),
+.author = "Felix Queißner",
+.layout = "page.shtml",
+.draft = false,
+---
+
+## [The Vision]($section.id('vision'))
+
+The Ashet Home Computer is a modern interpretation of the classic home computer, designed
+from the ground up to be both fully hackable and fully understandable. It balances simplicity
+and capability, providing everything necessary for daily computing tasks without unnecessary complexity.
+
+**Key Aspects:**
+
+- **Fully Hackable and Understandable** \
+  Every aspect of the system is transparent, well-documented, and designed for exploration and customization.
+- **Daily Computing Ready** \
+  Suitable for everyday tasks:
+  - Desktop OS with intuitive GUI
+  - Internet browsing (limited to essential, not overly complex web content)
+  - Text document reading and writing
+  - Built-in comprehensive system documentation
+  - Programming with interpreted languages can be done on the system itself
+  - Programming with compiled languages should be done externally
+- **Designed for Simplicity** \
+  Crafted to be fully understood and maintained by a single individual:
+  - Minimal abstraction layers—just enough complexity for functionality, but simple enough to be comprehensible.
+  - Avoidance of complex modern protocols and standards:
+    - No PCI or PCI Express
+    - Limited to USB 1.1 for ease of use and implementation
+  - Simplified electronics design:
+    - No use of BGA components
+    - Easily repairable with basic hand-soldering and wire-patching techniques
+
+This vision ensures that users at all skill levels -- from learners and hobbyists to
+seasoned developers -- can fully grasp, modify, and expand their home computing experience.
+
+## [Audience]($section.id('audience'))
+
+**Makers**
+
+For creative individuals building custom hardware interfaces, experimenting with electronics, and developing innovative DIY solutions, Ashet provides modular expandability and comprehensive documentation.
+
+**Hackers**
+
+Ideal for tech enthusiasts and hardware hackers who appreciate full hardware transparency, direct register access, and the flexibility to emulate or interface various digital protocols.
+
+**Demosceners**
+
+With its limited, yet powerful audio and video capabilities and ten-core processing, Ashet supports artists pushing creative and technical limits, producing visually and sonically compelling real-time demonstrations.
+
+**Educators**
+
+Ashet serves as a tangible teaching tool to illustrate comprehensive computer system design, bridging the gap between theory and hands-on learning with extensive documentation and accessible hardware architecture.
+
+**Students**
+
+Providing practical experience in computer hardware and software integration, Ashet encourages active learning and experimentation, from fundamental principles to advanced system development.
+
+**Self-Learners**
+
+For independent learners seeking to deepen their understanding of computing and electronics, Ashet offers an approachable, thoroughly documented platform suitable for self-guided exploration and discovery.
+
+
+
+## [Comparison with other projects]($section.id('comparison'))
+
+The following table shows a comparison to other "small" computers. It should help you get an idea where the Ashet Home Computer is in relation to other projects.
+
+| Feature             | Ashet                                                               | [Raspberry Pi 4](https://www.raspberrypi.com/products/raspberry-pi-4-model-b/specifications/)   | [Arduino Uno REV3](https://store.arduino.cc/products/arduino-uno-rev3) | [Neotron Pico](https://github.com/neotron-Compute/neotron-Pico)     | [Cody Computer](https://www.codycomputer.org/)          |
+|---------------------|---------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|------------------------------------------------------------------------|---------------------------------------------------------------------|---------------------------------------------------------|
+| CPU Bus Width       | 32 bit                                                              | 64 bit                                                                                          | 8 bit                                                                  | 32 bit                                                              | 8 bit                                                   |
+| CPU Architecture    | Arm Cortex-M33                                                      | Arm Cortex-A72                                                                                  | AVR                                                                    | Arm Cortex-M0+                                                      | 6502                                                    |
+| CPU Model           | [Rapsberry Pi RP2350](https://www.raspberrypi.com/products/rp2350/) | [Broadcom BCM2711](https://www.raspberrypi.com/documentation/computers/processors.html#bcm2711) | [ATmega328P](https://www.microchip.com/en-us/product/atmega328p)       | [Rapsberry Pi RP2040](https://www.raspberrypi.com/products/rp2040/) | [W65C02S](https://wdc65xx.com/integrated-circuit)       |
+| CPU Cores           | 2                                                                   | 4                                                                                               | 1                                                                      | 2                                                                   | 1                                                       |
+| CPU Clock           | 150 MHz                                                             | 1.8 GHz                                                                                         | 16 MHz                                                                 | 133 MHz                                                             | 1 MHz                                                   |
+| System Memory       | 8.5 MB                                                              | 1, 2, 4 or 8 GB                                                                                 | 2 KB                                                                   | 264 kB                                                              | 64 kB                                                   |
+| Comprehensible      | []($image.siteAsset('img/check.svg'))                               | []($image.siteAsset('img/cross.svg'))                                                           | []($image.siteAsset('img/check.svg'))                                  | []($image.siteAsset('img/check.svg'))                               | []($image.siteAsset('img/check.svg'))                                                       |
+| Modern I/O          | []($image.siteAsset('img/check.svg'))                               | []($image.siteAsset('img/check.svg'))                                                           | []($image.siteAsset('img/cross.svg'))                                  | []($image.siteAsset('img/cross.svg'))&nbsp;¹                        | []($image.siteAsset('img/cross.svg'))                                                       |
+| Modular Design      | []($image.siteAsset('img/check.svg'))                               | []($image.siteAsset('img/cross.svg'))                                                           | []($image.siteAsset('img/cross.svg'))                                  | []($image.siteAsset('img/check.svg'))                               | []($image.siteAsset('img/check.svg'))&nbsp;²                                                |
+| Full Documentation  | []($image.siteAsset('img/check.svg'))                               | []($image.siteAsset('img/cross.svg'))                                                           | []($image.siteAsset('img/check.svg'))                                  | []($image.siteAsset('img/check.svg'))                               | []($image.siteAsset('img/check.svg'))                                                       |
+| Ethernet            | []($image.siteAsset('img/check.svg'))                               | []($image.siteAsset('img/check.svg'))                                                           | []($image.siteAsset('img/cross.svg'))                                  | []($image.siteAsset('img/cross.svg'))                               | []($image.siteAsset('img/cross.svg'))                                                       |
+| Parallax Propeller  | []($image.siteAsset('img/check.svg')) ([Propeller 2](https://www.parallax.com/propeller-2))             | []($image.siteAsset('img/cross.svg'))                       | []($image.siteAsset('img/cross.svg'))                                  | []($image.siteAsset('img/cross.svg'))                               | []($image.siteAsset('img/check.svg')) ([Propeller 1](https://www.parallax.com/propeller-1)) |
+
+¹Neotron Pico uses PS/2 for mouse/keyboard and VGA for video.
+
+²Cody Computer has a single cartridge that can be added.

@@ -1,0 +1,109 @@
+<extend template="base.shtml">
+<head id="head">
+</head>
+<main id="body">
+  <h1>Ashet Home Computer</h1>
+  <h2 class="subtitle">Bridging the Gap Between Learning and Making</h2>
+  <div class="main-carousel">
+    <div class="carousel-cell">
+      <img
+        alt="A rendering of a computer with a slotted design, having 8 slots with several connectors on them."
+        src="$site.asset('img/front/case-rendering.png').link()"
+      >
+    </div>
+    <div class="carousel-cell">
+      <img
+        alt="A rendering of a computer with a slotted design, having 8 slots with several connectors on them. The case is open and you can see a backplane with expansion cards inserted."
+        src="$site.asset('img/front/case-rendering-topless.png').link()"
+      >
+    </div>
+    <div class="carousel-cell">
+      <img
+        alt="A rendering of a computer with a slotted design, having 8 slots with several connectors on them."
+        src="$site.asset('img/front/case_opened.png').link()"
+      >
+    </div>
+    <div class="carousel-cell">
+      <img
+        alt="A rendering of a computer with a slotted design, having 8 slots with several connectors on them."
+        src="$site.asset('img/front/case_closed.png').link()"
+      >
+    </div>
+  </div>
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      var elem = document.querySelector('.main-carousel');
+      var flkty = new Flickity( elem, {
+        // options
+        cellAlign: 'left',
+        contain: true,
+        wrapAround: true,
+        autoPlay: true,
+      });
+
+    });
+  </script>
+  <p class="centered">
+    <a href="" class="btn primary" role="button">Fund&nbsp;Now</a>
+    <a href="$site.page('about').linkRef('vision')" class="btn" role="button">Our&nbsp;Vision</a>
+    <a href="$site.page('hardware').linkRef('features')" class="btn" role="button">Features</a>
+  </p>
+  <hr>
+  <p class="main">
+    The Ashet Home Computer is an expandable and hackable computer in the spirits of the 80's home computers.
+
+    Fully understandable by a single person, yet powerful enough to run a graphical desktop OS, it tries to bridge the gap between Arduinos and a RaspberryPi.
+
+    It is designed and engineered for fun and learning, which best go hand in hand.
+  </p>
+  <hr>
+  <h2>Features</h2>
+  <div class="cardset main">
+    <div class="card">
+      <div class="card-title">Specifications</div>
+      <hr>
+      <div class="card-contents">
+        <ul>
+          <li>Dual Core CPU with 150 MHz</li>
+          <li>16 MB Flash</li>
+          <li>8.5 MB RAM</li>
+          <li>Modern Connectivity (USB,&nbsp;Ethernet,&nbsp;DVI)</li>
+        </ul>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-title">Expandable</div>
+      <hr>
+      <div class="card-contents">
+        <ul>
+          <li>7 Expansion Slots</li>
+          <li>Many Expansions Available</li>
+          <li>Hackable Operating System</li>
+          <li>Handcrafted Expansions Possible</li>
+        </ul>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-title">Designed For Education</div>
+      <hr>
+      <div class="card-contents">
+        <ul>
+          <li>Fully Open Architecture</li>
+          <li>Built-in Debug Probe</li>
+          <li>Fully Documented</li>
+          <li>Decision Making Documentation</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <h2>Project Status</h2>
+  <p class="main">
+    The Ashet Home Computer has completed its design phase, and a practical, achievable hardware concept is now finalized.
+
+    Currently, the RP2350 processor successfully boots the operating system and supports launching desktop applications.
+
+    Next, we're focusing on assembling a functional prototype that demonstrates all key features in a simplified form. After this, we will move into the product design phase, aiming to create a production-ready version and finalize manufacturing plans.
+
+    To fund this critical next stage, we will launch a crowdfunding campaign on platforms such as Indiegogo or Kickstarter.
+  </p>
+</main>

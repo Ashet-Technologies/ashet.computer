@@ -1,0 +1,84 @@
+.sections = [
+    {
+        "title": "Home Computer",
+        "subsections": [
+            {
+                "title": "Renderings",
+                "images": [
+                    {
+                        "caption": "Default Setup",
+                        "file": "img/case-rendering.png",
+                    },
+                    {
+                        "caption": "Case Interiors",
+                        "file": "img/case-rendering-topless.png",
+                    },
+                ],
+            },
+            {
+                "title": "Photos",
+                "images": [
+                    {
+                        "caption": "Cardboard Prototype",
+                        "file": "img/ashet-hc-cardboard-proto.jpg",
+                    },
+                    {
+                        "caption": "First Gen Video Mode",
+                        "file": "img/ashet-hc-videomode.jpg",
+                    },
+                    {
+                        "caption": "Development Setup",
+                        "file": "img/ashet-hc-devsetup-00.jpg",
+                    },
+                ],
+            },
+        ],
+    },
+    {
+        "title": "Ashet OS",
+        "subsections": [
+            {
+                "title": "Screenshots",
+                "images": [
+                    {
+                        "caption": "Early Desktop",
+                        "file": "img/ashet-os-01.jpg",
+                    },
+                    {
+                        "caption": "Simulation over VNC",
+                        "file": "img/ashet-os-vnc-01.jpg",
+                    },
+                    {
+                        "caption": "Terminal Application",
+                        "file": "img/connex-01.jpg",
+                    },
+                    {
+                        "caption": "Font Rendering",
+                        "file": "img/font-rendering-01.jpg",
+                    },
+                    {
+                        "caption": "Wiki Application",
+                        "file": "img/hyper-wiki-01.jpg",
+                    },
+                ],
+            },
+            {
+                "title": "Videos",
+                "images": [
+                    {
+                        "caption": "First Successfull Usage",
+                        "file": "img/ashet-os-firstboot.mp4",
+                        "thumb": "img/ashet-os-firstboot.png",
+                        "type": "video",
+                    },
+                    {
+                        "caption": "First Successfull Boot",
+                        "file": "img/ashet-os-firstrun.mp4",
+                        "thumb": "img/ashet-os-firstrun.png",
+                        "type": "video",
+                    },
+                ],
+            },
+        ],
+    },
+],

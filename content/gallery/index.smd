@@ -1,0 +1,9 @@
+---
+.title = "Gallery",
+.date = @date("2025-05-08T10:24:00"),
+.author = "Felix Queißner",
+.layout = "gallery.shtml",
+.draft = false,
+---
+
+This gallery showcases the progress of the project and is meant to give you a feeling of what's ahead.
