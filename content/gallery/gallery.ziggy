@@ -19,6 +19,14 @@
                 "title": "Photos",
                 "images": [
                     {
+                        "caption": "Case Assembly",
+                        "file": "img/ashet-hc-case_opened-01.png",
+                    },
+                    {
+                        "caption": "Case Assembly",
+                        "file": "img/ashet-hc-case_closed-01.png",
+                    },
+                    {
                         "caption": "Cardboard Prototype",
                         "file": "img/ashet-hc-cardboard-proto.jpg",
                     },
