@@ -4,6 +4,9 @@
 .author = "Felix Queißner",
 .layout = "page.shtml",
 .draft = false,
+.custom = {
+  "banner": "img/front/case-rendering-topless.png"
+},
 ---
 
 ## [Introduction]($section.id('intro'))

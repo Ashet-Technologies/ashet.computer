@@ -4,6 +4,9 @@
 .author = "Felix Queißner",
 .layout = "page.shtml",
 .draft = false,
+.custom = {
+  "banner": "img/front/case-rendering.png"
+},
 ---
 
 ## [The Vision]($section.id('vision'))

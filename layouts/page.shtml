@@ -3,5 +3,8 @@
 </head>
 <main id="body">
   <h1 :text="$page.title"></h1>
+  <div class="banner" :if="$page.custom.has('banner')">
+    <img src="$site.asset($page.custom.get('banner')).link()">
+  </div>
   <div :html="$page.content()"></div>
 </main>

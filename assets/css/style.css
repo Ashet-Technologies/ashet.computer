@@ -271,3 +271,16 @@ main figure {
 main figure img {
   width: 100%;
 }
+
+main div.banner {
+  width: 100%;
+  display: block;
+}
+
+main div.banner img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  max-height: 15em;
+}

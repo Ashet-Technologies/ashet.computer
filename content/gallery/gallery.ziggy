@@ -1,9 +1,11 @@
 .sections = [
     {
         "title": "Home Computer",
+        "anchor": "home-computer",
         "subsections": [
             {
                 "title": "Renderings",
+                "anchor": "home-computer-render",
                 "images": [
                     {
                         "caption": "Default Setup",
@@ -17,6 +19,7 @@
             },
             {
                 "title": "Photos",
+                "anchor": "home-computer-photo",
                 "images": [
                     {
                         "caption": "Case Assembly",
@@ -44,9 +47,11 @@
     },
     {
         "title": "Ashet OS",
+        "anchor": "ashet-os",
         "subsections": [
             {
                 "title": "Screenshots",
+                "anchor": "ashet-os-screenshot",
                 "images": [
                     {
                         "caption": "Early Desktop",
@@ -72,6 +77,7 @@
             },
             {
                 "title": "Videos",
+                "anchor": "ashet-os-videos",
                 "images": [
                     {
                         "caption": "First Successfull Usage",

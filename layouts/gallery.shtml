@@ -5,9 +5,9 @@
   <h1 :text="$page.title"></h1>
   <div :html="$page.content()"></div>
   <ctx :loop="$page.asset('gallery.ziggy').ziggy().get('sections')">
-    <h2 :text="$loop.it.get('title')"></h2>
+    <h2 id="$loop.it.get('anchor')" :text="$loop.it.get('title')"></h2>
     <ctx :loop="$loop.it.get('subsections')">
-      <h3 :text="$loop.it.get('title')"></h3>
+      <h3 id="$loop.it.get('anchor')" :text="$loop.it.get('title')"></h3>
       <div class="gallery" :loop="$loop.it.get('images')">
         <div class="gallery-item">
           <a href="$page.asset($loop.it.get('file')).link()">
@@ -28,10 +28,3 @@
     </ctx>
   </ctx>
 </main>
-<!-- 
-<div class="gallery">
-  <a href="../img/case-rendering-topless.png">
-    <img src="../img/case-rendering-topless.png" />
-    <label>Device Rendering with open case</label>
-  </a>
-</div> -->
