@@ -5,7 +5,7 @@
 .layout = "page.shtml",
 .draft = false,
 .custom = {
-  "banner": "img/front/case-rendering.png"
+  "banner": "img/front/case-rendering.webp"
 },
 ---
 
