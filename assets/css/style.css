@@ -112,6 +112,7 @@ div>ul {
 .cardset .card {
   border: 1px solid black;
   flex: 1;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 50%);
 }
 
 .cardset .card .card-title {
@@ -137,18 +138,27 @@ div>ul {
 }
 
 a.btn {
+  display: inline-block;
   border: 1px solid black;
   border-radius: 0.75rem;
   padding: 0.5rem 0.75rem;
   font-size: 130%;
-  background-color: dimgray;
-  color: white;
+  background-color: white;
+  color: cornflowerblue;
   margin: 0.25rem;
   text-decoration: none;
+  line-height: 1.0em;
+  height: 1.5em;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 50%);
+}
+
+a.btn:hover {
+  text-decoration: underline;
+
 }
 
 .btn.primary {
-  background-color: deeppink;
+  background-color: cornflowerblue;
   color: white;
 }
 
