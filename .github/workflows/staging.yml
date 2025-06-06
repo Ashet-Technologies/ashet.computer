@@ -30,16 +30,16 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
-      - uses: robinraju/release-downloader@v1
+      - name: Install Zine
+        uses: robinraju/release-downloader@v1
         with:
           repository: 'kristoff-it/zine'
           tag: 'v0.10.2'
           fileName: 'x86_64-linux-musl.tar.xz'
-          extract: true
 
       - name: Render
         run: |
-          ls
+          tar -xf ./x86_64-linux-musl.tar.xz
           ./zine release
       
       - name: Upload artifact
