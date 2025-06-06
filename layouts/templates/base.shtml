@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head id="head">
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1">
+    <title :text="$site.title"></title>
+    <link type="text/css" rel="stylesheet" href="$site.asset('css/reset.css').link()">
+    <link type="text/css" rel="stylesheet" href="$site.asset('css/style.css').link()">
+    <link type="text/css" rel="stylesheet" href="$site.asset('css/highlight.css').link()">
+    <link type="text/css" rel="stylesheet" href="$site.asset('css/flickity.css').link()">
+    <script defer src="$site.asset('js/flickity.pkgd.min.js').link()"></script>
+    <super>
+  </head>
+  <body>
+    <nav>
+      <a class="$site.page('').isCurrent().then('selected primary', 'primary')" href="$site.page('').link()">Ashet&nbsp;Home&nbsp;Computer</a>
+      <!-- <hr> -->
+      <a class="$site.page('about').isCurrent().then('selected')" href="$site.page('about').link()">About</a>
+      <!-- <hr> -->
+      <a class="$site.page('hardware').isCurrent().then('selected')" href="$site.page('hardware').link()">Hardware</a>
+      <!-- <hr> -->
+      <a class="$site.page('ashet-os').isCurrent().then('selected')" href="$site.page('ashet-os').link()">Ashet&nbsp;OS</a>
+      <!-- <hr> -->
+      <a class="$site.page('gallery').isCurrent().then('selected')" href="$site.page('gallery').link()">Gallery</a>
+      <!-- <hr> -->
+      <ctx :if="$site.page('devlog').subpages().first?()">
+        <a class="$site.page('devlog').subpages().at(0).isCurrent().then('selected')" href="$if.link()">Devlog</a>
+        <!-- <hr> -->
+      </ctx>
+      <a class="$site.page('community').isCurrent().then('selected')" href="$site.page('community').link()">Community</a>
+    </nav>
+    <main id="body">
+      <super>
+    </main>
+    <footer>
+      <hr>
+      <p style="text-align: center">
+        <a href="$site.page('imprint').link()">Legal Notice and Data Protection</a>
+      </p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,110 @@
+.sections = [
+    {
+        "title": "Home Computer",
+        "anchor": "home-computer",
+        "subsections": [
+            {
+                "title": "Renderings",
+                "anchor": "home-computer-render",
+                "images": [
+                    {
+                        "caption": "Default Setup",
+                        "file": "img/case-rendering.png",
+                        "thumb": "img/case-rendering.webp",
+                    },
+                    {
+                        "caption": "Case Interiors",
+                        "file": "img/case-rendering-topless.png",
+                        "thumb": "img/case-rendering-topless.webp",
+                    },
+],
+            },
+            {
+                "title": "Photos",
+                "anchor": "home-computer-photo",
+                "images": [
+                    {
+                        "caption": "Case Assembly",
+                        "file": "img/ashet-hc-case_opened-01.png",
+                        "thumb": "img/ashet-hc-case_opened-01.webp",
+                    },
+                    {
+                        "caption": "Case Assembly",
+                        "file": "img/ashet-hc-case_closed-01.png",
+                        "thumb": "img/ashet-hc-case_closed-01.webp",
+                    },
+                    {
+                        "caption": "Cardboard Prototype",
+                        "file": "img/ashet-hc-cardboard-proto.jpg",
+                        "thumb": "img/ashet-hc-cardboard-proto.webp",
+                    },
+                    {
+                        "caption": "First Gen Video Mode",
+                        "file": "img/ashet-hc-videomode.jpg",
+                        "thumb": "img/ashet-hc-videomode.webp",
+                    },
+                    {
+                        "caption": "Development Setup",
+                        "file": "img/ashet-hc-devsetup-00.jpg",
+                        "thumb": "img/ashet-hc-devsetup-00.webp",
+                    },
+],
+            },
+],
+    },
+    {
+        "title": "Ashet OS",
+        "anchor": "ashet-os",
+        "subsections": [
+            {
+                "title": "Screenshots",
+                "anchor": "ashet-os-screenshot",
+                "images": [
+                    {
+                        "caption": "Early Desktop",
+                        "file": "img/ashet-os-01.jpg",
+                        "thumb": "img/ashet-os-01.webp",
+                    },
+                    {
+                        "caption": "Simulation over VNC",
+                        "file": "img/ashet-os-vnc-01.jpg",
+                        "thumb": "img/ashet-os-vnc-01.webp",
+                    },
+                    {
+                        "caption": "Terminal Application",
+                        "file": "img/connex-01.jpg",
+                        "thumb": "img/connex-01.webp",
+                    },
+                    {
+                        "caption": "Font Rendering",
+                        "file": "img/font-rendering-01.jpg",
+                        "thumb": "img/font-rendering-01.webp",
+                    },
+                    {
+                        "caption": "Wiki Application",
+                        "file": "img/hyper-wiki-01.jpg",
+                        "thumb": "img/hyper-wiki-01.webp",
+                    },
+                ],
+            },
+            {
+                "title": "Videos",
+                "anchor": "ashet-os-videos",
+                "images": [
+                    {
+                        "caption": "First Successfull Usage",
+                        "file": "img/ashet-os-firstboot.mp4",
+                        "thumb": "img/ashet-os-firstboot.webp",
+                        "type": "video",
+                    },
+                    {
+                        "caption": "First Successfull Boot",
+                        "file": "img/ashet-os-firstrun.mp4",
+                        "thumb": "img/ashet-os-firstrun.webp",
+                        "type": "video",
+                    },
+                ],
+            },
+        ],
+    },
+],

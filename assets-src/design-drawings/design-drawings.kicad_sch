@@ -1,0 +1,182 @@
+(kicad_sch
+	(version 20250114)
+	(generator "eeschema")
+	(generator_version "9.0")
+	(uuid "69db6190-9845-40f1-8d88-a3e016ab5fd6")
+	(paper "A4")
+	(lib_symbols)
+	(sheet
+		(at 49.022 57.404)
+		(size 23.368 18.288)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "131177c9-ec1d-4a74-9306-000b792e1b3b")
+		(property "Sheetname" "Expansion"
+			(at 49.022 56.6924 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "expansion.kicad_sch"
+			(at 49.022 76.2766 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "design-drawings"
+				(path "/69db6190-9845-40f1-8d88-a3e016ab5fd6"
+					(page "5")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 25.4 26.035)
+		(size 24.765 19.685)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "56bfab58-c03e-4881-bf44-8c96e44f166f")
+		(property "Sheetname" "Backplane"
+			(at 25.4 25.3234 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "backplane.kicad_sch"
+			(at 25.4 46.3046 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "design-drawings"
+				(path "/69db6190-9845-40f1-8d88-a3e016ab5fd6"
+					(page "2")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 109.22 33.02)
+		(size 20.32 17.78)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "8a016164-de3a-45ab-ac0f-543a9ea4a40e")
+		(property "Sheetname" "Mainboard"
+			(at 109.22 32.3084 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "mainboard.kicad_sch"
+			(at 109.22 51.3846 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "design-drawings"
+				(path "/69db6190-9845-40f1-8d88-a3e016ab5fd6"
+					(page "4")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 69.85 25.4)
+		(size 33.02 20.955)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "b55a7641-b4fb-4796-9aba-58f312859360")
+		(property "Sheetname" "Architecture"
+			(at 69.85 24.6884 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "architecture.kicad_sch"
+			(at 69.85 46.9396 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "design-drawings"
+				(path "/69db6190-9845-40f1-8d88-a3e016ab5fd6"
+					(page "3")
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+	(embedded_fonts no)
+)

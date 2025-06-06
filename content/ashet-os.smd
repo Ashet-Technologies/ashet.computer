@@ -1,0 +1,90 @@
+---
+.title = "Ashet OS",
+.date = @date("2025-05-08T10:24:00"),
+.author = "Felix Queißner",
+.layout = "page.shtml",
+.draft = false,
+.custom = {
+  "banner": "img/banners/ashet-os.jpg"
+},
+---
+
+## Introduction
+
+**Ashet OS isn’t just another operating system.** It’s an experiment in simplicity, approachability, and modern design,
+built to prove that you can have a responsive, hackable, and portable OS—without bloated complexity or unnecessary barriers.
+Whether you’re a curious hacker, retro computing enthusiast, or just someone tired of waiting on modern machines,
+Ashet OS aims to inspire and empower.
+
+## The Vision
+
+The vision for Ashet OS is clear: to create an operating system that is actually useful, simple enough to be
+hacked on, and runs on almost anything -- even ultra-low-end hardware. Ashet OS is designed from the ground up to be:
+
+* **Simple**: So anyone can dive in and understand or tinker.
+* **Useful**: Not just a toy -- capable enough for real projects and daily tasks.
+* **Portable**: Built for many architectures from day one.
+* **Accessible**: Usable on minimal hardware (just 8 MB RAM!) and also easily runnable as a desktop app on modern machines.
+
+## Motivation & Inspirations
+
+Why build a new OS? The honest answer: **[Just for Fun. No, Really.](https://justforfunnoreally.dev/)**
+
+But a few sparks helped light the fire:
+
+* **[Amiga OS](https://en.wikipedia.org/wiki/Workbench_(AmigaOS)#Workbench_3.5,_3.9)**
+  showed what’s possible: blazingly fast and snappy on just 8 MHz.
+* **[SerenityOS](https://serenityos.org/)** brought a sense of modern ambition and fun to open-source OS design.
+* **[Redox OS](https://www.redox-os.org/), [Plan 9](https://plan9.io/plan9/), and others** keep the world excited about OS innovation.
+* **Frustration with today’s sluggishness:** It’s baffling how slow modern Windows can feel on incredibly powerful hardware.
+  Ashet OS is proof it doesn’t have to be that way.
+
+The result is a project born of curiosity, inspiration, and a touch of rebellion -- a challenge to see just how elegant and capable an OS can be.
+
+## Key Features
+
+* **Multi-platform from the start:** Designed to run on different CPU architectures and systems, including RISC-V, Arm, and x86
+* **Runs on low-end machines:** 8 MB RAM is enough.
+* **Asynchronous syscall design** for responsive applications.
+* **Full multi-tasking:** Processes, threads, [IPC](https://en.wikipedia.org/wiki/Inter-process_communication), shared memory, pipes, sync primitives.
+* **Innovative graphics API and built-in GUI:** Inspired by many, but does its own thing.
+* **Networking:** Native TCP and UDP support.
+* **Filesystem:** Supports multiple filesystem types for real-world use cases.
+
+## Platforms
+
+| System                                                                   | Architecture | CPU Support                |
+| ------------------------------------------------------------------------ | ------------ | -------------------------- |
+| Ashet Home Computer                                                      | Arm          | Cortex-M33                 |
+| [QEMU Virtual Home Computer](https://github.com/Ashet-Technologies/qemu) | Arm          | Cortex-M33                 |
+| [QEMU virt](https://www.qemu.org/docs/master/system/arm/virt.html)       | Arm          | Cortex-A                   |
+| [QEMU virt](https://www.qemu.org/docs/master/system/riscv/virt.html)     | RISC-V       | RV32imcZicsr               |
+| PC Platform                                                              | x86          | Intel Pentium Pro or newer |
+
+## The Design Philosophy
+
+* **No security focus:** Prioritizes approachability and learning; removing mitigations means fewer roadblocks to understanding how things work.
+* **Monolithic kernel:** Keeps things simple, straightforward, and hackable.
+* **32-bit only:** Ensures portable, modular code without the headaches of having differently sized pointers.
+* **[Cooperative scheduling](https://en.wikipedia.org/wiki/Cooperative_multitasking):** No need for interrupts, no typical multi-threading hazards; the tradeoff (one bad actor can halt the OS) is accepted in the name of clarity and hackability.
+* **Not Unix philosophy:** Specialized syscalls for specialized tasks, don't try to cramp everything into a single interface.
+* **Modern, intentional choices:** Every aspect is designed to be understandable, inviting, and open for exploration.
+
+## Progress So Far
+
+* OS boots into desktop
+* GUI is running and supports window management and desktop elements
+* Networking stack is integrated and can open TCP/UDP sockets
+* Multi-tasking is functional with process/thread support
+* Filesystem driver(s) can mount and interact with multiple formats
+
+Screenshots can be found in the [gallery]($link.page('gallery').unsafeRef('ashet-os')).
+
+## Try It Yourself
+
+Ashet OS is fully open source and surprisingly easy to try -- no installation or virtual machine required!
+You can run it as a regular desktop application on Linux and Windows. Download, play, hack, and explore.
+
+Want to shape the project, provide feedback, or just see what it’s about? Jump in, share your ideas, and help build something new.
+
+**To support development or learn more, visit the fundraiser or main landing page.**

@@ -1,0 +1,1159 @@
+(kicad_sch
+	(version 20250114)
+	(generator "eeschema")
+	(generator_version "9.0")
+	(uuid "95f4470f-3861-4106-8d3f-721e556ea4f1")
+	(paper "User" 84.455 38.1)
+	(lib_symbols)
+	(rectangle
+		(start 1.778 3.429)
+		(end 10.668 11.684)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(type color)
+			(color 255 229 191 1)
+		)
+		(uuid 245014bb-2a6e-423b-aeae-b3d4c38a189c)
+	)
+	(rectangle
+		(start 10.668 3.429)
+		(end 74.168 36.449)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(uuid 3526221f-8c42-4fa0-aca4-3779f57cae70)
+	)
+	(rectangle
+		(start 74.168 3.429)
+		(end 83.058 9.779)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(type color)
+			(color 255 229 191 1)
+		)
+		(uuid 3a05fd8b-19f9-453e-8219-bb76a255cfc4)
+	)
+	(rectangle
+		(start 74.168 26.289)
+		(end 83.058 32.004)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(type color)
+			(color 255 229 191 1)
+		)
+		(uuid 3af0eef2-217c-4bbe-ad3c-15ed7bc48d44)
+	)
+	(rectangle
+		(start 1.778 29.464)
+		(end 10.668 36.449)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(type color)
+			(color 255 229 191 1)
+		)
+		(uuid 3b1db022-b6c4-4da3-a862-0358d2c7fcdc)
+	)
+	(rectangle
+		(start 74.168 34.544)
+		(end 83.058 36.449)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(type color)
+			(color 255 229 191 1)
+		)
+		(uuid 6bf8a77d-d80c-4550-a25d-3c9ab036949c)
+	)
+	(rectangle
+		(start 74.168 21.209)
+		(end 83.058 23.749)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(type color)
+			(color 255 229 191 1)
+		)
+		(uuid a1ac44ed-d199-49c5-9bdf-6874a05939c5)
+	)
+	(rectangle
+		(start 74.168 12.319)
+		(end 83.058 16.129)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(type color)
+			(color 255 229 191 1)
+		)
+		(uuid b68e93e7-e828-4e4e-b2bd-29360e704cb1)
+	)
+	(rectangle
+		(start 74.168 1.524)
+		(end 74.168 3.429)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(uuid bf704ce7-f797-4c4c-bc1e-50f4f9e25f9a)
+	)
+	(rectangle
+		(start 10.668 3.429)
+		(end 1.778 36.449)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(uuid eddbce80-a4c6-4f41-bda3-c1becad1e726)
+	)
+	(text_box "Debug Probe"
+		(exclude_from_sim no)
+		(at 52.578 21.844 0)
+		(size 12.7 6.35)
+		(margins 0.9525 0.9525 0.9525 0.9525)
+		(stroke
+			(width 0.127)
+			(type solid)
+			(color 194 0 0 1)
+		)
+		(fill
+			(type color)
+			(color 255 255 194 1)
+		)
+		(effects
+			(font
+				(face "KiCad Font")
+				(size 1.016 1.016)
+				(color 0 0 132 1)
+			)
+		)
+		(uuid "0089e652-13b0-4f13-8d97-9e3367799535")
+	)
+	(text_box ""
+		(exclude_from_sim no)
+		(at 10.668 11.684 0)
+		(size -8.89 2.54)
+		(margins 0.9525 0.9525 0.9525 0.9525)
+		(stroke
+			(width 0.127)
+			(type solid)
+			(color 194 0 0 1)
+		)
+		(fill
+			(type color)
+			(color 255 255 194 1)
+		)
+		(effects
+			(font
+				(face "KiCad Font")
+				(size 1.27 1.27)
+				(color 0 0 132 1)
+			)
+		)
+		(uuid "0c28cb8e-a71e-41e2-b3d4-3a42323c6662")
+	)
+	(text_box "Frontpanel"
+		(exclude_from_sim no)
+		(at 74.168 1.524 0)
+		(size 8.89 1.905)
+		(margins 0.9525 0.9525 0.9525 0.9525)
+		(stroke
+			(width 0)
+			(type solid)
+			(color 0 0 194 1)
+		)
+		(fill
+			(type color)
+			(color 0 0 194 1)
+		)
+		(effects
+			(font
+				(size 0.889 0.889)
+				(color 255 255 255 1)
+			)
+		)
+		(uuid "0fe3b4dd-92a3-4f23-abbb-d7cc17a388e0")
+	)
+	(text_box "RP2350"
+		(exclude_from_sim no)
+		(at 33.528 7.874 0)
+		(size 12.7 22.225)
+		(margins 0.9525 0.9525 0.9525 0.9525)
+		(stroke
+			(width 0.127)
+			(type solid)
+			(color 194 0 0 1)
+		)
+		(fill
+			(type color)
+			(color 255 255 194 1)
+		)
+		(effects
+			(font
+				(face "KiCad Font")
+				(size 1.016 1.016)
+				(color 0 0 132 1)
+			)
+			(justify top)
+		)
+		(uuid "1347e2cb-b34f-44b6-b8d3-fc5e79eff291")
+	)
+	(text_box ""
+		(exclude_from_sim no)
+		(at 10.668 19.304 0)
+		(size -8.89 2.54)
+		(margins 0.9525 0.9525 0.9525 0.9525)
+		(stroke
+			(width 0.127)
+			(type solid)
+			(color 194 0 0 1)
+		)
+		(fill
+			(type color)
+			(color 255 255 194 1)
+		)
+		(effects
+			(font
+				(face "KiCad Font")
+				(size 1.27 1.27)
+				(color 0 0 132 1)
+			)
+		)
+		(uuid "1f659964-6dd0-4f79-90a8-85463ef5363f")
+	)
+	(text_box ""
+		(exclude_from_sim no)
+		(at 10.668 24.384 0)
+		(size -8.89 2.54)
+		(margins 0.9525 0.9525 0.9525 0.9525)
+		(stroke
+			(width 0.127)
+			(type solid)
+			(color 194 0 0 1)
+		)
+		(fill
+			(type color)
+			(color 255 255 194 1)
+		)
+		(effects
+			(font
+				(face "KiCad Font")
+				(size 1.27 1.27)
+				(color 0 0 132 1)
+			)
+		)
+		(uuid "276535e0-03b4-4a22-81e5-70d1c2185db6")
+	)
+	(text_box ""
+		(exclude_from_sim no)
+		(at 10.668 16.764 0)
+		(size -8.89 2.54)
+		(margins 0.9525 0.9525 0.9525 0.9525)
+		(stroke
+			(width 0.127)
+			(type solid)
+			(color 194 0 0 1)
+		)
+		(fill
+			(type color)
+			(color 255 255 194 1)
+		)
+		(effects
+			(font
+				(face "KiCad Font")
+				(size 1.27 1.27)
+				(color 0 0 132 1)
+			)
+		)
+		(uuid "28496253-153d-4585-9427-896c5732a6a4")
+	)
+	(text_box "Mainboard"
+		(exclude_from_sim no)
+		(at 10.668 1.524 0)
+		(size -8.89 1.905)
+		(margins 0.9525 0.9525 0.9525 0.9525)
+		(stroke
+			(width 0)
+			(type solid)
+			(color 0 0 194 1)
+		)
+		(fill
+			(type color)
+			(color 0 0 194 1)
+		)
+		(effects
+			(font
+				(size 0.889 0.889)
+				(color 255 255 255 1)
+			)
+		)
+		(uuid "361a5797-198c-40db-89ff-80ef8d15c608")
+	)
+	(text_box ""
+		(exclude_from_sim no)
+		(at 74.168 32.004 0)
+		(size 8.89 2.54)
+		(margins 0.9525 0.9525 0.9525 0.9525)
+		(stroke
+			(width 0.127)
+			(type solid)
+			(color 194 0 0 1)
+		)
+		(fill
+			(type color)
+			(color 255 255 194 1)
+		)
+		(effects
+			(font
+				(face "KiCad Font")
+				(size 1.27 1.27)
+				(color 0 0 132 1)
+			)
+		)
+		(uuid "536b40aa-c23f-425f-a90b-bd89d016b62a")
+	)
+	(text_box "USB Hub"
+		(exclude_from_sim no)
+		(at 20.828 23.749 0)
+		(size 6.35 6.35)
+		(margins 0.9525 0.9525 0.9525 0.9525)
+		(stroke
+			(width 0.127)
+			(type solid)
+			(color 194 0 0 1)
+		)
+		(fill
+			(type color)
+			(color 255 255 194 1)
+		)
+		(effects
+			(font
+				(face "KiCad Font")
+				(size 1.016 1.016)
+				(color 0 0 132 1)
+			)
+		)
+		(uuid "538b5733-56c9-4cde-8b23-a02bbc2a8efb")
+	)
+	(text_box "Flash"
+		(exclude_from_sim no)
+		(at 14.478 4.699 0)
+		(size 6.35 6.35)
+		(margins 0.9525 0.9525 0.9525 0.9525)
+		(stroke
+			(width 0.127)
+			(type solid)
+			(color 194 0 0 1)
+		)
+		(fill
+			(type color)
+			(color 255 255 194 1)
+		)
+		(effects
+			(font
+				(face "KiCad Font")
+				(size 1.016 1.016)
+				(color 0 0 132 1)
+			)
+		)
+		(uuid "653b6e56-139d-4da5-a2d7-941754e65cff")
+	)
+	(text_box ""
+		(exclude_from_sim no)
+		(at 10.668 14.224 0)
+		(size -8.89 2.54)
+		(margins 0.9525 0.9525 0.9525 0.9525)
+		(stroke
+			(width 0.127)
+			(type solid)
+			(color 194 0 0 1)
+		)
+		(fill
+			(type color)
+			(color 255 255 194 1)
+		)
+		(effects
+			(font
+				(face "KiCad Font")
+				(size 1.27 1.27)
+				(color 0 0 132 1)
+			)
+		)
+		(uuid "65e31453-452d-40ad-b213-39b9832170ca")
+	)
+	(text_box ""
+		(exclude_from_sim no)
+		(at 1.778 26.924 0)
+		(size 8.89 2.54)
+		(margins 0.9525 0.9525 0.9525 0.9525)
+		(stroke
+			(width 0.127)
+			(type solid)
+			(color 194 0 0 1)
+		)
+		(fill
+			(type color)
+			(color 255 255 194 1)
+		)
+		(effects
+			(font
+				(face "KiCad Font")
+				(size 1.27 1.27)
+				(color 0 0 132 1)
+			)
+		)
+		(uuid "7147ff39-24e8-4ab8-84f0-bbdca8947a07")
+	)
+	(text_box "ENC424J600"
+		(exclude_from_sim no)
+		(at 52.578 7.874 0)
+		(size 12.7 6.35)
+		(margins 0.9525 0.9525 0.9525 0.9525)
+		(stroke
+			(width 0.127)
+			(type solid)
+			(color 194 0 0 1)
+		)
+		(fill
+			(type color)
+			(color 255 255 194 1)
+		)
+		(effects
+			(font
+				(face "KiCad Font")
+				(size 1.016 1.016)
+				(color 0 0 132 1)
+			)
+		)
+		(uuid "7e0ffa7f-f530-4cfd-bedc-4b8b7ce262da")
+	)
+	(text_box ""
+		(exclude_from_sim no)
+		(at 74.168 23.749 0)
+		(size 8.89 2.54)
+		(margins 0.9525 0.9525 0.9525 0.9525)
+		(stroke
+			(width 0.127)
+			(type solid)
+			(color 194 0 0 1)
+		)
+		(fill
+			(type color)
+			(color 255 255 194 1)
+		)
+		(effects
+			(font
+				(face "KiCad Font")
+				(size 1.27 1.27)
+				(color 0 0 132 1)
+			)
+		)
+		(uuid "7e24f33f-53eb-4c8b-86d7-f1dc6222db7b")
+	)
+	(text_box ""
+		(exclude_from_sim no)
+		(at 74.168 16.129 0)
+		(size 8.89 2.54)
+		(margins 0.9525 0.9525 0.9525 0.9525)
+		(stroke
+			(width 0.127)
+			(type solid)
+			(color 194 0 0 1)
+		)
+		(fill
+			(type color)
+			(color 255 255 194 1)
+		)
+		(effects
+			(font
+				(face "KiCad Font")
+				(size 1.27 1.27)
+				(color 0 0 132 1)
+			)
+		)
+		(uuid "a522b863-0688-4a27-9be7-763b40d3ae34")
+	)
+	(text_box ""
+		(exclude_from_sim no)
+		(at 74.168 9.779 0)
+		(size 8.89 2.54)
+		(margins 0.9525 0.9525 0.9525 0.9525)
+		(stroke
+			(width 0.127)
+			(type solid)
+			(color 194 0 0 1)
+		)
+		(fill
+			(type color)
+			(color 255 255 194 1)
+		)
+		(effects
+			(font
+				(face "KiCad Font")
+				(size 1.27 1.27)
+				(color 0 0 132 1)
+			)
+		)
+		(uuid "b86fe714-d3c8-4db5-8c2c-f1c7bc557101")
+	)
+	(text_box ""
+		(exclude_from_sim no)
+		(at 74.168 18.669 0)
+		(size 8.89 2.54)
+		(margins 0.9525 0.9525 0.9525 0.9525)
+		(stroke
+			(width 0.127)
+			(type solid)
+			(color 194 0 0 1)
+		)
+		(fill
+			(type color)
+			(color 255 255 194 1)
+		)
+		(effects
+			(font
+				(face "KiCad Font")
+				(size 1.27 1.27)
+				(color 0 0 132 1)
+			)
+		)
+		(uuid "c6720071-b43e-4f23-81b1-ffe0a1e14752")
+	)
+	(text_box ""
+		(exclude_from_sim no)
+		(at 1.778 21.844 0)
+		(size 8.89 2.54)
+		(margins 0.9525 0.9525 0.9525 0.9525)
+		(stroke
+			(width 0.127)
+			(type solid)
+			(color 194 0 0 1)
+		)
+		(fill
+			(type color)
+			(color 255 255 194 1)
+		)
+		(effects
+			(font
+				(face "KiCad Font")
+				(size 1.27 1.27)
+				(color 0 0 132 1)
+			)
+		)
+		(uuid "d03c75a3-68c7-48d6-8996-df4588597137")
+	)
+	(text_box "PSRAM"
+		(exclude_from_sim no)
+		(at 24.003 4.699 0)
+		(size 6.35 6.35)
+		(margins 0.9525 0.9525 0.9525 0.9525)
+		(stroke
+			(width 0.127)
+			(type solid)
+			(color 194 0 0 1)
+		)
+		(fill
+			(type color)
+			(color 255 255 194 1)
+		)
+		(effects
+			(font
+				(face "KiCad Font")
+				(size 1.016 1.016)
+				(color 0 0 132 1)
+			)
+		)
+		(uuid "e5a3b921-6f83-4599-923e-5ae81d778121")
+	)
+	(text_box ""
+		(exclude_from_sim no)
+		(at 11.938 32.004 0)
+		(size 8.89 2.54)
+		(margins 0.9525 0.9525 0.9525 0.9525)
+		(stroke
+			(width 0.127)
+			(type solid)
+			(color 194 0 0 1)
+		)
+		(fill
+			(type color)
+			(color 255 255 194 1)
+		)
+		(effects
+			(font
+				(face "KiCad Font")
+				(size 1.27 1.27)
+				(color 0 0 132 1)
+			)
+		)
+		(uuid "eeaa438c-915e-43ad-9b83-0597697ff710")
+	)
+	(text_box "Internals"
+		(exclude_from_sim no)
+		(at 10.668 1.524 0)
+		(size 63.5 1.905)
+		(margins 0.9525 0.9525 0.9525 0.9525)
+		(stroke
+			(width 0)
+			(type solid)
+			(color 0 0 194 1)
+		)
+		(fill
+			(type color)
+			(color 0 0 194 1)
+		)
+		(effects
+			(font
+				(size 0.889 0.889)
+				(color 255 255 255 1)
+			)
+		)
+		(uuid "f6edd231-962e-4822-936d-25215cda6220")
+	)
+	(junction
+		(at 27.178 12.954)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "62d96ec1-1b2d-42e3-abe7-ad028e6aa5d8")
+	)
+	(wire
+		(pts
+			(xy 65.278 11.049) (xy 74.168 11.049)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "00c4c582-0d62-448b-b4ae-48f39ecd25cd")
+	)
+	(wire
+		(pts
+			(xy 46.228 19.939) (xy 74.168 19.939)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0a212fb3-a666-44cb-ad4c-59e5c28e093d")
+	)
+	(wire
+		(pts
+			(xy 10.668 12.954) (xy 12.573 12.954)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1bac52ad-fcd1-494e-aa92-b712ced39cf8")
+	)
+	(wire
+		(pts
+			(xy 46.228 17.399) (xy 74.168 17.399)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2fd0f4ce-a30a-41de-8aa3-02149ec77fb6")
+	)
+	(wire
+		(pts
+			(xy 10.668 23.114) (xy 33.528 23.114)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "39f6844a-2e9b-4a2d-aa1f-614dfc25c3d5")
+	)
+	(wire
+		(pts
+			(xy 10.668 20.574) (xy 33.528 20.574)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3a266b11-96cf-4c41-962d-32d45346c9bd")
+	)
+	(bus
+		(pts
+			(xy 33.528 12.954) (xy 27.178 12.954)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "44273334-dc92-43cc-893f-2d466ef09677")
+	)
+	(wire
+		(pts
+			(xy 13.208 12.954) (xy 13.843 12.954)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "50a21f03-92ec-4ff6-beab-a4bdd41542b5")
+	)
+	(wire
+		(pts
+			(xy 22.733 33.274) (xy 20.828 33.274)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5d6d1796-dc9e-462a-a370-b79d03a6f25d")
+	)
+	(wire
+		(pts
+			(xy 25.273 30.099) (xy 25.273 33.274)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5f847b8e-76cc-4122-8f65-ba2ee0c4b5d7")
+	)
+	(wire
+		(pts
+			(xy 10.668 18.034) (xy 33.528 18.034)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "645db49f-92e2-4a7b-9fb6-f87d96e251dd")
+	)
+	(bus
+		(pts
+			(xy 27.178 12.954) (xy 17.653 12.954)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6fd1e48f-ca0b-475f-8e0d-e1551a3b14b1")
+	)
+	(wire
+		(pts
+			(xy 22.733 30.099) (xy 22.733 33.274)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "767dc626-53e9-4157-9efd-b1d8c0f4ec60")
+	)
+	(bus
+		(pts
+			(xy 27.178 11.049) (xy 27.178 12.954)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "90e4cc37-241b-4a72-a8f0-5c1fc35f60b4")
+	)
+	(wire
+		(pts
+			(xy 46.228 11.049) (xy 52.578 11.049)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "96cf8f48-f075-4930-ac46-c77ee526aefe")
+	)
+	(wire
+		(pts
+			(xy 46.228 23.749) (xy 52.578 23.749)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9c8d9dc5-cdc2-4a1b-8334-eb7d46d5a301")
+	)
+	(wire
+		(pts
+			(xy 10.668 15.494) (xy 33.528 15.494)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b88f564d-20d1-4fc1-8c72-a1856e6431a8")
+	)
+	(wire
+		(pts
+			(xy 25.273 33.274) (xy 74.168 33.274)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ce399296-c57a-49c5-bb26-3bc49ef26179")
+	)
+	(wire
+		(pts
+			(xy 27.178 26.924) (xy 33.528 26.924)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ce952e41-ea07-47c5-bad3-f44819eaaa6e")
+	)
+	(wire
+		(pts
+			(xy 46.228 26.289) (xy 52.578 26.289)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d13ba91d-cff0-4d6e-a56a-2953da156bf7")
+	)
+	(bus
+		(pts
+			(xy 17.653 11.049) (xy 17.653 12.954)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d523be79-36ab-46bb-bf13-9f4f00d975af")
+	)
+	(wire
+		(pts
+			(xy 14.478 12.954) (xy 15.113 12.954)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d67c87a6-ee78-48fa-8902-d4a8910cf5ad")
+	)
+	(wire
+		(pts
+			(xy 10.668 28.194) (xy 20.828 28.194)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e1acab7d-2842-44fb-8380-eb2d982d707b")
+	)
+	(wire
+		(pts
+			(xy 65.278 25.019) (xy 74.168 25.019)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e74d0400-5fbd-4fbe-ac7b-fa5e61fabcdb")
+	)
+	(wire
+		(pts
+			(xy 10.668 25.654) (xy 20.828 25.654)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fdda7689-ea06-4e8c-b1a6-fc967db27649")
+	)
+	(hierarchical_label "UART"
+		(shape passive)
+		(at 46.228 26.289 180)
+		(effects
+			(font
+				(size 0.889 0.889)
+			)
+			(justify right)
+		)
+		(uuid "08399eec-8e4d-49a8-82a0-09b3a3e6a708")
+	)
+	(hierarchical_label "I²C"
+		(shape passive)
+		(at 33.528 23.114 0)
+		(effects
+			(font
+				(size 0.889 0.889)
+			)
+			(justify left)
+		)
+		(uuid "08f09863-9e45-485b-929b-c98129af01b0")
+	)
+	(hierarchical_label "USB"
+		(shape output)
+		(at 10.668 28.194 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "1ada1474-1a63-4cdb-ab34-ac2e50abf102")
+	)
+	(hierarchical_label "USB-C"
+		(shape input)
+		(at 74.168 25.019 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "1b1ae838-dcf0-486d-88f9-31d83a6c48ad")
+	)
+	(hierarchical_label "SBLink"
+		(shape bidirectional)
+		(at 10.668 20.574 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "1b546388-fc04-4f39-a3c7-73a0dcbc1bf7")
+	)
+	(hierarchical_label "HSTX"
+		(shape passive)
+		(at 33.528 15.494 0)
+		(effects
+			(font
+				(size 0.889 0.889)
+			)
+			(justify left)
+		)
+		(uuid "1ee7d62f-0ecd-44e9-b6c4-e9f4a97ead11")
+	)
+	(hierarchical_label "Video"
+		(shape output)
+		(at 10.668 15.494 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "27f71efc-cc45-4e7c-b77c-8a492f3468ff")
+	)
+	(hierarchical_label "USB Host"
+		(shape passive)
+		(at 33.528 26.924 0)
+		(effects
+			(font
+				(size 0.889 0.889)
+			)
+			(justify left)
+		)
+		(uuid "35dd45f0-b78d-4f89-b7af-298b66aaa40f")
+	)
+	(hierarchical_label "RESET"
+		(shape input)
+		(at 74.168 17.399 0)
+		(effects
+			(font
+				(size 1.143 1.143)
+			)
+			(justify left)
+		)
+		(uuid "38df1ed6-5239-421e-a8c4-41d8cfb3d66f")
+	)
+	(hierarchical_label "SPI"
+		(shape passive)
+		(at 46.228 11.049 180)
+		(effects
+			(font
+				(size 0.889 0.889)
+			)
+			(justify right)
+		)
+		(uuid "437907b7-8182-4ce3-b136-e076b8cad1d6")
+	)
+	(hierarchical_label "QSPI"
+		(shape passive)
+		(at 33.528 12.954 0)
+		(effects
+			(font
+				(size 0.889 0.889)
+			)
+			(justify left)
+		)
+		(uuid "51196d2e-bf8d-4777-8a9d-85e6fd0252be")
+	)
+	(hierarchical_label "Power"
+		(shape input)
+		(at 10.668 12.954 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "5300427a-6f63-4ca1-8dac-24f5fa420e36")
+	)
+	(hierarchical_label "PIO"
+		(shape passive)
+		(at 33.528 20.574 0)
+		(effects
+			(font
+				(size 0.889 0.889)
+			)
+			(justify left)
+		)
+		(uuid "674ae455-0120-4843-b188-44b04caeec8e")
+	)
+	(hierarchical_label "RESET"
+		(shape passive)
+		(at 46.228 17.399 180)
+		(effects
+			(font
+				(size 0.889 0.889)
+			)
+			(justify right)
+		)
+		(uuid "6a3e9988-27e7-4f71-9ff3-b17482e06b7c")
+	)
+	(hierarchical_label "SWD"
+		(shape passive)
+		(at 46.228 23.749 180)
+		(effects
+			(font
+				(size 0.889 0.889)
+			)
+			(justify right)
+		)
+		(uuid "6bef1dcd-6e82-46f0-827d-3d95c3ee0070")
+	)
+	(hierarchical_label "USB-A"
+		(shape output)
+		(at 74.168 33.274 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "6e6db4a4-b4db-4ab4-800e-450d8d9d9e2d")
+	)
+	(hierarchical_label "USB"
+		(shape output)
+		(at 10.668 25.654 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "7f07e464-9766-4fc4-b6e0-87e9d6e9fd47")
+	)
+	(hierarchical_label "USB A"
+		(shape output)
+		(at 20.828 33.274 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "8c0d5e5f-7f32-4a84-b225-a6f371e6ad86")
+	)
+	(hierarchical_label "Ethernet"
+		(shape output)
+		(at 74.168 11.049 0)
+		(effects
+			(font
+				(size 1.143 1.143)
+			)
+			(justify left)
+		)
+		(uuid "c4c623bf-5ab1-40d3-9908-eea4f8c6ed05")
+	)
+	(hierarchical_label "BOOT"
+		(shape passive)
+		(at 46.228 19.939 180)
+		(effects
+			(font
+				(size 0.889 0.889)
+			)
+			(justify right)
+		)
+		(uuid "e08e1c02-b1a4-4d8f-9c41-74ff5b89b87c")
+	)
+	(hierarchical_label "BOOT"
+		(shape input)
+		(at 74.168 19.939 0)
+		(effects
+			(font
+				(size 1.143 1.143)
+			)
+			(justify left)
+		)
+		(uuid "e24c5d5e-9201-4faf-a853-342f4725ed77")
+	)
+	(hierarchical_label "PIO"
+		(shape passive)
+		(at 33.528 18.034 0)
+		(effects
+			(font
+				(size 0.889 0.889)
+			)
+			(justify left)
+		)
+		(uuid "e2a146ea-36f8-402d-85ed-6d12ef4afb64")
+	)
+	(hierarchical_label "Audio"
+		(shape output)
+		(at 10.668 18.034 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "e451fccb-0e38-4ae8-811f-ab3f3a729258")
+	)
+	(hierarchical_label "I²C"
+		(shape tri_state)
+		(at 10.668 23.114 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "ec47750a-438a-4726-a7c5-49c0d8a58a10")
+	)
+)
