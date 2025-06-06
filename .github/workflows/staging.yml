@@ -37,9 +37,25 @@ jobs:
           tag: 'v0.10.2'
           fileName: 'x86_64-linux-musl.tar.xz'
 
+      - name: Extract Zine
+        run:  tar -xf ./x86_64-linux-musl.tar.xz
+      
+      - name: Patch URL
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          url=$(gh api "repos/$GITHUB_REPOSITORY/pages" --jq '.html_url')
+          echo "url    = '${url}'"
+          host="$(echo $url | cut -d / -f 1-3)"
+          prefix="$(echo $url | cut -d / -f 4-)"
+          echo "host   = '${host}'"
+          echo "prefix = '${prefix}'"
+          sed -is "s|.host_url = \".*\"|.host_url = \"${host}\"|" ./zine.ziggy 
+          sed -is "s|.url_path_prefix = \".*\"|.url_path_prefix = \"${prefix}\"|" ./zine.ziggy 
+          cat zine.ziggy
+
       - name: Render
         run: |
-          tar -xf ./x86_64-linux-musl.tar.xz
           ./zine release
       
       - name: Upload artifact
