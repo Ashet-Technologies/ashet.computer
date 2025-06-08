@@ -19,11 +19,13 @@ and capability, providing everything necessary for daily computing tasks without
 
 - **Fully Hackable and Understandable** \
   Every aspect of the system is transparent, well-documented, and designed for exploration and customization.
-- **Daily Computing Ready** \
-  Suitable for everyday tasks:
+- **Daily Computing Possible** \
+  Suitable for (simple) everyday tasks:
   - Desktop OS with intuitive GUI
-  - Internet browsing (limited to essential, not overly complex web content)
-  - Text document reading and writing
+  - Text document reading and writing (plaintext, no WYSIWIG)
+  - Internet browsing (limited to HTML and basic CSS, no JavaScript)
+  - E-Mail reading and writing
+  - Chatting (IRC)
   - Built-in comprehensive system documentation
   - Programming with interpreted languages can be done on the system itself
   - Programming with compiled languages should be done externally
@@ -40,6 +42,9 @@ and capability, providing everything necessary for daily computing tasks without
 This vision ensures that users at all skill levels -- from learners and hobbyists to
 seasoned developers -- can fully grasp, modify, and expand their home computing experience.
 
+The idea behind the *Daily Computing* aspect is to show that most of these tasks do not require incredibly powerful
+hardware but could and still can done on small, low-power machines.
+
 ## [Audience]($section.id('audience'))
 
 **Makers**
@@ -52,7 +57,7 @@ Ideal for tech enthusiasts and hardware hackers who appreciate full hardware tra
 
 **Demosceners**
 
-With its limited, yet powerful audio and video capabilities and ten-core processing, Ashet supports artists pushing creative and technical limits, producing visually and sonically compelling real-time demonstrations.
+With its limited, yet powerful audio and video capabilities and multi-core processing, Ashet supports artists pushing creative and technical limits, producing visually and sonically compelling real-time demonstrations.
 
 **Educators**
 
@@ -76,7 +81,7 @@ The following table shows a comparison to other "small" computers. It should hel
 |---------------------|---------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|------------------------------------------------------------------------|---------------------------------------------------------------------|---------------------------------------------------------|
 | CPU Bus Width       | 32 bit                                                              | 64 bit                                                                                          | 8 bit                                                                  | 32 bit                                                              | 8 bit                                                   |
 | CPU Architecture    | Arm Cortex-M33                                                      | Arm Cortex-A72                                                                                  | AVR                                                                    | Arm Cortex-M0+                                                      | 6502                                                    |
-| CPU Model           | [Rapsberry Pi RP2350](https://www.raspberrypi.com/products/rp2350/) | [Broadcom BCM2711](https://www.raspberrypi.com/documentation/computers/processors.html#bcm2711) | [ATmega328P](https://www.microchip.com/en-us/product/atmega328p)       | [Rapsberry Pi RP2040](https://www.raspberrypi.com/products/rp2040/) | [W65C02S](https://wdc65xx.com/integrated-circuit)       |
+| CPU Model           | [Raspberry Pi RP2350](https://www.raspberrypi.com/products/rp2350/) | [Broadcom BCM2711](https://www.raspberrypi.com/documentation/computers/processors.html#bcm2711) | [ATmega328P](https://www.microchip.com/en-us/product/atmega328p)       | [Raspberry Pi RP2040](https://www.raspberrypi.com/products/rp2040/) | [W65C02S](https://wdc65xx.com/integrated-circuit)       |
 | CPU Cores           | 2                                                                   | 4                                                                                               | 1                                                                      | 2                                                                   | 1                                                       |
 | CPU Clock           | 150 MHz                                                             | 1.8 GHz                                                                                         | 16 MHz                                                                 | 133 MHz                                                             | 1 MHz                                                   |
 | System Memory       | 8.5 MB                                                              | 1, 2, 4 or 8 GB                                                                                 | 2 KB                                                                   | 264 kB                                                              | 64 kB                                                   |

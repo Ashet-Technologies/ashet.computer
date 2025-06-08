@@ -40,9 +40,10 @@ The computer follows a modular design similar to a PC where you have expansion c
 
 These features are available no matter what expansion cards you have installed.
 
-- [RP2350 Core](https://www.raspberrypi.com/products/rp2350/)
-  - Dual-Core System
-  - Each Core Might Be
+- [RP2350](https://www.raspberrypi.com/products/rp2350/) Main SOC
+  - 150 MHz
+  - Dual-Socket Architecture
+  - Each socket can be either a
     -  Arm CPU (Cortex-M33, 150 MHz)
     -  RISC-V CPU (RV32IMAC+, 150 MHz)
 - 8.5 MB RAM
@@ -54,8 +55,8 @@ These features are available no matter what expansion cards you have installed.
 - Battery-Backed Real-Time Clock
 - Integrated Debug Probe
 - 7 Expansion Slots
-  - 1 Video Expansion Slot
-  - 1 Audio Expansion Slot
+  - 1 Generic + Video Expansion Slot
+  - 1 Generic + Audio Expansion Slot
   - 5 Generic Expansion Slots
 
 ### Standard Expansion Cards 

@@ -32,6 +32,7 @@ nav {
   padding: 0.25rem;
   padding-top: 0;
   margin-bottom: 1rem;
+  flex-direction: row;
 }
 
 nav a {
@@ -43,6 +44,7 @@ nav a {
 
 nav a.selected {
   background: gray;
+  color: white;
   text-decoration: none;
 }
 
@@ -56,6 +58,35 @@ nav a.primary.selected {
   color: white;
 }
 
+nav .menubtn {
+  display: none;
+  height: 2rem;
+  min-width: 2rem;
+}
+
+nav .menubtn input {
+  display: none;
+}
+
+nav .menubtn svg {
+  width: 2rem;
+  height: 2rem;
+}
+
+
+@media (width < 40rem) {
+  nav {
+    flex-direction: column;
+  }
+
+  nav .menubtn {
+    display: block;
+  }
+
+  nav:has(:checked) a {
+    display: none;
+  }
+}
 
 h1 {
   text-align: center;
@@ -172,14 +203,29 @@ table {
 }
 
 .gallery {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+}
+
+@media (width < 40rem) {
+  .gallery {
+    grid-template-columns: 33% 33% 33%;
+  }
+}
+
+@media (width < 25rem) {
+  .gallery {
+    grid-template-columns: 50% 50%;
+  }
+}
+
+@media (width > 60rem) {
+  .gallery {
+    grid-template-columns: 20% 20% 20% 20% 20%;
+  }
 }
 
 .gallery .gallery-item {
-  flex: 0;
-  min-width: 25%;
-  max-width: 25%;
   padding: 0.25rem;
   position: relative;
 }
