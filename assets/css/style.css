@@ -199,7 +199,8 @@ p.centered {
 }
 
 table {
-  overflow-x: scroll;
+  display: block;
+  overflow-x: auto;
 }
 
 .gallery {
@@ -292,7 +293,7 @@ table tr:last-child {
 table tr th {
   border-bottom: 1px solid black;
   text-align: center;
-  vertical-align: bottom;
+  vertical-align: top;
 }
 
 table td,
