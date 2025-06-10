@@ -1,5 +1,5 @@
 ---
-.title = "About the Ashet\x27Home Computer",
+.title = "About the Ashet\u{A0}Home\u{A0}Computer",
 .date = @date("2025-05-08T10:24:00"),
 .author = "Felix Queißner",
 .layout = "page.shtml",
