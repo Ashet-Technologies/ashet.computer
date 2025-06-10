@@ -13,6 +13,14 @@
   </head>
   <body>
     <nav>
+      <label class="menubtn">
+        <input type="checkbox" checked>
+        <svg viewbox="0 0 10 10">
+          <rect x="1" y="1.5" width="8" height="1.5"/>
+          <rect x="1" y="4" width="8" height="1.5"/>
+          <rect x="1" y="6.5" width="8" height="1.5"/>
+        </svg>
+      </label>
       <a class="$site.page('').isCurrent().then('selected primary', 'primary')" href="$site.page('').link()">Ashet&nbsp;Home&nbsp;Computer</a>
       <!-- <hr> -->
       <a class="$site.page('about').isCurrent().then('selected')" href="$site.page('about').link()">About</a>
