@@ -8,15 +8,15 @@ body {
   margin-left: auto;
   margin-right: auto;
 
-  padding-left: 1rem;
-  padding-right: 1rem;
+  /* padding-left: 1rem;
+  padding-right: 1rem; */
 
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 main {
-  margin-left: 1rem;
-  margin-right: 1rem;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
 
   font-size: 120%;
 }
@@ -26,36 +26,59 @@ footer {
 }
 
 nav {
-  display: flex;
+  display: grid;
   flex-wrap: wrap;
-  gap: 0.15rem;
-  padding: 0.25rem;
+  /* padding: 0.25em; */
   padding-top: 0;
   margin-bottom: 1rem;
   flex-direction: row;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  width: 42em;
+  gap: 0.15em;
+  grid-template-columns: 11em 6em 6em 6em 6em 6em;
 }
 
 nav a {
   display: block;
   padding: 0.2rem 0.4rem 0.2rem 0.4rem;
-  background-color: silver;
+  background-color: #CCCCCC;
   color: black;
+  text-align: center;
 }
 
 nav a.selected {
-  background: gray;
+  background: #888888;
   color: white;
   text-decoration: none;
 }
 
 nav a.primary {
-  background-color: rgb(73, 110, 177);
+  background-color: hsl(219, 42%, 49%);
   color: white;
 }
 
 nav a.primary.selected {
-  background-color: cornflowerblue;
+  background-color: hsl(219, 79%, 66%);
   color: white;
+}
+
+nav a:hover {
+  background-color: #BBB;
+}
+
+nav a.selected:hover {
+  background-color: #777;
+}
+
+nav a.primary:hover {
+  background-color: hsl(219, 42%, 40%);
+}
+
+nav a.primary.selected:hover {
+  background-color: hsl(219, 79%, 60%);
 }
 
 nav .menubtn {
@@ -74,9 +97,14 @@ nav .menubtn svg {
 }
 
 
-@media (width < 40rem) {
+@media (width < 43em) {
   nav {
+    display: flex;
     flex-direction: column;
+  }
+
+  nav a {
+    text-align: left;
   }
 
   nav .menubtn {
