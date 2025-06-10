@@ -61,35 +61,32 @@
   <div class="cardset main">
     <div class="card">
       <div class="card-title">Specifications</div>
-      <hr>
       <div class="card-contents">
         <ul>
-          <li>Dual Core CPU with 150 MHz</li>
-          <li>16 MB Flash</li>
-          <li>8 MB RAM</li>
-          <li>Modern Connectivity (USB,&nbsp;Ethernet,&nbsp;DVI)</li>
+          <li>Dual Core CPU with&nbsp;150&nbsp;MHz</li>
+          <li>16&nbsp;MB Flash</li>
+          <li>8&nbsp;MB RAM</li>
+          <li>Modern&nbsp;Connectivity (USB,&nbsp;Ethernet,&nbsp;DVI)</li>
         </ul>
       </div>
     </div>
     <div class="card">
       <div class="card-title">Expandable</div>
-      <hr>
       <div class="card-contents">
         <ul>
           <li>7 Expansion Slots</li>
-          <li>Many Expansions Available</li>
-          <li>Hackable Operating System</li>
-          <li>Handcrafted Expansions Possible</li>
+          <li>Many Expansions&nbsp;Available</li>
+          <li>Hackable Operating&nbsp;System</li>
+          <li>Handcrafted&nbsp;Expansions Possible</li>
         </ul>
       </div>
     </div>
     <div class="card">
       <div class="card-title">Designed For Education</div>
-      <hr>
       <div class="card-contents">
         <ul>
-          <li>Fully Open Architecture</li>
-          <li>Built-in Debug Probe</li>
+          <li>Fully Open&nbsp;Architecture</li>
+          <li>Built-in Debug&nbsp;Probe</li>
           <li>Fully Documented</li>
           <li>Decision Making Documentation</li>
         </ul>

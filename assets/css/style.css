@@ -18,7 +18,12 @@ main {
   margin-left: 1.5rem;
   margin-right: 1.5rem;
 
+  font-size: 100%;
+}
+@media (width > 30rem) {
+  main {
   font-size: 120%;
+  }
 }
 
 footer {
@@ -36,9 +41,12 @@ nav {
   margin-left: auto;
   margin-right: auto;
 
+  max-width: 100%;
   width: 42em;
   gap: 0.15em;
   grid-template-columns: 11em 6em 6em 6em 6em 6em;
+
+    align-items: self-start;
 }
 
 nav a {
@@ -47,12 +55,17 @@ nav a {
   background-color: #CCCCCC;
   color: black;
   text-align: center;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 50%);
 }
 
 nav a.selected {
   background: #888888;
   color: white;
   text-decoration: none;
+  height: 2.5rem;
+  line-height: 2.3rem;
 }
 
 nav a.primary {
@@ -94,6 +107,7 @@ nav .menubtn input {
 nav .menubtn svg {
   width: 2rem;
   height: 2rem;
+  cursor: pointer;
 }
 
 
@@ -101,10 +115,16 @@ nav .menubtn svg {
   nav {
     display: flex;
     flex-direction: column;
+    align-items: unset;
   }
 
   nav a {
     text-align: left;
+    border-bottom-left-radius: unset;
+    border-bottom-right-radius: unset;
+    height: unset;
+    line-height: unset;
+    box-shadow: unset;
   }
 
   nav .menubtn {
@@ -169,9 +189,9 @@ div>ul {
 }
 
 .cardset .card {
-  border: 1px solid black;
+  /* border: 1px solid black; */
   flex: 1;
-  box-shadow: 2px 2px 3px rgba(0, 0, 0, 50%);
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 50%);
 }
 
 .cardset .card .card-title {
@@ -180,11 +200,11 @@ div>ul {
   font-weight: bold;
   padding: 0.15rem;
   font-size: 120%;
+  white-space: nowrap;
 }
 
 .cardset .card .card-contents {
   font-size: 110%;
-
 }
 
 .cardset .card .card-contents ul {
@@ -226,10 +246,6 @@ p.centered {
   text-align: center;
 }
 
-table {
-  display: block;
-  overflow-x: auto;
-}
 
 .gallery {
   display: grid;
@@ -272,11 +288,13 @@ table {
   align-items: stretch;
 
 
-  background-color: silver;
+  /* background-color: silver; */
   padding: 0.25rem;
   color: black;
-  border-radius: 0.25rem;
+  /* border-radius: 0.25rem; */
   text-decoration: none;
+
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 50%);
 }
 
 .gallery .gallery-item .gallery-title {
@@ -308,6 +326,8 @@ table {
   font-size: 95%;
   width: 100%;
   max-width: 100%;
+  display: block;
+  overflow-x: auto;
 }
 
 table tr {
@@ -349,6 +369,16 @@ table img {
   vertical-align: middle;
 }
 
+
+#comparison table th:first-child,
+#comparison table td:first-child {
+  position: sticky;
+  left: 0;
+  z-index: 2;
+  background: white;
+}
+
+
 main figure {
   width: 100%;
 }
@@ -360,6 +390,7 @@ main figure img {
 main div.banner {
   width: 100%;
   display: block;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 50%);
 }
 
 main div.banner img {
