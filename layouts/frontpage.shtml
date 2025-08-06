@@ -20,13 +20,13 @@
     <div class="carousel-cell">
       <img
         alt="A rendering of a computer with a slotted design, having 8 slots with several connectors on them."
-        src="$site.asset('img/front/case_opened.webp').link()"
+        src="$site.asset('img/front/case_closed-02.webp').link()"
       >
     </div>
     <div class="carousel-cell">
       <img
         alt="A rendering of a computer with a slotted design, having 8 slots with several connectors on them."
-        src="$site.asset('img/front/case_closed.webp').link()"
+        src="$site.asset('img/front/case_opened.webp').link()"
       >
     </div>
   </div>

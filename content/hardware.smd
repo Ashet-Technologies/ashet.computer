@@ -36,13 +36,19 @@ to educators teaching system design.
 
 The computer follows a modular design similar to a PC where you have expansion cards that you can plug into the system.
 
+### Mechanical
+
+The case is made out of ABS and will be a stock part by [Hammond](https://www.hammfg.com/part/RM2095L) (100&nbsp;mm&nbsp;×&nbsp;180&nbsp;mm&nbsp;×&nbsp;250&nbsp;mm).
+
+On the back will be a mechanical power switch and a 12V barrel jack for power supply.
+
 ### Core Features 
 
 These features are available no matter what expansion cards you have installed.
 
 - [RP2350](https://www.raspberrypi.com/products/rp2350/) Main SOC
   - 150 MHz
-  - Dual-Socket Architecture
+  - Dual-"Socket" Architecture
   - Each socket can be either a
     -  Arm CPU (Cortex-M33, 150 MHz)
     -  RISC-V CPU (RV32IMAC+, 150 MHz)
@@ -109,7 +115,7 @@ The main components are:
 - **Backplane** \
   The backplane interconnects all other components.
 - **Power Supply** \
-  The power supply provides power to the whole system and is designed to be replacable.
+  The power supply provides power to the whole system and is designed to be replaceable.
 
 The block diagram also shows that the first two expansion slots are different than the others:
 
@@ -128,10 +134,10 @@ The mainboard is the core of the system and provides us with the CPU, RAM and BI
 It also has three other important components:
 
 - **On-Board USB Hub** \
-  With the integrated USB hub, we can connect peripherials like mice or keyboards directly to the motherboard.
+  With the integrated USB hub, we can connect peripherals like mice or keyboards directly to the motherboard.
   The front panel also contains a USB-A socket so another hub can be connected.
 - **On-Board Ethernet** \
-  With the [ENC424J600](https://www.microchip.com/en-us/product/ENC424J600) we get access to ethernet and networkworking capabilities.
+  With the [ENC424J600](https://www.microchip.com/en-us/product/ENC424J600) we get access to ethernet and networking capabilities.
 - **On-Board Debug Probe** \
   With a built-in [debug probe](https://github.com/raspberrypi/debugprobe), we can debug the running system without the need for any special or expensive hardware.
   The debug probe also contains a high-speed UART interface (≥ 1 MBaud) which can be used for logging or remote control.
@@ -159,7 +165,7 @@ The backplane houses the following components:
 - **Pin Header** \
   The system-internal I²C bus is exposed on a case-internal pin header, allowing home-made expansions to be easily connected.
 - 2× **USB A** \
-  The backplane has 2 internal USB-A sockets, allowing case-internal peripherials like USB sticks to be connected.
+  The backplane has 2 internal USB-A sockets, allowing case-internal peripherals like USB sticks to be connected.
 
 ### [Expansion Cards]($section.id('arch-exp'))
 
@@ -179,6 +185,6 @@ The following connections are available:
     - [ΔΣ Analog-to-Digital Conversion](https://en.wikipedia.org/wiki/Delta-sigma_modulation)
     - 8 bit Digital-to-Analog output with several impedances and voltage ranges
 - **Video** -- 8 dedicated high-speed video lanes. *Not each expansion slot provides these!*
-- **Audio** -- A bi-direction I²S interface for low-latency audio applications. *Not each expansion slot provides these!*
+- **Audio** -- A bidirection I²S interface for low-latency audio applications. *Not each expansion slot provides these!*
 - **IRQ** -- A dedicated lane to signal the host system that attention is needed.
 - **Detect** --  A signal that is looped back to the host system. Used to detect if a card is present or not.
