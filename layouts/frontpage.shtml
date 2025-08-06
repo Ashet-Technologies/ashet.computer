@@ -30,7 +30,7 @@
       >
     </div>
   </div>
-  <script>
+  <script deferr>
     window.addEventListener('DOMContentLoaded', () => {
       var elem = document.querySelector('.main-carousel');
       var flkty = new Flickity( elem, {
@@ -40,11 +40,11 @@
         wrapAround: true,
         autoPlay: true,
       });
-
     });
   </script>
   <p class="centered">
-    <a href="" class="btn primary" role="button">Fund&nbsp;Now</a>
+    <!-- <a href="" class="btn primary" role="button">Fund&nbsp;Now</a> -->
+    <a href="https://buttondown.com/ashet.computer" class="btn primary" role="button" target="_blank">Subscribe!</a>
     <a href="$site.page('about').linkRef('vision')" class="btn" role="button">Our&nbsp;Vision</a>
     <a href="$site.page('hardware').linkRef('features')" class="btn" role="button">Features</a>
   </p>
@@ -93,14 +93,5 @@
       </div>
     </div>
   </div>
-  <h2>Project Status</h2>
-  <p class="main">
-    The Ashet Home Computer has completed its design phase, and a practical, achievable hardware concept is now finalized.
-
-    Currently, the RP2350 processor successfully boots the operating system and supports launching desktop applications.
-
-    Next, we're focusing on assembling a functional prototype that demonstrates all key features in a simplified form. After this, we will move into the product design phase, aiming to create a production-ready version and finalize manufacturing plans.
-
-    To fund this critical next stage, we will launch a crowdfunding campaign on platforms such as Indiegogo or Kickstarter.
-  </p>
+  <div class="main" :html='$page.content()'></div>
 </main>

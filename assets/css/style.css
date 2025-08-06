@@ -20,9 +20,10 @@ main {
 
   font-size: 100%;
 }
+
 @media (width > 30rem) {
   main {
-  font-size: 120%;
+    font-size: 120%;
   }
 }
 
@@ -46,7 +47,7 @@ nav {
   gap: 0.15em;
   grid-template-columns: 11em 6em 6em 6em 6em 6em;
 
-    align-items: self-start;
+  align-items: self-start;
 }
 
 nav a {
@@ -399,4 +400,11 @@ main div.banner img {
   object-fit: cover;
   object-position: center;
   max-height: 15em;
+}
+
+.main h2 img,
+.main h3 img {
+  display: inline;
+  height: 0.8em;
+  vertical-align: baseline;
 }

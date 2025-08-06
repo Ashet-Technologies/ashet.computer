@@ -64,7 +64,7 @@ These features are available no matter what expansion cards you have installed.
 The following expansion cards are the designated expansion cards which make up the Ashet Home Computer as designed:
 
 1. **Framebuffer Video Card**
-    - DVI Video Out (800x480, 60 Hz)
+    - DVI Video Out (640x400, 8bpp, 60 Hz)
 2. **PCM Sound Card**
     - PCM Audio Out (48 kHz, 16 bit)
     - PCM Audio In (48 kHz, 16 bit)
