@@ -133,7 +133,7 @@ The mainboard is the core of the system and provides us with the CPU, RAM and BI
 It also has three other important components:
 
 - **On-Board USB Hub** \
-  With the integrated USB hub, we can connect peripherals like mice or keyboards directly to the motherboard.
+  With the integrated USB hub, we can connect peripherals like mice or keyboards directly to the mainboard.
   The front panel also contains a USB-A socket so another hub can be connected.
 - **On-Board Ethernet** \
   With the [ENC424J600](https://www.microchip.com/en-us/product/ENC424J600) we get access to ethernet and networking capabilities.

@@ -24,6 +24,21 @@
                 "anchor": "home-computer-photo",
                 "images": [
                     {
+                        "caption": "Device Mock-Up (2025-08)",
+                        "file": "img/shooting-desktop_square.png",
+                        "thumb": "img/shooting-desktop_square.webp",
+                    },
+                    {
+                        "caption": "Device Mock-Up (2025-08)",
+                        "file": "img/shooting-front.png",
+                        "thumb": "img/shooting-front.webp",
+                    },
+                    {
+                        "caption": "Device Mock-Up (2025-08)",
+                        "file": "img/shooting-side.png",
+                        "thumb": "img/shooting-side.webp",
+                    },
+                    {
                         "caption": "Development Setup (2025-08)",
                         "file": "img/ashet-hc-devsetup-02.jpg",
                         "thumb": "img/ashet-hc-devsetup-02.webp",

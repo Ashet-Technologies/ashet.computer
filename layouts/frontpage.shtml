@@ -8,6 +8,18 @@
     <div class="carousel-cell">
       <img
         alt="A rendering of a computer with a slotted design, having 8 slots with several connectors on them."
+        src="$site.asset('img/front/shooting-side.webp').link()"
+      >
+    </div>
+    <div class="carousel-cell">
+      <img
+        alt="A rendering of a computer with a slotted design, having 8 slots with several connectors on them."
+        src="$site.asset('img/front/shooting-front.webp').link()"
+      >
+    </div>
+    <div class="carousel-cell">
+      <img
+        alt="A rendering of a computer with a slotted design, having 8 slots with several connectors on them."
         src="$site.asset('img/front/case-rendering.webp').link()"
       >
     </div>
@@ -15,18 +27,6 @@
       <img
         alt="A rendering of a computer with a slotted design, having 8 slots with several connectors on them. The case is open and you can see a backplane with expansion cards inserted."
         src="$site.asset('img/front/case-rendering-topless.webp').link()"
-      >
-    </div>
-    <div class="carousel-cell">
-      <img
-        alt="A rendering of a computer with a slotted design, having 8 slots with several connectors on them."
-        src="$site.asset('img/front/case_closed-02.webp').link()"
-      >
-    </div>
-    <div class="carousel-cell">
-      <img
-        alt="A rendering of a computer with a slotted design, having 8 slots with several connectors on them."
-        src="$site.asset('img/front/case_opened.webp').link()"
       >
     </div>
   </div>
