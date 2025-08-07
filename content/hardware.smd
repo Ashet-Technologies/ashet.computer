@@ -46,15 +46,14 @@ On the back will be a mechanical power switch and a 12V barrel jack for power su
 
 These features are available no matter what expansion cards you have installed.
 
-- [RP2350](https://www.raspberrypi.com/products/rp2350/) Main SOC
+- [RP2350](https://www.raspberrypi.com/products/rp2350/) Main SoC
   - 150 MHz
   - Dual-"Socket" Architecture
   - Each socket can be either a
     -  Arm CPU (Cortex-M33, 150 MHz)
     -  RISC-V CPU (RV32IMAC+, 150 MHz)
-- 8.5 MB RAM
-  - 8 MB PSRAM
   - 512kB internal SRAM
+- 8 MB PSRAM
 - 16 MB Flash
 - USB 1.1 Host
 - 10/100 Mbps Ethernet

@@ -117,13 +117,13 @@
                 "anchor": "ashet-os-videos",
                 "images": [
                     {
-                        "caption": "First Successfull Usage",
+                        "caption": "First Successful Usage",
                         "file": "img/ashet-os-firstboot.mp4",
                         "thumb": "img/ashet-os-firstboot.webp",
                         "type": "video",
                     },
                     {
-                        "caption": "First Successfull Boot",
+                        "caption": "First Successful Boot",
                         "file": "img/ashet-os-firstrun.mp4",
                         "thumb": "img/ashet-os-firstrun.webp",
                         "type": "video",

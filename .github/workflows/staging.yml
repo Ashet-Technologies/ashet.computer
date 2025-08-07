@@ -49,6 +49,8 @@ jobs:
 
           ./tools/patch-ziggy-file.py --url "${url}" --ziggy-file ./zine.ziggy
 
+          cat ./zine.ziggy
+
       - name: Render
         run: |
           ./zine release
