@@ -97,7 +97,7 @@ Take a peek at our [List of Expansion Board Ideas](https://github.com/Ashet-Tech
 
 ## [Architecture]($section.id('arch'))
 
-The architecture of the Ashet Home Computer is really modular:
+The architecture of the Ashet Home Computer is very modular:
 
 [ ]($image.siteAsset('img/docs/architecture.svg'))
 
@@ -110,7 +110,7 @@ The main components are:
 - **Mainboard** \
   This is the board which houses the CPU, RAM and BIOS flash of the computer.
 - **Expansion** \
-  Expansion cards function like PCIe cards. They provide I/O functionality, additional storage or any imaginable other thing. You can mix-and-match them to your needs.
+  Expansion cards function like PCIe cards. They provide I/O functionality, additional storage or anything else you can imagine. You can mix-and-match them to your needs.
 - **Backplane** \
   The backplane interconnects all other components.
 - **Power Supply** \
@@ -183,7 +183,7 @@ The following connections are available:
     - Two adjacent pins can form a USB 1.1 port
     - [ΔΣ Analog-to-Digital Conversion](https://en.wikipedia.org/wiki/Delta-sigma_modulation)
     - 8 bit Digital-to-Analog output with several impedances and voltage ranges
-- **Video** -- 8 dedicated high-speed video lanes. *Not each expansion slot provides these!*
-- **Audio** -- A bidirection I²S interface for low-latency audio applications. *Not each expansion slot provides these!*
+- **Video** -- 8 dedicated high-speed video lanes. *Not every expansion slot provides these!*
+- **Audio** -- A bidirection I²S interface for low-latency audio applications. *Not every expansion slot provides these!*
 - **IRQ** -- A dedicated lane to signal the host system that attention is needed.
 - **Detect** --  A signal that is looped back to the host system. Used to detect if a card is present or not.
