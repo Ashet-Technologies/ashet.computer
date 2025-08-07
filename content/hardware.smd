@@ -46,7 +46,7 @@ On the back will be a mechanical power switch and a 12V barrel jack for power su
 
 These features are available no matter what expansion cards you have installed.
 
-- [RP2350](https://www.raspberrypi.com/products/rp2350/) Main SoC
+- [Raspberry Pi RP2350](https://www.raspberrypi.com/products/rp2350/) Main SoC
   - 150 MHz
   - Dual-"Socket" Architecture
   - Each socket can be either a
@@ -150,11 +150,11 @@ The backplane is the big interconnect in the system, connecting all other compon
 The backplane houses the following components:
 
 - **Southbridge** \
-  Built on top of the [Parallax Propeller 2](http://parallax.com/propeller-2/), the southbridge is a true power house.
+  Built on top of the [Parallax Propeller 2](http://parallax.com/propeller-2/), the southbridge is a true powerhouse.
   Sparing one CPU core and 64kB of RAM for each expansion slot, we can easily communicate with each expansion slot, 
   sure we won't miss a thing.
 - **I²C Switch**
-  The I²C switch can connect up to 8 "subnets" into our main I²C network. This way, each expansion card gets a full universe of I²C addresses,
+  The I²C switch can connect up to 8 subnets into our main I²C network. This way, each expansion card gets a full universe of I²C addresses,
   while no conflicts happen with our internal I²C devices.
 - **IRQ Mux** \
   The IRQ Mux receives one interrupt lane from each expansion slot and can notify the mainboard that an expansion needs

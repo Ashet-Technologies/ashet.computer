@@ -33,7 +33,7 @@ Why build a new OS? The honest answer: **[Just for Fun. No, Really.](https://jus
 But a few sparks helped light the fire:
 
 * **[Amiga OS](https://en.wikipedia.org/wiki/Workbench_(AmigaOS)#Workbench_3.5,_3.9)**
-  showed what’s possible: blazingly fast and snappy on just 8 MHz.
+  showed what’s possible: blazingly fast and snappy on a [68k processor](https://en.wikipedia.org/wiki/Motorola_68000) with just 8 MHz.
 * **[SerenityOS](https://serenityos.org/)** brought a sense of modern ambition and fun to open-source OS design.
 * **[Redox OS](https://www.redox-os.org/), [Plan 9](https://plan9.io/plan9/), and others** keep the world excited about OS innovation.
 * **Frustration with today’s sluggishness:** It’s baffling how slow modern Windows can feel on incredibly powerful hardware.
