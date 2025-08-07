@@ -11,6 +11,10 @@
 
 ## Introduction
 
+Ashet OS is a basic OS that will **let you understand** the very basic fundamentals that makes for an OS. It will be designed and documented
+in a way that lets you choose an area, be it *networking*, *sound*, *graphics handling*, *memory management*, *file systems* etc and let you
+dive into just that specific area. With Ashet OS you should finally *have a chance to understand* all the magic concepts that makes up an OS.
+
 **Ashet OS isn’t just another operating system.** It’s an experiment in simplicity, approachability, and modern design,
 built to prove that you can have a responsive, hackable, and portable OS—without bloated complexity or unnecessary barriers.
 Whether you’re a curious hacker, retro computing enthusiast, or just someone tired of waiting on modern machines,
@@ -87,4 +91,4 @@ You can run it as a regular desktop application on Linux and Windows. [Download]
 
 Want to shape the project, provide feedback, or just see what it’s about? Jump in, share your ideas, and help build something new:
 
-[github.com/Ashet-Technologies/Ashet-Os](https://github.com/Ashet-Technologies/Ashet-Os)
+[github.com/Ashet-Technologies/Ashet-OS](https://github.com/Ashet-Technologies/Ashet-OS)
