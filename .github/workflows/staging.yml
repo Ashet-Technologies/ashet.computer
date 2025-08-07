@@ -46,13 +46,8 @@ jobs:
         run: |
           url=$(gh api "repos/$GITHUB_REPOSITORY/pages" --jq '.html_url')
           echo "url    = '${url}'"
-          host="$(echo $url | cut -d / -f 1-3)"
-          prefix="$(echo $url | cut -d / -f 4-)"
-          echo "host   = '${host}'"
-          echo "prefix = '${prefix}'"
-          sed -is "s|.host_url = \".*\"|.host_url = \"${host}\"|" ./zine.ziggy 
-          sed -is "s|.url_path_prefix = \".*\"|.url_path_prefix = \"${prefix}\"|" ./zine.ziggy 
-          cat zine.ziggy
+
+          ./tools/patch-ziggy-file.py --url "${url}" --ziggy-file ./zine.ziggy
 
       - name: Render
         run: |
