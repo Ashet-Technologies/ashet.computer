@@ -101,31 +101,36 @@
                 "anchor": "ashet-os-screenshot",
                 "images": [
                     {
+                        "caption": "Desktop Mockup (2025-08)",
+                        "file": "img/ashet-os-shooting-mockup.png",
+                        "thumb": "img/ashet-os-shooting-mockup.webp",
+                    },
+                    {
                         "caption": "Early Desktop",
-                        "file": "img/ashet-os-01.jpg",
+                        "file": "img/ashet-os-01.png",
                         "thumb": "img/ashet-os-01.webp",
                     },
                     {
                         "caption": "Simulation over VNC",
-                        "file": "img/ashet-os-vnc-01.jpg",
+                        "file": "img/ashet-os-vnc-01.png",
                         "thumb": "img/ashet-os-vnc-01.webp",
                     },
                     {
                         "caption": "Terminal Application",
-                        "file": "img/connex-01.jpg",
+                        "file": "img/connex-01.png",
                         "thumb": "img/connex-01.webp",
                     },
                     {
                         "caption": "Font Rendering",
-                        "file": "img/font-rendering-01.jpg",
+                        "file": "img/font-rendering-01.png",
                         "thumb": "img/font-rendering-01.webp",
                     },
                     {
                         "caption": "Wiki Application",
-                        "file": "img/hyper-wiki-01.jpg",
+                        "file": "img/hyper-wiki-01.png",
                         "thumb": "img/hyper-wiki-01.webp",
                     },
-],
+                ],
             },
             {
                 "title": "Videos",
