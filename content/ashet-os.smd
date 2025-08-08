@@ -5,7 +5,7 @@
 .layout = "page.shtml",
 .draft = false,
 .custom = {
-  "banner": "img/banners/ashet-os.jpg"
+  "banner": "img/banners/ashet-os.webp"
 },
 ---
 
