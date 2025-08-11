@@ -2,7 +2,7 @@ name: Staging
 
 on:
   push:
-    branches: [main,work/serious_redesign]
+    branches: [main]
   workflow_dispatch:
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
