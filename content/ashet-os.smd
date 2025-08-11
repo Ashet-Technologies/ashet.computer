@@ -5,11 +5,15 @@
 .layout = "page.shtml",
 .draft = false,
 .custom = {
-  "banner": "img/banners/ashet-os.jpg"
+  "banner": "img/banners/ashet-os.webp"
 },
 ---
 
 ## Introduction
+
+Ashet OS is a basic OS that will **let you understand** the very basic fundamentals that makes for an OS. It will be designed and documented
+in a way that lets you choose an area, be it *networking*, *sound*, *graphics handling*, *memory management*, *file systems* etc and let you
+dive into just that specific area. With Ashet OS you should finally *have a chance to understand* all the magic concepts that makes up an OS.
 
 **Ashet OS isn’t just another operating system.** It’s an experiment in simplicity, approachability, and modern design,
 built to prove that you can have a responsive, hackable, and portable OS—without bloated complexity or unnecessary barriers.
@@ -33,7 +37,7 @@ Why build a new OS? The honest answer: **[Just for Fun. No, Really.](https://jus
 But a few sparks helped light the fire:
 
 * **[Amiga OS](https://en.wikipedia.org/wiki/Workbench_(AmigaOS)#Workbench_3.5,_3.9)**
-  showed what’s possible: blazingly fast and snappy on just 8 MHz.
+  showed what’s possible: blazingly fast and snappy on a [68k processor](https://en.wikipedia.org/wiki/Motorola_68000) with just 8 MHz.
 * **[SerenityOS](https://serenityos.org/)** brought a sense of modern ambition and fun to open-source OS design.
 * **[Redox OS](https://www.redox-os.org/), [Plan 9](https://plan9.io/plan9/), and others** keep the world excited about OS innovation.
 * **Frustration with today’s sluggishness:** It’s baffling how slow modern Windows can feel on incredibly powerful hardware.
@@ -83,8 +87,8 @@ Screenshots can be found in the [gallery]($link.page('gallery').unsafeRef('ashet
 ## Try It Yourself
 
 Ashet OS is fully open source and surprisingly easy to try -- no installation or virtual machine required!
-You can run it as a regular desktop application on Linux and Windows. Download, play, hack, and explore.
+You can run it as a regular desktop application on Linux and Windows. [Download](https://github.com/Ashet-Technologies/Ashet-OS/releases/), play, hack, and explore.
 
-Want to shape the project, provide feedback, or just see what it’s about? Jump in, share your ideas, and help build something new.
+Want to shape the project, provide feedback, or just see what it’s about? Jump in, share your ideas, and help build something new:
 
-**To support development or learn more, visit the fundraiser or main landing page.**
+[github.com/Ashet-Technologies/Ashet-OS](https://github.com/Ashet-Technologies/Ashet-OS)

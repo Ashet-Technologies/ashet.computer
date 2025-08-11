@@ -6,3 +6,50 @@
 .draft = false,
 --- 
 
+## Project Status & Roadmap
+
+### []($image.siteAsset('img/check.svg')) Design
+  
+The Ashet Home Computer has completed its design phase, and a practical, achievable hardware concept is now finalized.
+
+There are still many smaller design components to be refined, but the overall concept is done.
+
+*Check out the [hardware design]($link.page('hardware')) to learn more about the system.*
+  
+### []($image.siteAsset('img/check.svg')) Prototyping
+  
+A functional *cable clutter prototype* has been created which validates all of the design ideas.
+
+This includes:
+
+- PSRAM Support
+- DVI Video Generation
+- Backplane Communication
+- Expansion Card Drivers
+- Ethernet
+- I²C Subsystem
+
+Currently, the RP2350 processor successfully boots the operating system and supports launching desktop applications.
+
+The mechanical design is also validated by building a mock-up of the final hardware and case assembly.
+
+*Check out the prototype images and videos in the [gallery]($link.page('gallery').ref('home-computer-photo'))!*
+
+### []($image.siteAsset('img/wrench-clock.svg')) Engineering
+
+The next stage after prototyping will be the actual engineering. This includes creating schematics, pcb layouts,
+evaluation of hardware limits and EMI emissions.
+
+In this phase, the fully production-ready computer will be built.
+
+To fund development for this critical next stage, we will launch a crowdfunding campaign on a platform such as Indiegogo or Kickstarter.
+
+*Subscribe to our [newsletter](https://buttondown.com/ashet.computer) to get notified when the fundraiser starts!*
+
+### []($image.siteAsset('img/wrench-clock.svg')) Production &amp; Release
+
+In parallel to the engineering, a manufacturing partner must be found that will produce and distribute the Ashet Home Computer.
+
+One of the goals is to make the computer available for 250€ or less, but if that's possible depends on so many details that it's hard to tell in the current phase.
+
+No matter what's the outcome of this phase, the whole computer design will be available for free under a *permissive&nbsp;licence* and can be built by everyone.

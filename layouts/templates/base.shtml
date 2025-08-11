@@ -3,16 +3,40 @@
   <head id="head">
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1">
-    <title :text="$site.title"></title>
     <link type="text/css" rel="stylesheet" href="$site.asset('css/reset.css').link()">
     <link type="text/css" rel="stylesheet" href="$site.asset('css/style.css').link()">
     <link type="text/css" rel="stylesheet" href="$site.asset('css/highlight.css').link()">
     <link type="text/css" rel="stylesheet" href="$site.asset('css/flickity.css').link()">
     <script defer src="$site.asset('js/flickity.pkgd.min.js').link()"></script>
+    <!-- Generic Metadata -->
+    <title :text="$site.title"></title>
+    <meta name="title" content="$site.title">
+    <meta name="description" content="$site.asset('social-media.ziggy').ziggy().get('description')">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="$site.host_url">
+    <meta property="og:title" content="$site.title">
+    <meta property="og:description" content="$site.asset('social-media.ziggy').ziggy().get('description')">
+    <meta property="og:image" content="$site.asset('img/banners/social-media-preview.webp').link()">
+    <!-- X (Twitter) -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="$site.host_url">
+    <meta property="twitter:title" content="$site.title">
+    <meta property="twitter:description" content="$site.asset('social-media.ziggy').ziggy().get('description')">
+    <meta property="twitter:image" content="$site.asset('img/banners/social-media-preview.webp').link()">
     <super>
   </head>
   <body>
     <nav>
+      <label class="menubtn">
+        <input type="checkbox" checked>
+        <svg viewbox="0 0 10 10">
+          <rect x="1" y="1.5" width="8" height="1.5"/>
+          <rect x="1" y="4" width="8" height="1.5"/>
+          <rect x="1" y="6.5" width="8" height="1.5"/>
+        </svg>
+        Navigation
+      </label>
       <a class="$site.page('').isCurrent().then('selected primary', 'primary')" href="$site.page('').link()">Ashet&nbsp;Home&nbsp;Computer</a>
       <!-- <hr> -->
       <a class="$site.page('about').isCurrent().then('selected')" href="$site.page('about').link()">About</a>

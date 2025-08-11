@@ -8,17 +8,23 @@ body {
   margin-left: auto;
   margin-right: auto;
 
-  padding-left: 1rem;
-  padding-right: 1rem;
+  /* padding-left: 1rem;
+  padding-right: 1rem; */
 
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 main {
-  margin-left: 1rem;
-  margin-right: 1rem;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
 
-  font-size: 120%;
+  font-size: 100%;
+}
+
+@media (width > 30rem) {
+  main {
+    font-size: 120%;
+  }
 }
 
 footer {
@@ -28,34 +34,113 @@ footer {
 nav {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.15rem;
-  padding: 0.25rem;
+  /* padding: 0.25em; */
   padding-top: 0;
   margin-bottom: 1rem;
+  flex-direction: row;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  max-width: 100%;
+  width: 42em;
+  gap: 0.15em;
+
+  align-items: self-start;
 }
 
 nav a {
   display: block;
   padding: 0.2rem 0.4rem 0.2rem 0.4rem;
-  background-color: silver;
+  background-color: #CCCCCC;
   color: black;
+  text-align: center;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 50%);
+  flex: 1;
 }
 
 nav a.selected {
-  background: gray;
+  background: #6b6cab;
+  color: white;
   text-decoration: none;
+  height: 2.5rem;
+  line-height: 2.3rem;
 }
 
 nav a.primary {
-  background-color: rgb(73, 110, 177);
+  background-color: hsl(219, 42%, 49%);
   color: white;
 }
 
 nav a.primary.selected {
-  background-color: cornflowerblue;
+  background-color: hsl(219, 79%, 66%);
   color: white;
 }
 
+nav a:hover {
+  background-color: #BBB;
+}
+
+nav a.selected:hover {
+  background-color: #777;
+}
+
+nav a.primary:hover {
+  background-color: hsl(219, 42%, 40%);
+}
+
+nav a.primary.selected:hover {
+  background-color: hsl(219, 79%, 60%);
+}
+
+nav .menubtn {
+  display: none;
+  height: 2rem;
+  min-width: 2rem;
+  line-height: 2rem;
+}
+
+nav .menubtn input {
+  display: none;
+}
+
+nav .menubtn svg {
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: bottom;
+}
+
+
+@media (width < 43em) {
+  nav {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  nav a {
+    text-align: left;
+    border-bottom-left-radius: unset;
+    border-bottom-right-radius: unset;
+    height: unset;
+    line-height: unset;
+    box-shadow: unset;
+  }
+
+  nav .menubtn {
+    display: block;
+  }
+
+  nav:has(:checked) a {
+    display: none;
+  }
+}
 
 h1 {
   text-align: center;
@@ -110,9 +195,9 @@ div>ul {
 }
 
 .cardset .card {
-  border: 1px solid black;
+  /* border: 1px solid black; */
   flex: 1;
-  box-shadow: 2px 2px 3px rgba(0, 0, 0, 50%);
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 50%);
 }
 
 .cardset .card .card-title {
@@ -121,11 +206,11 @@ div>ul {
   font-weight: bold;
   padding: 0.15rem;
   font-size: 120%;
+  white-space: nowrap;
 }
 
 .cardset .card .card-contents {
   font-size: 110%;
-
 }
 
 .cardset .card .card-contents ul {
@@ -167,19 +252,31 @@ p.centered {
   text-align: center;
 }
 
-table {
-  overflow-x: scroll;
-}
 
 .gallery {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+}
+
+@media (width < 40rem) {
+  .gallery {
+    grid-template-columns: 33% 33% 33%;
+  }
+}
+
+@media (width < 25rem) {
+  .gallery {
+    grid-template-columns: 50% 50%;
+  }
+}
+
+@media (width > 60rem) {
+  .gallery {
+    grid-template-columns: 20% 20% 20% 20% 20%;
+  }
 }
 
 .gallery .gallery-item {
-  flex: 0;
-  min-width: 25%;
-  max-width: 25%;
   padding: 0.25rem;
   position: relative;
 }
@@ -197,11 +294,13 @@ table {
   align-items: stretch;
 
 
-  background-color: silver;
+  /* background-color: silver; */
   padding: 0.25rem;
   color: black;
-  border-radius: 0.25rem;
+  /* border-radius: 0.25rem; */
   text-decoration: none;
+
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 50%);
 }
 
 .gallery .gallery-item .gallery-title {
@@ -233,6 +332,8 @@ table {
   font-size: 95%;
   width: 100%;
   max-width: 100%;
+  display: block;
+  overflow-x: auto;
 }
 
 table tr {
@@ -246,7 +347,7 @@ table tr:last-child {
 table tr th {
   border-bottom: 1px solid black;
   text-align: center;
-  vertical-align: bottom;
+  vertical-align: top;
 }
 
 table td,
@@ -274,6 +375,16 @@ table img {
   vertical-align: middle;
 }
 
+
+#comparison table th:first-child,
+#comparison table td:first-child {
+  position: sticky;
+  left: 0;
+  z-index: 2;
+  background: white;
+}
+
+
 main figure {
   width: 100%;
 }
@@ -285,6 +396,7 @@ main figure img {
 main div.banner {
   width: 100%;
   display: block;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 50%);
 }
 
 main div.banner img {
@@ -293,4 +405,11 @@ main div.banner img {
   object-fit: cover;
   object-position: center;
   max-height: 15em;
+}
+
+.main h2 img,
+.main h3 img {
+  display: inline;
+  height: 0.8em;
+  vertical-align: baseline;
 }

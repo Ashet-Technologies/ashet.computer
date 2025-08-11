@@ -30,16 +30,29 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
-      - uses: robinraju/release-downloader@v1
+      - name: Install Zine
+        uses: robinraju/release-downloader@v1
         with:
           repository: 'kristoff-it/zine'
           tag: 'v0.10.2'
           fileName: 'x86_64-linux-musl.tar.xz'
-          extract: true
+
+      - name: Extract Zine
+        run:  tar -xf ./x86_64-linux-musl.tar.xz
+      
+      - name: Patch URL
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          url=$(gh api "repos/$GITHUB_REPOSITORY/pages" --jq '.html_url')
+          echo "url    = '${url}'"
+
+          ./tools/patch-ziggy-file.py --url "${url}" --ziggy-file ./zine.ziggy
+
+          cat ./zine.ziggy
 
       - name: Render
         run: |
-          ls
           ./zine release
       
       - name: Upload artifact

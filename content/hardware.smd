@@ -36,26 +36,32 @@ to educators teaching system design.
 
 The computer follows a modular design similar to a PC where you have expansion cards that you can plug into the system.
 
+### Mechanical
+
+The case is made out of ABS and will be a stock part by [Hammond](https://www.hammfg.com/part/RM2095L) (100&nbsp;mm&nbsp;×&nbsp;180&nbsp;mm&nbsp;×&nbsp;250&nbsp;mm).
+
+On the back will be a mechanical power switch and a 12V barrel jack for power supply.
+
 ### Core Features 
 
 These features are available no matter what expansion cards you have installed.
 
-- [RP2350 Core](https://www.raspberrypi.com/products/rp2350/)
-  - Dual-Core System
-  - Each Core Might Be
+- [Raspberry Pi RP2350](https://www.raspberrypi.com/products/rp2350/) Main SoC
+  - 150 MHz
+  - Dual-"Socket" Architecture
+  - Each socket can be either a
     -  Arm CPU (Cortex-M33, 150 MHz)
     -  RISC-V CPU (RV32IMAC+, 150 MHz)
-- 8.5 MB RAM
-  - 8 MB PSRAM
   - 512kB internal SRAM
+- 8 MB PSRAM
 - 16 MB Flash
 - USB 1.1 Host
 - 10/100 Mbps Ethernet
 - Battery-Backed Real-Time Clock
 - Integrated Debug Probe
 - 7 Expansion Slots
-  - 1 Video Expansion Slot
-  - 1 Audio Expansion Slot
+  - 1 Generic + Video Expansion Slot
+  - 1 Generic + Audio Expansion Slot
   - 5 Generic Expansion Slots
 
 ### Standard Expansion Cards 
@@ -63,14 +69,14 @@ These features are available no matter what expansion cards you have installed.
 The following expansion cards are the designated expansion cards which make up the Ashet Home Computer as designed:
 
 1. **Framebuffer Video Card**
-    - DVI Video Out (800x480, 60 Hz)
+    - DVI Video Out (640x400, 8bpp, 60 Hz)
 2. **PCM Sound Card**
     - PCM Audio Out (48 kHz, 16 bit)
     - PCM Audio In (48 kHz, 16 bit)
 3. **USB Card**
     - 4 USB 1.1 Host Ports
 4. **RS232 Card**
-    - TTL UART (3.3V, 5V, ±12V)
+    - UART (3.3V, 5V, ±12V)
 5. **Basic I/O Card**
     - Pin Header Connector
     - 8 GPIOs
@@ -91,7 +97,7 @@ Take a peek at our [List of Expansion Board Ideas](https://github.com/Ashet-Tech
 
 ## [Architecture]($section.id('arch'))
 
-The architecture of the Ashet Home Computer is really modular:
+The architecture of the Ashet Home Computer is very modular:
 
 [ ]($image.siteAsset('img/docs/architecture.svg'))
 
@@ -104,11 +110,11 @@ The main components are:
 - **Mainboard** \
   This is the board which houses the CPU, RAM and BIOS flash of the computer.
 - **Expansion** \
-  Expansion cards function like PCIe cards. They provide I/O functionality, additional storage or any imaginable other thing. You can mix-and-match them to your needs.
+  Expansion cards function like PCIe cards. They provide I/O functionality, additional storage or anything else you can imagine. You can mix-and-match them to your needs.
 - **Backplane** \
   The backplane interconnects all other components.
 - **Power Supply** \
-  The power supply provides power to the whole system and is designed to be replacable.
+  The power supply provides power to the whole system and is designed to be replaceable.
 
 The block diagram also shows that the first two expansion slots are different than the others:
 
@@ -127,10 +133,10 @@ The mainboard is the core of the system and provides us with the CPU, RAM and BI
 It also has three other important components:
 
 - **On-Board USB Hub** \
-  With the integrated USB hub, we can connect peripherials like mice or keyboards directly to the motherboard.
+  With the integrated USB hub, we can connect peripherals like mice or keyboards directly to the mainboard.
   The front panel also contains a USB-A socket so another hub can be connected.
 - **On-Board Ethernet** \
-  With the [ENC424J600](https://www.microchip.com/en-us/product/ENC424J600) we get access to ethernet and networkworking capabilities.
+  With the [ENC424J600](https://www.microchip.com/en-us/product/ENC424J600) we get access to ethernet and networking capabilities.
 - **On-Board Debug Probe** \
   With a built-in [debug probe](https://github.com/raspberrypi/debugprobe), we can debug the running system without the need for any special or expensive hardware.
   The debug probe also contains a high-speed UART interface (≥ 1 MBaud) which can be used for logging or remote control.
@@ -144,11 +150,11 @@ The backplane is the big interconnect in the system, connecting all other compon
 The backplane houses the following components:
 
 - **Southbridge** \
-  Built on top of the [Parallax Propeller 2](http://parallax.com/propeller-2/), the southbridge is a true power house.
+  Built on top of the [Parallax Propeller 2](http://parallax.com/propeller-2/), the southbridge is a true powerhouse.
   Sparing one CPU core and 64kB of RAM for each expansion slot, we can easily communicate with each expansion slot, 
   sure we won't miss a thing.
 - **I²C Switch**
-  The I²C switch can connect up to 8 "subnets" into our main I²C network. This way, each expansion card gets a full universe of I²C addresses,
+  The I²C switch can connect up to 8 subnets into our main I²C network. This way, each expansion card gets a full universe of I²C addresses,
   while no conflicts happen with our internal I²C devices.
 - **IRQ Mux** \
   The IRQ Mux receives one interrupt lane from each expansion slot and can notify the mainboard that an expansion needs
@@ -158,7 +164,7 @@ The backplane houses the following components:
 - **Pin Header** \
   The system-internal I²C bus is exposed on a case-internal pin header, allowing home-made expansions to be easily connected.
 - 2× **USB A** \
-  The backplane has 2 internal USB-A sockets, allowing case-internal peripherials like USB sticks to be connected.
+  The backplane has 2 internal USB-A sockets, allowing case-internal peripherals like USB sticks to be connected.
 
 ### [Expansion Cards]($section.id('arch-exp'))
 
@@ -177,7 +183,7 @@ The following connections are available:
     - Two adjacent pins can form a USB 1.1 port
     - [ΔΣ Analog-to-Digital Conversion](https://en.wikipedia.org/wiki/Delta-sigma_modulation)
     - 8 bit Digital-to-Analog output with several impedances and voltage ranges
-- **Video** -- 8 dedicated high-speed video lanes. *Not each expansion slot provides these!*
-- **Audio** -- A bi-direction I²S interface for low-latency audio applications. *Not each expansion slot provides these!*
+- **Video** -- 8 dedicated high-speed video lanes. *Not every expansion slot provides these!*
+- **Audio** -- A bidirection I²S interface for low-latency audio applications. *Not every expansion slot provides these!*
 - **IRQ** -- A dedicated lane to signal the host system that attention is needed.
 - **Detect** --  A signal that is looped back to the host system. Used to detect if a card is present or not.

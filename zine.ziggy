@@ -1,6 +1,7 @@
 Site {
     .title = "Ashet Home Computer",
     .host_url = "https://ashet.computer",
+    .url_path_prefix = "",
     .content_dir_path = "content",
     .layouts_dir_path = "layouts",
     .assets_dir_path = "assets",
