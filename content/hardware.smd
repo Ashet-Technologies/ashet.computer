@@ -76,7 +76,7 @@ The following expansion cards are the designated expansion cards which make up t
 3. **USB Card**
     - 4 USB 1.1 Host Ports
 4. **RS232 Card**
-    - TTL UART (3.3V, 5V, ±12V)
+    - UART (3.3V, 5V, ±12V)
 5. **Basic I/O Card**
     - Pin Header Connector
     - 8 GPIOs
