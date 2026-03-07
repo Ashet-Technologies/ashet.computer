@@ -1,0 +1,120 @@
+---
+.title = "2025/Q2",
+.date = @date("2026-03-07T00:00:00"),
+.author = "Felix Queißner",
+.layout = "devlog.shtml",
+.draft = false,
+--- 
+
+[]($section.id('about'))
+## About this Devlog
+This is a non-exhaustive, curated list of changes meant to help users quickly see what has improved since they last checked.
+
+You can [subscribe the latest devlog via RSS]($link.page('devlog').alternative('rss')).
+
+This page lists entries for the year 2024, for future entries consult the [devlog archive](/devlog/).
+
+---
+
+### [Mocking the Connectors]($section.id('2025-06-27T00:00:00'))
+
+First connector mocks built
+
+### [DocGen 1.0]($section.id('2025-06-20T00:00:00'))
+
+Automatic doc generation
+
+
+
+
+### [Palette 2.0 and DVI Driver 2.0]($section.id('2025-06-02T00:00:00'))
+
+Successful implementation of a 640x400 video mode with 8 bpp, but this time we have a custom palette and way more memory bandwidth than before.
+
+Took me some time to get all the timings correctly. This isn't integrated into Ashet OS yet, but that's the next step. But this is huge, as we can now use a custom palette
+
+The palette i use now is called "HSV332m" where "m" stands for modified.
+
+It's a mathematical palette, so you can compute the palette index based off RGB values (or even better: HSV values!).
+
+It encodes 3 bits of hue (so we get 8 shades of color), 3 bits value (so we get 9 brightness levels :thinkong: ) and 2 bits of saturation, so we can go grayscale, pastel and fullbright.
+
+The trick is that the encoding scheme uses two modifications:
+
+- the 3 bits for value are mapped to [12.5%, …, 50%, …,  87.5%, 100%], so we do not map value=0 to black, but to "dark"
+- the 2 bits for saturation work as expected, but: saturation=0 yields the same values for any H depending on V. This means, we have 6 bits (64 values) which map to 8 shades of gray. This isn't optimal. So we switch the encoding of H+V when S=0 into a linear, 64-shade grayscale ramp
+
+This way we get a really large grayscale shade, which is cool. Also we get 8 hues in 8 shades + black (s=0, hv=0) . This should yield fairly good results overall for most images.
+
+
+
+---
+
+
+### [PS/2 Front]($section.id('2025-05-14T00:00:00'))
+
+More work on the PS/2 front:
+
+After making the PS/2 communication work in general, i'm now porting the x86-specific drivers in Ashet OS into a more generic framework, so i can use them with the southbridge setup.
+
+result: **we're having comms, sire!**
+
+two really different mice, one is brand new, the other one so old that HP doesn't know it build it anymore.
+Also it costs 70€ on amazon :rofl:
+
+### [Progress Report]($section.id('2025-05-11T00:00:00'))
+
+Progress Report!
+
+On the photo you can see the chain of connections:
+
+- left: A pi pico clone, playing the role of the Southbridge Dongle, connected to my laptop
+- center left: the southbridge / backplane in the form of the P2 EVAL board
+- center right: the "expansion card" which provides the electrical interface
+- right: a PS/2 mouse
+
+In the log screenshot you can see how southbridge firmware is uploaded with `loadp2`, then my `southbridge-pchost` takes over, plays a nice animation on the LEDs and uploads a new module into the southbridge, using SLOT 3.
+
+Afterwards, the configuration is uploaded for the FIFOs between the southbridge controller and the module slot, and the module is started.
+
+Then the module starts communciating PS/2 with the connected mouse and periodic `AA 00` messages by the mouse can be seen.
+
+This means, my southbridge concept is viable and works. I can even change the slot to SLOT 5 and change the plug position of the expansion port and it will magically work. Just making two of the expansion card adapters and i can use up to 4 PS/2 devices already.
+
+HELL YEAH.
+
+
+### [Case Photoshooting]($section.id('2025-05-08T00:00:00'))
+
+Made some better photos of the case 😀
+
+---
+
+### [GUI Redesign]($section.id('2025-04-19T00:00:00'))
+
+I'm working on a new design for the UI which is more presentable than what we have right now.
+
+
+### [Full Metal Case!]($section.id('2025-04-15T00:00:00'))
+
+Pictures
+
+### [We're doomed.]($section.id('2025-04-12T00:00:00'))
+
+GUI branch news flash: We have a "game", running with 3 FPS on the RP2350 🤣
+
+
+### [Case Assembly]($section.id('2025-04-09T00:00:00'))
+
+I did some more work on the case prototype today!
+
+I figured the PCBs need guides so you can hit the slot in the case much easier. A friend 3D printed them, but they are a bit too tight in fit.
+
+Also i made a single front plate, which also works fine.
+
+Problem is, that as soon as the front plate is in, it's basically locked tightly :rofl:
+
+
+### [GUI Editor!?!]($section.id('2025-04-01T00:00:00'))
+
+More work

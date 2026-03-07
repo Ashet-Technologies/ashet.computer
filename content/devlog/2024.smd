@@ -1,0 +1,46 @@
+---
+.title = "2024/Q1",
+.date = @date("2026-03-07T00:00:00"),
+.author = "Felix Queißner",
+.layout = "devlog.shtml",
+.draft = false,
+--- 
+
+[]($section.id('about'))
+## About this Devlog
+This is a non-exhaustive, curated list of changes meant to help users quickly see what has improved since they last checked.
+
+You can [subscribe the latest devlog via RSS]($link.page('devlog').alternative('rss')).
+
+This page lists entries for the year 2024, for future entries consult the [devlog archive](/devlog/).
+
+### [3D Musings]($section.id('2024-12-29T00:00:00'))
+
+Now in 3D!
+
+### [Christmas Crafting Days!]($section.id('2024-12-25T00:00:00'))
+
+I create a cardboard prototype of what i envision the computer to look like. it's slighty too short on the top-right dimension, but apart from that i'm pretty happy witht the overall layout 
+
+Modules left to right:
+- Mainboard with display, two buttons, usb-c for programming/debugging and usb-a for devices
+- high-end video card with hdmi, vga and rca/cvbs
+- stereo audio in/out with audio on pairs of rca
+- 4-port usb card
+- 2-port rs232
+- 2-port C64 serial
+- DIY board with a perfboard inside
+- digital and analog I/O on pin headers
+
+### [Framing the case]($section.id('2024-11-21T00:00:00'))
+
+i dont have time to code much, but i'm sketching out the case for the home computer
+
+the mug is the ikea standard mug, for size reference. the computer will get 7 expansion slots, one which can do video, and one which can do audio
+
+### [The beginning of a new era]($section.id("2024-09-05T00:00:00"))
+
+some different mental tasks ahead:
+planning the Ashet Home Computer™, Mark 4.
+
+This is a rough sketch of the mainboard, and it's all built around the absent RP2350 Stamp XL, which should be possible to clip into the large hole in the middle

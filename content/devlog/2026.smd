@@ -1,0 +1,103 @@
+---
+.title = "2026/Q1",
+.date = @date("1990-01-01T00:00:00"),
+.author = "Sample Author",
+.layout = "devlog.shtml",
+.draft = false,
+--- 
+[]($section.id('about'))
+## About this Devlog
+
+This is where you should describe to your users what your devlog is about.
+Refer to the corresponding section in the home page to learn more about devlogs.
+
+For example this is how the Zine devlog describes itself:
+
+> This is a non-exhaustive, curated list of changes meant to help users quickly see what has improved since they last checked.
+>
+> You can [subscribe to this page via RSS]($link.page('devlog').alternative('rss')).
+>
+> This page lists entries for the current year, for past entries consult the
+[devlog archive](/devlog/).
+
+Feel free to tweak it to your specific use case or replace it entirely as you
+see fit.
+
+Regardless of what you decide, you might want to make sure you preserve the
+links to the RSS feed and to the devlog archive from the copy above.
+
+---
+
+
+### [Selfhosted RISC-V Emulator]($section.id('2026-03-06T00:00:00'))
+
+I've got a week of Claude Pro sponsored by a friend and i've used it to fulfill me a long-standing dream of shipping our own emulator with Ashet OS.
+
+It's still in a work branch, but the screenshot should explain basically everything.
+
+The emulator is … surprisingly fast considering it's not optimized for performance, but for flexibility.
+
+On my laptop i can achieve roughly 160 MIPS stable, which makes Ashet OS fairly usable.
+
+We have a new port for the emulator supporting the minimum viable feature set, allowing introspection of how the OS is integrated into new hardware.
+
+It's not merged yet into the master branch, but if you want to try it out today, you can check out work/rv32-emulator and build like this:
+
+```
+# build kernel:
+$ zig build -Doptimize-kernel -Doptimize-apps=ReleaseSafe rv32-ashet-base tools
+# build emulator:
+$ (cd src/tools/emulator/ && zig build -Drelease)
+# run emulator:
+./src/tools/emulator/zig-out/bin/emulator ./zig-out/rv32-ashet-base/kernel.bin --disk0 ./zig-out/rv32-ashet-base/disk.img
+```
+
+This should then proceed to boot Ashet OS in a unpredictable time. You can play around with the speed sligher, and if you hold ctrl and click it, you can actually enter any number you want (i use 150 to 200).
+
+
+### [OS Documentation Website]($section.id('2026-03-01T00:00:00'))
+
+- <https://os.ashet.computer/>
+
+OS Documentation Website
+After a good amount of work, i've finally managed to compile all of the existing OS documentation into a single website:
+
+https://os.ashet.computer/
+
+It's finally live and merged into the master branch, and will now be refreshed with every PR merged into master 👍
+
+Source code of the website is in src/website 
+
+---
+
+### [Backplane schematic nearly complete]($section.id('2026-02-16T00:00:00'))
+
+
+That's not a layout yet, but just an estimation of space for the Backplane.
+
+Tight, but most likely doable.
+
+Schematic is soon to be done for version 1
+
+Also i finally got a reliable estimation for the price of the backplane materials \o/
+
+My original estimation was "80€ for 100 PCBs", but it looks like i'm down to "50€ for the parts on the PCBs" which is really really awesome.
+
+The PCB would cost 3.13 € per backplane with 4 layers/ENIG or 3.98 € with 6 layers/ENIG.
+
+Now i need an estimation for the assembly cost, then we'll have reliable numbers for the final backplane PCB 😮
+
+
+### [Zig 0.15.2 Update]($section.id('2026-02-04T00:00:00'))
+
+https://github.com/Ashet-Technologies/Ashet-OS?tab=readme-ov-file#contributing
+
+---
+
+### [Ashet Express communication fixed]($section.id('2026-01-10'))
+
+Did someone order a slideshow?
+
+I finally fixed the bug that mouse movement would overrun the kernel and crash it.
+
+But the GUI branch merge contained a strong simplification of the rendering core, which is now incredibly slow.

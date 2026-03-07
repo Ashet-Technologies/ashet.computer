@@ -1,0 +1,268 @@
+---
+.title = "2025/Q4",
+.date = @date("2026-03-07T00:00:00"),
+.author = "Felix Queißner",
+.layout = "devlog.shtml",
+.draft = false,
+--- 
+
+[]($section.id('about'))
+## About this Devlog
+
+This is a non-exhaustive, curated list of changes meant to help users quickly see what has improved since they last checked.
+
+You can [subscribe the latest devlog via RSS]($link.page('devlog').alternative('rss')).
+
+This page lists entries for the year 2024, for past and future entries consult the [devlog archive](/devlog/).
+
+---
+
+### [Christmas Vibecoding]($section.id('2025-12-29T00:00:00'))
+
+I'm researching on how good current LLMs are in programming, so i'm doing some Vibecoding.
+
+The results are exciting and creepy.
+
+
+I had three roundtrips with *ChatGPT 5.2 Thinking*.
+
+First prompt had `hello-gui.zig`, `graphics.zig` (containing CommandQueue), and `ashet.abi` attached, and looked like this:
+> i've attached a small hello-world like program for graphical applications, and the file containing the CommandQueue structure. I've also attached the kernel api definition containing basically all necessary enums. Implement a "2048" style game for Ashet OS. Do not assume much about the code structure, and if something is unclear, ask me about it before you write any code.
+
+It had some questions which i answered:
+> 1. mono-8 is a good font with 8 pixels height and 5 pixels width pet char.
+> 2. Use a std.Random.DefaultPrng
+> 3. Use an in-game overlay
+> 4. arrow keys, wasd, numpad, and R for restart
+
+it basically yielded a playable version of 2028, with only a fuckup with not using `@divFloor` and having misunderstood that `abi.clock.monotonic()` can't fail.
+
+I then prompted again, trying to stretch my goals:
+> okay, i had to some fixes in Color.from_html, and adjust the default window size to 256x256.
+> 
+> I've attached the working, compiling version here. changes i want to have:
+> - tiny move animation with 4 or 8 frames
+> - allow playing after winning
+> - remove the "2048" title in the window (we have window decorations!)
+> - use mono-6 font for the tutorial text line
+
+and then it yielded the version attached. What. The. Shit. 
+
+I am **thoroughly** impressed. Also Ashet OS soon™ ships another useful application, which is:
+
+`# 2048`
+
+### [HyperDoc 2.0]($section.id('2025-12-23T00:00:00'))
+
+i got a "slight" derail and started working on HyperDoc 2.0:
+
+<https://github.com/Ashet-Technologies/hyperdoc/blob/hdoc-2.0/examples/demo.hdoc>
+
+```
+hdoc(version="2.0" , lang="en", title="HyperDoc \"2.0\" Demonstration");
+
+h1{HyperDoc 2.0}
+
+toc;
+
+h2{Paragraphs}
+
+p { This is a simple paragraph containing text. }
+
+p(id="foo") {
+  This is a paragraph with an attribute "id" with the value "foo".
+}
+
+p {
+  This paragraph contains \em{inline} formatting. We don't support \strike{bold} or \strike{italic} as it's a stylistic choice.
+  Other formatting we have is \mono{monospaced}, superscript (x\sup{2}) and subscript(x\sub{2}).
+  We can also \link(ref="foo"){link to other parts of a document} or \link(uri="https://ashet.computer"){to websites}.
+  With \mono(syntax="c"){int *value = 10;} we can also have language information and potential syntax highlighting attached to monospaced font.
+}
+
+h2{Special Paragraphs}
+
+note    { HyperDoc 2.0 also supports different types of paragraphs. }
+warning { These should affect rendering, and have well-defined semantics attached to them. }
+danger  { You shall not assume any specific formatting of these elements though. }
+tip     { They typically have a standardized style though. }
+quote   { You shall not pass! }
+spoiler { Nobody expects the Spanish Inquisition! }
+
+h2{Verbatim and Preformatted Text}
+
+p:
+| We can also use verbatim text mode.
+| This is introduced by a trailing colon (':') at the end of a line.
+| Each following line that starts with whitespace followed by a pipe character ('|')
+| is then part of the contents.
+| Verbatim text doesn't perform any interpretation of its contents, so no escaping is required.
+| This is really useful for code blocks:
+
+pre(syntax="c"):
+| #include <stdio.h>
+| int main(int argc, char const * argv[]) {
+|   printf("Hello, World!\n");
+|   return 0;
+| }
+
+h2{String Literals}
+
+p "It's also possible to use a string literal for bodies if desired."
+
+p { \em "Magic" is a simple way to highlight single words or text with escaping in inlines. }
+
+h2{Images & Figures}
+
+p { We can also add images to our documents: }
+
+img(id="fig1", path="./preview.jpeg") { If this is non-empty, it's a figure caption. }
+
+h2{Lists}
+
+p { Also lists are possible: }
+
+h3{Unordered Lists}
+
+ul {
+  li { p { Apples } }
+  li { p { Bananas } }
+  li { p { Cucumbers } }
+}
+
+h3{Ordered Lists}
+
+ol {
+  li { p { Collect underpants } }
+  li { p { ? } }
+  li { p { Profit } }
+}
+```
+
+
+### [Magic the Countering]($section.id('2025-12-16T12:00:00'))
+
+Ashet OS now has it's first production-ready application!
+
+A Magic The Gathering Life Counter! 😁
+
+I guess it's as simple as an application can be, and it's actually useful to some people, so we can definitly say that's close to production-grade software here 🤣  🤣
+
+
+### [Widgets ahoi!]($section.id('2025-12-16T00:00:00'))
+
+So the widget subsystem seems to work in its basics already!
+
+This makes me really happy, as it means we can soon start making really cool applications easily.
+
+[You can find a full usage demo for widgets at GitHub](<https://github.com/Ashet-Technologies/Ashet-OS/blob/de1f75ddf82648003702fac429898f9961f267ea/src/userland/apps/hello-gui/src/hello-widgets.zig>)
+
+What's unusual about the Ashet OS GUI:
+
+The code implementing the widget logic is neither in the kernel nor in the application but in a special application called the "widget server" which provides the rendering, data and logic that is widget specific via special IPC routines.
+
+This means that applications can be expanded and widgets can be implemented in any programming language, even dynamically.
+
+It even allows changing the behaviour of widgets fully at runtime, as long as you keep some basic properties steady (hit test visible, focusable, ...)
+
+This also means that you can replace and modify all applications by exchanging your desired widget server.
+
+It... also allows some incredibly stupid things, and it has meme potential.
+Consider the "global radio", a radio button that, assuming network is present, can only be enabled on a single machine in a single radio button instance
+
+
+### [Multi-colored Paintings]($section.id('2025-12-01T00:00:00'))
+
+I've finally improved the Paint application to support color selection and palette showcasing 🙂
+
+
+
+---
+
+### [NGI Zero Commons Fund application]($section.id('2025-11-26T00:00:00'))
+
+So it begins.
+
+I've just applied to the [NGI Zero Commons Fund](https://nlnet.nl/commonsfund/) with the Home Computer, with the proposal to make the system replicable (so everyone could replicate it).
+
+Wish me luck.
+
+### [Hardware Licencing]($section.id('2025-11-25T00:00:00'))
+
+Two new changes on the Meta Front:
+
+https://github.com/Ashet-Technologies/Home-Computer/blob/main/LICENSE
+
+The hardware designs are now licenced under CERN-OHL-P-2.0 license and we have a social media preview
+
+
+### [GUI Rendering Routines]($section.id('2025-11-09T00:00:00'))
+
+The above image was a hand-pixeled image. These three are programmatically generated, so i have the base render routines working for this style.
+
+While implementing it i figured that now that we're using HSL based colors as the base type, we've gained the ability to trivially reskin the UI into 8 colors, and 4 levels of color intensity and 6 different brightness levels
+
+
+### [Graphical redesign]($section.id('2025-11-05T00:00:00'))
+
+I'm finally working on the new GUI with the new color scheme and the new palette! \o/
+
+I'm not 100% confident on the purple intensity, but i'm pretty confident about the scale, shape and shade of things.
+
+Also i'm super proud of my pretty legible 8x8 icons
+
+---
+
+### [Visiting Zigtoberfest]($section.id('2025-10-25T00:00:00'))
+
+Greetings from the Zigtoberfest! 
+
+### [Rework completed]($section.id('2025-10-24T00:00:00'))
+
+
+After one week of intense work, i've managed to fully rebuild what i had before, but now much more structured.
+
+This is the whole electronics setup of the home computer right now. It contains most components of the final design except for power management, USB and the sound expansion.
+
+USB and sound are the next parts of HW development, but i want to focus on some OS design details i've found during implementing all of the prototype stuff.
+
+Also there's no userland serial port API yet.
+
+
+### [Rework in progress...]($section.id('2025-10-20T00:00:00'))
+
+5 days later, we're in the "booting to desktop again" phase of the rebuild.
+
+most soldering work is done, and a good amount of stuff also works again:
+
+- :new: dedicated debug outputs per cpu core
+- :new: COM1 and COM2 serial ports
+- :new: "User Port" (4 GPIOs)
+- DVI videoout
+- Southbridge Link to propeller board
+- I2C subnetting
+
+what's yet missing:
+
+- driver for ENP424J600 (should be fairly easy compared to current one, i've already got reset implemented)
+- audio subsystem (i routed the pins to a pinheader, but didnt find the right I2S modules yet
+- ETM trace port (routed to pins, but no testing yet)
+- "dedicated debug probe" (right now, i use the picoprobe + my quad UART to emulate what i want to have, but i'll use a pi pico for this prototype to emulate the later soldered debug probe)
+
+this makes me really happy right now because it looks like i can showcase a standalone system at [Zigtoberfest 2025](https://zigtoberfest.de) in munich this weekend!
+
+
+
+### [Dismantle the prototype]($section.id('2025-10-15T00:00:00'))
+
+i have dismantled the cable clutter prototype as it was now way, way too cluttered for me to keep maintaining it.
+
+right now, i dont have a working prototype anymore.
+
+but i've already started assembling the new second prototype using another RP2350 carrier board, and some adapter PCBs
+
+The goal with this new prototype is:
+
+- figure out the final pinout
+- make the device more portable (physically transportable)
+- make it more feature complete

@@ -1,0 +1,118 @@
+---
+.title = "2025/Q1",
+.date = @date("2026-03-07T00:00:00"),
+.author = "Felix Queißner",
+.layout = "devlog.shtml",
+.draft = false,
+--- 
+
+[]($section.id('about'))
+## About this Devlog
+This is a non-exhaustive, curated list of changes meant to help users quickly see what has improved since they last checked.
+
+You can [subscribe the latest devlog via RSS]($link.page('devlog').alternative('rss')).
+
+This page lists entries for the year 2024, for future entries consult the [devlog archive](/devlog/).
+
+---
+
+### [Reporting in]($section.id('2025-03-29T00:00:00'))
+
+Screenshot with the current state of things
+
+### [Shipments Soldered]($section.id('2025-03-25T00:00:00'))
+
+I had time to solder and assemble!
+
+### [GUI Editor?!]($section.id('2025-03-24T12:00:00'))
+
+Guess i have to start creating a serialization format now, it seems quite usable already 😄
+
+
+### [Shipments Arrived]($section.id('2025-03-24T00:00:00'))
+
+The 3/4 shipments of hw components arrived \o/
+
+Only missing the small front panels for the modules now, and everything seems to fit well so far
+
+
+### [GUI Editor?]($section.id('2025-03-23T00:00:00'))
+
+Starting to create a GUI editor for apps
+
+### [Wallpaper support]($section.id('2025-03-21T00:00:00'))
+
+New features on the GUI branch:
+
+- Desktop wallpaper support
+- Developer-local rootfs parts (add your wallpaper here!)
+- Real mouse cursor instead of three lines
+- Transparency support in the blitter (only Bitmaps, but mouse is now  transparent)
+- Fonts revisited and get correctly translated now
+- System fonts are loaded from disk instead of being embedded into the kernel
+
+
+### [Ashet OS - Hosted on Linux + Wayland]($section.id('2025-03-14T00:00:00'))
+
+New Hotness on the development channel!
+
+We have now native support for Wayland in the x86-hosted-linux target, so playing around with Ashet OS is now 90% easier than before!
+
+Shoutout to geemili for [shimizu](https://git.sr.ht/~geemili/shimizu)!
+
+
+---
+
+### [Updating the color scheme, Part 1]($section.id('2025-02-19T00:00:00'))
+
+The color rework has fixed true hw colors as well
+
+
+### [Ashet OS can boot on RP2350 with HDMI/DVI video output!]($section.id('2025-02-10T00:00:00'))
+
+So today's the day! I finally and successfully proofed a point.
+
+Ashet OS can boot on RP2350 with HDMI/DVI video output!
+
+Booting in 6 seconds (or less), with the slowest part being the screen recognizing the video signal.
+
+Some OS demoing going on, starting some apps and dragging windows around
+
+How i did the mouse input you might wonder.
+
+Well. It's midnight, and we don't have time for good solutions, but only for ugly hacks!
+
+Just copy the mouse input from my laptop over serial to the RP2350:
+
+```
+[felix@xqwork ~]$ dd if=/dev/input/mouse6 of=/dev/ttyUSB0 bs=3 status=progress
+59148 bytes (59 kB, 58 KiB) copied, 807 s, 0.1 kB/s^C
+19758+0 records in
+19758+0 records out
+59274 bytes (59 kB, 58 KiB) copied, 807.835 s, 0.1 kB/s
+
+[felix@xqwork ~]$
+```
+
+
+For those who wonder where the stuttering comes from:
+Excessive debug logging over 115200 Baud UART, which means we have 11520 byte per second transfer rate. Also the mouse is transferred over the same UART 🤣
+
+### [Ashet OS Smoke Testing in CI]($section.id('2025-02-04T00:00:00'))
+
+Ashet OS now has smoke testing in the CI ❤️
+
+---
+
+
+### [Fancy Renderings]($section.id('2025-01-23T00:00:00'))
+
+Renderings of the design
+
+### [Hands-on the Case]($section.id('2025-01-11T00:00:00'))
+
+i got the case, now it's time to figure out the mechanical details \o/
+
+### [More renderings]($section.id('2025-01-04T00:00:00'))
+
+???

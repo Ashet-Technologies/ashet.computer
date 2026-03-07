@@ -8,7 +8,7 @@
     .layout = "devlog.xml", 
     .output = "index.xml",
 }],
-.draft = true,
+.draft = false,
 --- 
 
 This page lists all the devlog years that are present on this site.

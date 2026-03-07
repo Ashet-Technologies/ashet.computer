@@ -1,0 +1,272 @@
+---
+.title = "2025/Q3",
+.date = @date("2026-03-07T00:00:00"),
+.author = "Felix Queißner",
+.layout = "devlog.shtml",
+.draft = false,
+--- 
+
+[]($section.id('about'))
+## About this Devlog
+This is a non-exhaustive, curated list of changes meant to help users quickly see what has improved since they last checked.
+
+You can [subscribe the latest devlog via RSS]($link.page('devlog').alternative('rss')).
+
+This page lists entries for the year 2024, for future entries consult the [devlog archive](/devlog/).
+
+---
+
+### [PS/2 Keyboard Input]($section.id('2025-09-23T00:00:00'))
+
+After some days of reading and table hacking, we're one step closer yet again!
+
+PS/2 keyboard input works, and the kernel is now officially using HID Usage Page 0x07 (Keyboard) codes as internal key codes, which means:
+
+One standard well applied, and we're ready for the future of USB and Bluetooth keyboards when they come.
+
+But now for some sweet keyboard action!  Make sure to turn on the sound on this one to enjoy the buckling springy Model M clicking and telling us hello!
+
+---
+
+### [Proofing the expansion concept]($section.id('2025-09-15T00:00:00'))
+
+We're now having a mouse.
+
+- A physical mouse.
+- Attached to a PS/2 port.
+- Connected to the Propeller 2.
+- Running firmware loaded from an EEPROM.
+- Using a driver selected by the data on the EEPROM.
+- Communicating via PropIO between Propeller 2 and RP2350.
+- Dispatched into a glue driver.
+- Into a generic PS/2 device driver.
+- Into the input subsystem.
+
+And finally: Straight to the mouse on the desktop.
+
+This is a huge milestone as we're now having achieved two things:
+
+- We're semi-ish standalone, still missing the keyboard part (but that's already mostly done)
+- We've validated 90% of the whole backplane and expansion subsystem.
+
+And oh boy it's fragile.
+
+*Haven't power-cycled the mouse?* Won't detect the mouse.
+
+*Starting an application?* Buffer overrun.
+
+*Looking at it funny?* Explodes.
+
+But i'm now more hyped than ever. I have achieved a huge milestone today, and i'm extremely happy and proud.
+
+
+### [Framing the frames]($section.id('2025-09-14T00:00:00'))
+
+Tiny progress message for today:
+
+I've got some hardcoded driver logic ready and i can now successfully launch the module firmware embedded in the expansion card eeprom, and i can receive the data sent by the *PS/2 mouse* attached to my expansion card.
+
+The screenshot is really ... boring this time, but my excitement is incredibly high.
+
+The `014400` and `0144aa` decoded means:
+
+```rb
+01 # frame type 1: write_fifo
+44 # module slot 4, fifo 4 (upstream fifo 0)
+00/AA # 1 byte data from the mouse
+```
+
+I've also attached a photo of the "expansion card"
+
+### [Detecting the cards]($section.id('2025-09-12T00:00:00'))
+
+Finally, some progress report!
+
+After days of sickness, tiredness and a lot of childcare, i finally had some small afternoons to continue working on my project.
+
+What's new? The Ashet Home Computer now scans the expansion card I²C busses at boot and performs card detection that way.
+
+The card EEPROM contents can now be conveniently described in JSON as such:
+
+```json
+{
+    "Vendor ID": 13,
+    "Product ID": 1,
+
+    "Vendor Name": "Ashet Technologies",
+    "Product Name": "Quad-Port PS/2 Expansion",
+    "Serial Number": "00000001",
+
+    "Properties": {
+        "Requires Audio": false,
+        "Requires Video": false,
+        "Requires USB": false
+    },
+
+    "Driver Interface": "none"
+}
+```
+and can then be compiled with a small tool that will also embed the firmware blob into the EEPROM.
+
+The next steps are loading the firmware from the EEPROM and launching it on the associated southbridge core.
+
+This means that we're a huge step closer to having a *standalone* system that can just be powered on and boots to desktop, has mouse, keyboard and network support available.
+
+---
+
+### [Evoke 2025]($section.id('2025-08-14T00:00:00'))
+
+Packing for Evoke rn. Here you can see that the cable clutter setup indeed fits into the case! 
+Also i've taken some photos that show how much interior space is available. Except for a smaller PCB behind the  backplane for power regulation, the space will be free and can be filled with goodies like USB drives, wifi adapters, ... :grin: 
+2 USB-A sockets and some QWIIC I2C sockets will be available for that space.
+
+Progress Report:
+
+Ashet OS gained I²C support, and we do have an I²C bus scan application soon :grin:
+
+
+### [Publishing the Website]($section.id('2025-08-11T00:00:00'))
+
+@everyone
+First milestone in publishing done!
+
+The website is live and it's possible to subscribe to the newsletter.
+
+https://ashet.computer/
+
+Newsletter won't be updated very often, the same as the @everyone won't be used often.
+
+Next global update will be the fundraiser launch.
+
+### [Fixing the NTP]($section.id('2025-08-10T14:00:00'))
+
+after fixing the zig-network ntp exampley i've ported it to Ashet OS.
+
+we can now run ntp queries when starting the "ntp-client" app 🙂
+
+
+### [ELF Stack]($section.id('2025-08-10T08:00:00'))
+
+Also during all the debugging of the HDMI, a new tool called "elfstack" emerged, which is currently hardcoded on showing memory allocations in physical and virtual memory in your elf file's memory sections:
+
+
+### [Integrating ENC28J60 Driver]($section.id('2025-08-10T00:00:00'))
+
+So after a weekend of failures getting the new HDMI driver running, i took the low hanging fruit of integrating the ENC28J60 driver.
+
+This means… :drum:  I can now go online with my own computer :scream:
+
+
+### [Photoshooting]($section.id('2025-08-08T00:00:00'))
+
+We did a photoshoot of the prototypes today, with some better setup than just having a smartphone camera :grin: 
+
+I guess with these images, i can convince everyone to get their *brand new* **Ashet Home Computer** :smile:
+
+
+### [Ethernet through ENC28J60]($section.id('2025-08-05T00:00:00'))
+
+Some more success! I've managed to get the ENC28J60 up and running today, which means i've got a really shitty and basic ethernet driver :metal:
+
+---
+
+### [Ashet Express going super fast]($section.id('2025-07-30T00:00:00'))
+
+Okay, time for more diagrams!
+
+I'm still doing "just" the ping-pong over cog 0 and 1 in the propeller, and measuring bandwidth.
+
+I use 5 MBaud transfer speed, and i do only send as soon as i have fully received the previous frame completely and have validated its contents.
+
+I do 10 000 transfers of 253 bytes payload in about 5.61 s which means we get a total transfer size of 2.53 MB, so we have a bandwidth of 450.5 kB/s, which means 3.6 Mbps, so we get a true bus utilization of 90% including control flow and protocol overhead.
+
+The maximum raw bandwidth we can get is 4 Mbps, as UART uses 10 bits per datum, 8 data bits + one start + one stop bit.
+
+That's actually pretty good! I don't think i need to put more time into that part of the project for now, that's already pretty good to work with. Assuming my calculations are correct, we can go up to 10 times faster in the end, meaning we could go up to 4.5 MB/s realistic bandwidth from and to the southbridge in full-duplex manner.
+
+
+
+the debug out is broken as the baud isn't right anymore. it looks quite cyberpunk 😮
+
+
+
+Time: 00:20
+
+Okay, last update for today! The test's still going strong:
+```
+[02:54:10.369] info: loopback status: 19209000 / 19209000 successful. 0 bytes error
+```
+that's a whopping 4.8 GiB in 3 hours without any error :smile:
+
+
+
+Time: 08:04
+
+Still going strong!
+
+```
+[37777.431058] info: loopback status: 67501000 / 67501000 successful. 0 bytes error
+```
+Running for 10.5h, transferring 16.8 GB up- and downstream each, zero bit flips or errors detected.
+I'd say this is stable and works :muscle:
+
+### [Ashet Express]($section.id('2025-07-20T00:00:00'))
+
+Even more showcasing!
+
+I've measured the roundtrip latencies in my current setup. The P2 just echos back the data sent by the RP2350. The RP2350 responds to each received frame with a new frame.
+
+Current roundtrip time at 500 kBaud is around 400µs, so about 16 fully transferred bytes for a message length of 10 bytes. This is pretty pretty good
+
+
+
+### [Mocking all the connectors]($section.id('2025-07-19T00:00:00'))
+
+I finally had time to assemble the whole case mockup. 
+
+On the outside, it's shiny and is pretty close to the CAD files.
+
+On the inside, it's all hotmelt 🤣 
+
+But i'm so fucking proud right now. This feels haptic, it looks like a computer and it makes me really really happy
+
+### [Integrations]($section.id('2025-07-18T00:00:00'))
+
+Some progress on the integration front!
+
+I'm currently integrating all of my prototype work regarding the Southbridge stuff.
+
+I think i made the most complex "Hello, World!" application i've ever done. Distributed over 3 machines, 3 CPU architectures and 4 CPU cores.
+
+x86/PC: Debugging
+Arm/RP2350: Main System CPU
+Propeller 2 Core 0: Southbridge Manager
+Propeller 2 Core 2: Expansion Module Controller
+
+The setup is "fairly simple" and will basically bootstrap the P2, upload the module code and write to a FIFO.
+
+The module will just bounce back all FIFO data received on FIFO 0 into FIFO 4, the manager core will then put the FIFO 4 data into frames and send it back to the RP2350. This will then print a debug log.
+
+All of that is visualized in the sequence diagram above :rofl: 
+
+As you can maybe see from the screenshot, the whole process between "system reset" and "module is launched and has responded with FIFO data" is less than 100ms, so it's all pretty fast and can be done blockingly for the first draft.
+
+I also attached a photo of the current ~~system setup~~ spaghetti syndrome, enjoy the cursed view :smile:
+
+All in all i'm pretty happy with the current progress. Slow, but steady with little delays when i actually work on something which is really nice.
+
+
+### [Dependencies? Gone.]($section.id('2025-07-09T00:00:00'))
+
+Ashet OS is now only depending on Zig 0.14 and an internet connection, to build the OS for arm-ashet-hc, arm-ashet-vhc, arm-qemu-virt, rv32-qemu-virt, x86-hosted-linux, x86-hosted-windows, x86-pc-bios and yields full disk images.
+
+
+### [The ABI Mapper]($section.id('2025-07-08T00:00:00'))
+
+Some late-night progress on the ABI mapper. I'm getting back to where i came from, but the code is now so much cleaner \o/
+
+
+### [Shipments Arrived (again)]($section.id('2025-07-06T00:00:00'))
+
+new shipment of parts! i got a bunch of eeproms for the expansion cards, and some more RP2350 boards i can use to assemble the prototype 🙂
+
