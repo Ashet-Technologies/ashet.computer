@@ -10,13 +10,13 @@
 	</h1>
 	<div :html="$page.contentSection('about')"></div>
 	<div class="feed" :loop="$page.contentSections().slice(1)">
-		<div id="$loop.it.id">
-			<h2><a href="$loop.it.id.prefix('#')">
-				<span :text="$loop.it.id.parseDate().format('2nd January 2006')"></span>:
+		<section id="$loop.it.id">
+			<h3><a href="$loop.it.id.prefix('#')">
+				<span class="date" :text="$loop.it.id.parseDate().format('2nd January 2006')"></span>:
 				<ctx :html="$loop.it.heading()"></ctx>
-			</a></h2>
+			</a></h3>
 
 			<ctx :html="$loop.it.htmlNoHeading()"></ctx>
-		</div>
+		</section>
 	</div>
 </main>

@@ -14,9 +14,12 @@ You can [subscribe the latest devlog via RSS]($link.page('devlog').alternative('
 
 This page lists entries for the year 2024, for future entries consult the [devlog archive](/devlog/).
 
-### [3D Musings]($section.id('2024-12-29T00:00:00'))
+## Entries
 
-Now in 3D!
+### [OpenSCAD]($section.id('2024-12-29T00:00:00'))
+
+> []($block.attrs('pictures','large'))
+> ![](/img/devlog/2024/2024-12-29_express1.webp)
 
 ### [Christmas Crafting Days!]($section.id('2024-12-25T00:00:00'))
 
@@ -32,11 +35,22 @@ Modules left to right:
 - DIY board with a perfboard inside
 - digital and analog I/O on pin headers
 
-### [Framing the case]($section.id('2024-11-21T00:00:00'))
+> []($block.attrs('pictures','large'))
+> ![](/img/devlog/2024/2024-12-25-cardboard.webp)
+
+### [Brainstorming a case design]($section.id('2024-11-21T00:00:00'))
 
 i dont have time to code much, but i'm sketching out the case for the home computer
 
 the mug is the ikea standard mug, for size reference. the computer will get 7 expansion slots, one which can do video, and one which can do audio
+
+> []($block.attrs('pictures'))
+> ![](/img/devlog/2024/2024-11-21-case1.webp)
+> ![](/img/devlog/2024/2024-11-21-case2.webp)
+> ![](/img/devlog/2024/2024-11-21-case3.webp)
+> ![](/img/devlog/2024/2024-11-21-case4.webp)
+> ![](/img/devlog/2024/2024-11-21-case5.webp)
+> ![](/img/devlog/2024/2024-11-21-case6.webp)
 
 ### [The beginning of a new era]($section.id("2024-09-05T00:00:00"))
 
@@ -44,3 +58,8 @@ some different mental tasks ahead:
 planning the Ashet Home Computer™, Mark 4.
 
 This is a rough sketch of the mainboard, and it's all built around the absent RP2350 Stamp XL, which should be possible to clip into the large hole in the middle
+
+> []($block.attrs('pictures','max'))
+> ![](/img/devlog/2024/2024-09-05_a-new-beginning.webp)
+
+

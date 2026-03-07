@@ -413,3 +413,40 @@ main div.banner img {
   height: 0.8em;
   vertical-align: baseline;
 }
+
+.feed h3 {
+  margin-left: 0;
+}
+
+.feed h3 .date {
+  font-size: 70%;
+}
+
+.feed section {
+  margin-block: 4rem;
+  margin-block-start: 0;
+}
+
+.block.pictures p {
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.block.pictures p :is(img, video) {
+  max-width: 100%;
+  max-height: 7em;
+  /* border: 1px solid black; */
+  box-shadow: 5px 5px 10px black ;
+}
+
+.block.pictures.large p :is(img, video) {
+  max-height: 75vh;
+}
+
+.block.pictures.max p :is(img, video) {
+  max-height: 100vh;
+  max-width: 80%;
+}

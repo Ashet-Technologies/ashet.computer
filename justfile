@@ -21,7 +21,7 @@ devlog-images:
     for file in $(find -name "*.jpg" -or -name "*.png"); do \
         mkdir -p "../content/${file%/*}" ; \
         echo "processing ${file}..." ; \
-        magick "${file}" -resize "720x720>" "../content/${file%.*}.webp"; \
+        magick "${file}" -resize "720x720>" "../assets/${file%.*}.webp"; \
     done
 
 [working-directory: 'assets-src']
@@ -29,5 +29,5 @@ devlog-videos:
     for file in $(find -name "*.mp4"); do \
         mkdir -p "../content/${file%/*}" ; \
         echo "processing ${file}..." ; \
-        ffmpeg -i "${file}" -vf "scale='min(720,iw)':'min(720,ih)':force_original_aspect_ratio=decrease" -c:v libvpx-vp9 -b:v 0 -crf 32 -c:a libopus "../content/${file%.*}.webm"; \
+        ffmpeg -i "${file}" -vf "scale='min(720,iw)':'min(720,ih)':force_original_aspect_ratio=decrease" -c:v libvpx-vp9 -b:v 0 -crf 32 -c:a libopus "../assets/${file%.*}.webm"; \
     done
