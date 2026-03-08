@@ -216,10 +216,14 @@ Also I'm super proud of my pretty legible 8x8 icons.
 
 Greetings from the Zigtoberfest! 
 
+I visited the [Zigtoberfest](https://zigtoberfest.de/) and did a tiny exhibition showcasing the Ashet Home Computer to the visitors:
+
 > []($block.attrs('pictures','three'))
 > []($image.siteAsset('img/devlog/2025/2025-10-25-zigtoberfest-1.webp').linked(true))
 > []($image.siteAsset('img/devlog/2025/2025-10-25-zigtoberfest-2.webp').linked(true))
 > []($image.siteAsset('img/devlog/2025/2025-10-25-zigtoberfest-3.webp').linked(true))
+
+The general reception was really great. People were impressed by the state of the project and are looking forward for future updates.
 
 
 ### [Rework completed]($section.id('2025-10-24T00:00:00').data('author','xq'))
