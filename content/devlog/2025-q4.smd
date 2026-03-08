@@ -19,25 +19,27 @@ This page lists entries for the year 2024, for past and future entries consult t
 
 ### [Christmas Vibecoding]($section.id('2025-12-29T00:00:00').data('author','xq'))
 
-I'm researching on how good current LLMs are in programming, so i'm doing some Vibecoding.
+I'm researching on how good current LLMs are in programming, so i'm doing some vibecoding.
 
 The results are exciting and creepy.
 
+I had three round-trips with *ChatGPT 5.2 Thinking*.
 
-I had three roundtrips with *ChatGPT 5.2 Thinking*.
+First prompt had `hello-gui.zig`, `graphics.zig` (containing `CommandQueue`), and `ashet.abi` attached, and looked like this:
 
-First prompt had `hello-gui.zig`, `graphics.zig` (containing CommandQueue), and `ashet.abi` attached, and looked like this:
 > i've attached a small hello-world like program for graphical applications, and the file containing the CommandQueue structure. I've also attached the kernel api definition containing basically all necessary enums. Implement a "2048" style game for Ashet OS. Do not assume much about the code structure, and if something is unclear, ask me about it before you write any code.
 
-It had some questions which i answered:
+It had some questions which I answered:
+
 > 1. mono-8 is a good font with 8 pixels height and 5 pixels width pet char.
 > 2. Use a std.Random.DefaultPrng
 > 3. Use an in-game overlay
 > 4. arrow keys, wasd, numpad, and R for restart
 
-it basically yielded a playable version of 2028, with only a fuckup with not using `@divFloor` and having misunderstood that `abi.clock.monotonic()` can't fail.
+The model basically yielded *a playable version* of 2028, with only the mistake of not using `@divFloor` and having misunderstood that `abi.clock.monotonic()` can't fail.
 
 I then prompted again, trying to stretch my goals:
+
 > okay, i had to some fixes in Color.from_html, and adjust the default window size to 256x256.
 > 
 > I've attached the working, compiling version here. changes i want to have:
@@ -46,58 +48,42 @@ I then prompted again, trying to stretch my goals:
 > - remove the "2048" title in the window (we have window decorations!)
 > - use mono-6 font for the tutorial text line
 
-and then it yielded the version attached. What. The. Shit. 
+It yielded the version you can see here:
 
-I am **thoroughly** impressed. Also Ashet OS soon™ ships another useful application, which is:
+> []($block.attrs('pictures','two'))
+> []($image.siteAsset('img/devlog/2025/2025-12-29_vibed-2048.webp').linked(true))
+> []($video.siteAsset('img/devlog/2025/2025-12-29_ashet-os-2048.webm').controls(true))
 
-`# 2048`
+I am **thoroughly** impressed.
+
+This means that Ashet OS soon™ ships another useful application, which is **2048**.
+
 
 ### [HyperDoc 2.0]($section.id('2025-12-23T00:00:00').data('author','xq'))
 
-i got a "slight" derail and started working on HyperDoc 2.0:
+I've got "slightly" derailed while updating [HyperDoc](https://github.com/Ashet-Technologies/hyperdoc) to Zig 0.15.2, and I've started working on HyperDoc 2.0:
 
-<https://github.com/Ashet-Technologies/hyperdoc/blob/hdoc-2.0/examples/demo.hdoc>
 
 ```
-hdoc(version="2.0" , lang="en", title="HyperDoc \"2.0\" Demonstration");
+hdoc(version="2.0" , lang="en");
 
-h1{HyperDoc 2.0}
+title{HyperDoc 2.0}
 
 toc;
 
-h2{Paragraphs}
+h1{Paragraphs}
 
-p { This is a simple paragraph containing text. }
+p { This is a \em "simple" paragraph containing text. }
 
 p(id="foo") {
-  This is a paragraph with an attribute "id" with the value "foo".
+  This is a paragraph with an attribute "\mono{id}" with the value "\mono{foo}".
 }
 
-p {
-  This paragraph contains \em{inline} formatting. We don't support \strike{bold} or \strike{italic} as it's a stylistic choice.
-  Other formatting we have is \mono{monospaced}, superscript (x\sup{2}) and subscript(x\sub{2}).
-  We can also \link(ref="foo"){link to other parts of a document} or \link(uri="https://ashet.computer"){to websites}.
-  With \mono(syntax="c"){int *value = 10;} we can also have language information and potential syntax highlighting attached to monospaced font.
-}
+h1{Special Paragraphs}
 
-h2{Special Paragraphs}
+warning { Nobody expects the Spanish Inquisition! }
 
-note    { HyperDoc 2.0 also supports different types of paragraphs. }
-warning { These should affect rendering, and have well-defined semantics attached to them. }
-danger  { You shall not assume any specific formatting of these elements though. }
-tip     { They typically have a standardized style though. }
-quote   { You shall not pass! }
-spoiler { Nobody expects the Spanish Inquisition! }
-
-h2{Verbatim and Preformatted Text}
-
-p:
-| We can also use verbatim text mode.
-| This is introduced by a trailing colon (':') at the end of a line.
-| Each following line that starts with whitespace followed by a pipe character ('|')
-| is then part of the contents.
-| Verbatim text doesn't perform any interpretation of its contents, so no escaping is required.
-| This is really useful for code blocks:
+h1{Verbatim and Preformatted Text}
 
 pre(syntax="c"):
 | #include <stdio.h>
@@ -106,56 +92,39 @@ pre(syntax="c"):
 |   return 0;
 | }
 
-h2{String Literals}
-
-p "It's also possible to use a string literal for bodies if desired."
-
-p { \em "Magic" is a simple way to highlight single words or text with escaping in inlines. }
-
-h2{Images & Figures}
-
-p { We can also add images to our documents: }
-
-img(id="fig1", path="./preview.jpeg") { If this is non-empty, it's a figure caption. }
-
-h2{Lists}
-
-p { Also lists are possible: }
-
-h3{Unordered Lists}
+h1{Lists}
 
 ul {
   li { p { Apples } }
   li { p { Bananas } }
   li { p { Cucumbers } }
 }
-
-h3{Ordered Lists}
-
-ol {
-  li { p { Collect underpants } }
-  li { p { ? } }
-  li { p { Profit } }
-}
 ```
 
+
+[A full example can be found on GitHub](https://github.com/Ashet-Technologies/hyperdoc/blob/c21b0cddbe067f936b72de86d66b0ac3307b3032/examples/demo.hdoc)
 
 ### [Magic the Countering]($section.id('2025-12-16T12:00:00').data('author','xq'))
 
 Ashet OS now has it's first production-ready application!
 
-A Magic The Gathering Life Counter! 😁
+A *Magic The Gathering Life Counter*!
 
-I guess it's as simple as an application can be, and it's actually useful to some people, so we can definitly say that's close to production-grade software here 🤣  🤣
+> []($block.attrs('pictures','large'))
+> []($image.siteAsset('img/devlog/2025/2025-12-17_mtg-counter.webp').linked(true))
+
+I guess it's as simple as an application can be, and it's actually useful to some people, so we can definitely say that's close to production-grade software.
+
 
 
 ### [Widgets ahoi!]($section.id('2025-12-16T00:00:00').data('author','xq'))
 
-So the widget subsystem seems to work in its basics already!
+> []($block.attrs('pictures','large'))
+> []($video.siteAsset('img/devlog/2025/2025-12-16_AshetOS-Widgets.webm').controls(true))
 
-This makes me really happy, as it means we can soon start making really cool applications easily.
+I'm working on the widget subsystem of the kernel and it starts to work already!
 
-[You can find a full usage demo for widgets at GitHub](<https://github.com/Ashet-Technologies/Ashet-OS/blob/de1f75ddf82648003702fac429898f9961f267ea/src/userland/apps/hello-gui/src/hello-widgets.zig>)
+This makes me really happy, as it means we can soon start making really cool applications.
 
 What's unusual about the Ashet OS GUI:
 
@@ -163,29 +132,45 @@ The code implementing the widget logic is neither in the kernel nor in the appli
 
 This means that applications can be expanded and widgets can be implemented in any programming language, even dynamically.
 
-It even allows changing the behaviour of widgets fully at runtime, as long as you keep some basic properties steady (hit test visible, focusable, ...)
+It even allows changing the behavior of widgets fully at runtime, as long as you keep some basic properties steady (hit test visible, focusable, ...)
 
 This also means that you can replace and modify all applications by exchanging your desired widget server.
 
-It... also allows some incredibly stupid things, and it has meme potential.
-Consider the "global radio", a radio button that, assuming network is present, can only be enabled on a single machine in a single radio button instance
+> []($block.attrs('note'))
+> It… also allows some incredibly stupid things, and it has meme potential.
+> 
+> Consider the "global radio", a radio button that, assuming network is present,
+> can only be enabled on a single machine in a single radio button instance.
+>
+> If you click it, it goes off for everybody else.
 
+
+[You can find a full usage demo for widgets at GitHub](<https://github.com/Ashet-Technologies/Ashet-OS/blob/de1f75ddf82648003702fac429898f9961f267ea/src/userland/apps/hello-gui/src/hello-widgets.zig>)
 
 ### [Multi-colored Paintings]($section.id('2025-12-01T00:00:00').data('author','xq'))
 
-I've finally improved the Paint application to support color selection and palette showcasing 🙂
+I've finally improved the Paint application to support color selection and palette showcasing:
 
-
+> []($block.attrs('pictures','large'))
+> []($image.siteAsset('img/devlog/2025/2025-12-01_paint.webp').linked(true))
 
 ---
 
 ### [NGI Zero Commons Fund application]($section.id('2025-11-26T00:00:00').data('author','xq'))
 
-So it begins.
-
 I've just applied to the [NGI Zero Commons Fund](https://nlnet.nl/commonsfund/) with the Home Computer, with the proposal to make the system replicable (so everyone could replicate it).
 
-Wish me luck.
+> []($block.attrs('pictures','max'))
+> []($image.siteAsset('img/devlog/2025/2025-11-25_ngi-zero.webp').linked(true))
+
+Wish me luck!
+
+> []($block.attrs('note','throwback'))
+> The timing couldn't have been better. While writing all of the devlog stuff 
+> in March 2026, i received the mail informing me that the Ashet Home Computer
+> has [reached the secondstage of project selection](/devlog/2026-q1#2026-03-08T10:00:00).
+>
+> What a coincidence!
 
 ### [Hardware Licencing]($section.id('2025-11-25T00:00:00').data('author','xq'))
 
@@ -198,18 +183,28 @@ The hardware designs are now licenced under CERN-OHL-P-2.0 license and we have a
 
 ### [GUI Rendering Routines]($section.id('2025-11-09T00:00:00').data('author','xq'))
 
-The above image was a hand-pixeled image. These three are programmatically generated, so i have the base render routines working for this style.
+> []($block.attrs('pictures','three'))
+> []($image.siteAsset('img/devlog/2025/2025-11-09_gui-1.webp').linked(true))
+> []($image.siteAsset('img/devlog/2025/2025-11-09_gui-2.webp').linked(true))
+> []($image.siteAsset('img/devlog/2025/2025-11-09_gui-3.webp').linked(true))
 
-While implementing it i figured that now that we're using HSL based colors as the base type, we've gained the ability to trivially reskin the UI into 8 colors, and 4 levels of color intensity and 6 different brightness levels
+The previous image was hand-pixeled. These three are programmatically generated, so i have the base render routines working for this style.
+
+While implementing the renderer, I figured that now that we're using HSL based color scheme, we've gained the ability to trivially reskin the UI into 8 colors, 4 levels of color intensity and 6 different brightness levels.
 
 
 ### [Graphical redesign]($section.id('2025-11-05T00:00:00').data('author','xq'))
 
-I'm finally working on the new GUI with the new color scheme and the new palette! \o/
+I'm finally working to bring the [new GUI design](/devlog/2025-q2#2025-04-19T00:00:00) to live, using the new color scheme and using the [new palette](/devlog/2025-q2#2025-06-02T00:00:00)!
+
+Here's the current draft drawn in [Aseprite](https://www.aseprite.org/):
+
+> []($block.attrs('pictures','large'))
+> []($image.siteAsset('img/devlog/2025/2025-11-05_gui-idea.webp').linked(true))
 
 I'm not 100% confident on the purple intensity, but i'm pretty confident about the scale, shape and shade of things.
 
-Also i'm super proud of my pretty legible 8x8 icons
+Also I'm super proud of my pretty legible 8x8 icons.
 
 ---
 
@@ -217,52 +212,73 @@ Also i'm super proud of my pretty legible 8x8 icons
 
 Greetings from the Zigtoberfest! 
 
+> []($block.attrs('pictures','three'))
+> []($image.siteAsset('img/devlog/2025/2025-10-25-zigtoberfest-1.webp').linked(true))
+> []($image.siteAsset('img/devlog/2025/2025-10-25-zigtoberfest-2.webp').linked(true))
+> []($image.siteAsset('img/devlog/2025/2025-10-25-zigtoberfest-3.webp').linked(true))
+
+
 ### [Rework completed]($section.id('2025-10-24T00:00:00').data('author','xq'))
 
 
-After one week of intense work, i've managed to fully rebuild what i had before, but now much more structured.
+After one week of intense work, I've managed to fully rebuild what I had before, but now much more structured and stable:
+
+> []($block.attrs('pictures','two'))
+> []($image.siteAsset('img/devlog/2025/2025-10-24-hardware-rework1.webp').linked(true))
+> []($image.siteAsset('img/devlog/2025/2025-10-24-hardware-rework2.webp').linked(true))
 
 This is the whole electronics setup of the home computer right now. It contains most components of the final design except for power management, USB and the sound expansion.
 
-USB and sound are the next parts of HW development, but i want to focus on some OS design details i've found during implementing all of the prototype stuff.
+USB and sound are the next parts of HW development, but I want to focus on some OS design details I've found during implementing all of the prototype stuff.
 
 Also there's no userland serial port API yet.
 
 
 ### [Rework in progress...]($section.id('2025-10-20T00:00:00').data('author','xq'))
 
-5 days later, we're in the "booting to desktop again" phase of the rebuild.
+5 days later, we're in the "booting to desktop again" phase of the rebuild:
 
-most soldering work is done, and a good amount of stuff also works again:
+> []($block.attrs('pictures'))
+> []($image.siteAsset('img/devlog/2025/2025-10-20-hardware-rework1.webp').linked(true))
+> []($image.siteAsset('img/devlog/2025/2025-10-20-hardware-rework2.webp').linked(true))
 
-- :new: dedicated debug outputs per cpu core
-- :new: COM1 and COM2 serial ports
-- :new: "User Port" (4 GPIOs)
-- DVI videoout
-- Southbridge Link to propeller board
-- I2C subnetting
+Most soldering work is done, and a good amount of stuff also works again:
 
-what's yet missing:
+- 🆕 Dedicated debug outputs per cpu core
+- 🆕 COM1 and COM2 serial ports
+- 🆕 "User Port" (4 GPIOs)
+- DVI video output
+- Southbridge link to Propeller 2 board
+- I²C subnets
 
-- driver for ENP424J600 (should be fairly easy compared to current one, i've already got reset implemented)
-- audio subsystem (i routed the pins to a pinheader, but didnt find the right I2S modules yet
+What's yet missing:
+
+- Driver for ENP424J600 (should be fairly easy compared to current one, i've already got reset implemented)
+- Audio subsystem (i routed the pins to a pinheader, but didnt find the right I2S modules yet
 - ETM trace port (routed to pins, but no testing yet)
-- "dedicated debug probe" (right now, i use the picoprobe + my quad UART to emulate what i want to have, but i'll use a pi pico for this prototype to emulate the later soldered debug probe)
+- Dedicated debug probe: Right now, i use the [Raspberry Pi Debug Probe](https://www.raspberrypi.com/documentation/microcontrollers/debug-probe.html) and a 4× UART-USB adapter to emulate what i really want. For now, I'll use a Raspberry Pi Pico for this prototype to emulate the debug probe embedded on the mainboard.
 
-this makes me really happy right now because it looks like i can showcase a standalone system at [Zigtoberfest 2025](https://zigtoberfest.de) in munich this weekend!
+This makes me really happy right now because it looks like I can showcase a standalone system at [Zigtoberfest 2025](https://zigtoberfest.de/past/) in Munich this weekend!
 
-
+> []($block.attrs('note','throwback'))
+> There's now even a cool photo on the Zigtoberfest page that shows the Ashet
+> Home Computer being displayed next to the speakers area.
 
 ### [Dismantle the prototype]($section.id('2025-10-15T00:00:00').data('author','xq'))
 
-i have dismantled the cable clutter prototype as it was now way, way too cluttered for me to keep maintaining it.
+I have dismantled the cable clutter prototype as it was now way, way too
+cluttered for me to keep maintaining it.
 
-right now, i dont have a working prototype anymore.
-
-but i've already started assembling the new second prototype using another RP2350 carrier board, and some adapter PCBs
+Right now, I dont have a working prototype anymore, but i've already started assembling the new second prototype using another RP2350 carrier board, and some adapter PCBs
 
 The goal with this new prototype is:
 
-- figure out the final pinout
-- make the device more portable (physically transportable)
-- make it more feature complete
+- Figure out the final pinout
+- Make the device more portable (physically transportable)
+- Make it more feature complete
+
+> []($block.attrs('pictures'))
+> []($image.siteAsset('img/devlog/2025/2025-10-15-hardware-rework1.webp').linked(true))
+> []($image.siteAsset('img/devlog/2025/2025-10-15-hardware-rework2.webp').linked(true))
+> []($image.siteAsset('img/devlog/2025/2025-10-15-hardware-rework3.webp').linked(true))
+> []($image.siteAsset('img/devlog/2025/2025-10-15-hardware-rework4.webp').linked(true))

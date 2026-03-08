@@ -451,6 +451,7 @@ main div.banner img {
   gap: 1em;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  align-content: flex-start;
 }
 
 .block.pictures p :is(img, video) {
@@ -458,6 +459,24 @@ main div.banner img {
   max-height: 7em;
   /* border: 1px solid black; */
   box-shadow: 5px 5px 10px black;
+}
+
+.block.pictures.two>p {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.block.pictures.two p :is(img, video) {
+  max-width: 100%;
+  max-height: 75vh;
+}
+
+.block.pictures.three>p {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.block.pictures.three p :is(img, video) {
+  max-width: 100%;
+  max-height: 75vh;
 }
 
 .block.pictures.large p :is(img, video) {
@@ -550,4 +569,21 @@ main div.banner img {
   border: 1px solid black;
   padding: 0.5rem;
   overflow-x: scroll;
+}
+
+.feed .post blockquote {
+
+  padding: 0.5em;
+
+  border-left: 3px solid green;
+  background-color: rgb(0, 128, 0, 15%);
+
+}
+
+.feed .post blockquote p:first-of-type {
+  margin-block-start: 0;
+}
+
+.feed .post blockquote p:first-of-type {
+  margin-block-end: 0;
 }
