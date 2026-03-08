@@ -9,13 +9,17 @@
 []($section.id('about'))
 ## About this Devlog
 
-This is a non-exhaustive, curated list of changes meant to help users quickly see what has improved since they last checked.
+This devlog contains reports about progress in the project. It does not cover
+everything that has happened, but it's a heartbeat that shows how the project
+progresses over time.
 
-You can [subscribe the latest devlog via RSS]($link.page('devlog').alternative('rss')).
+This page lists entries for the fourth quarter of 2025, for past and future entries consult the [devlog archive](/devlog/).
 
-This page lists entries for the year 2024, for past and future entries consult the [devlog archive](/devlog/).
+## Entries
 
----
+> []($block.attrs('note'))
+> All of these posts were pulled from the [Discord](/community) server and were converted into the
+> devlog in March 2026.
 
 ### [Christmas Vibecoding]($section.id('2025-12-29T00:00:00').data('author','xq'))
 

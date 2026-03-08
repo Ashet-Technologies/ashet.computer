@@ -1,15 +1,14 @@
 
+> []($block.attrs('note'))
 > []($block.attrs('note','throwback'))
 > []($block.attrs('pictures'))
 > []($block.attrs('pictures','two'))
 > []($block.attrs('pictures','three'))
 > []($block.attrs('pictures','large'))
 > []($block.attrs('pictures','max'))
-> []($block.attrs('note'))
-
-
-> []($block.attrs('pictures'))
-
+> []($block.attrs('figures'))
+> []($block.attrs('figures','large'))
 
 
 
+> []($image.siteAsset('img/devlog/2026/2026-03-06_emulator1.webp').linked(true))
