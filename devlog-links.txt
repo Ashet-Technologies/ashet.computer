@@ -5,24 +5,10 @@
 > []($block.attrs('note'))
 
 
-> []($image.siteAsset('img/devlog/2025/2025-07-30_matrix.webm').linked(true))
-> []($image.siteAsset('img/devlog/2025/2025-08-08_cable-clutter1.webp').linked(true))
-> []($image.siteAsset('img/devlog/2025/2025-08-08_cable-clutter2.webp').linked(true))
-> []($image.siteAsset('img/devlog/2025/2025-08-08_ethernet.webp').linked(true))
-> []($image.siteAsset('img/devlog/2025/2025-08-10_app-screens.webp').linked(true))
-> []($image.siteAsset('img/devlog/2025/2025-08-10_elfstack.webp').linked(true))
-> []($image.siteAsset('img/devlog/2025/2025-08-10_ethernet.webp').linked(true))
-> []($image.siteAsset('img/devlog/2025/2025-08-10_ntp-request.webp').linked(true))
-> []($image.siteAsset('img/devlog/2025/2025-08-14-packing1.webp').linked(true))
-> []($image.siteAsset('img/devlog/2025/2025-08-14-packing2.webp').linked(true))
-> []($image.siteAsset('img/devlog/2025/2025-08-15-evoke1.webp').linked(true))
-> []($image.siteAsset('img/devlog/2025/2025-08-16_i2c-log.webp').linked(true))
-> []($image.siteAsset('img/devlog/2025/2025-08-17-evoke2.webp').linked(true))
-> []($image.siteAsset('img/devlog/2025/2025-09-12_card-detect.webp').linked(true))
-> []($image.siteAsset('img/devlog/2025/2025-09-14_hw-setup.webp').linked(true))
-> []($image.siteAsset('img/devlog/2025/2025-09-14_packetlog.webp').linked(true))
-> []($image.siteAsset('img/devlog/2025/2025-09-15_mouse-input.webm').linked(true))
-> []($image.siteAsset('img/devlog/2025/2025-09-23_keyboard-input.webm').linked(true))
+> []($block.attrs('pictures'))
+
+
+
 > []($image.siteAsset('img/devlog/2025/2025-10-15-hardware-rework1.webp').linked(true))
 > []($image.siteAsset('img/devlog/2025/2025-10-15-hardware-rework2.webp').linked(true))
 > []($image.siteAsset('img/devlog/2025/2025-10-15-hardware-rework3.webp').linked(true))

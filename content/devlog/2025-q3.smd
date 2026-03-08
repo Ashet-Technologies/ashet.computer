@@ -24,13 +24,20 @@ This page lists entries for the third quarter of 2025, for past and future entri
 
 ### [PS/2 Keyboard Input]($section.id('2025-09-23T00:00:00').data('author','xq'))
 
-After some days of reading and table hacking, we're one step closer yet again!
+After some days of reading and hacking, we're one step closer yet again!
 
-PS/2 keyboard input works, and the kernel is now officially using HID Usage Page 0x07 (Keyboard) codes as internal key codes, which means:
+PS/2 keyboard input works, and the kernel is now officially using
+[HID Usage Page 0x07 (Keyboard)](https://usb.org/sites/default/files/hut1_7.pdf)
+codes as internal key codes, which means:
 
-One standard well applied, and we're ready for the future of USB and Bluetooth keyboards when they come.
+One standard well applied, and we're ready for the future of USB and Bluetooth
+keyboards when they come.
 
-But now for some sweet keyboard action!  Make sure to turn on the sound on this one to enjoy the buckling springy Model M clicking and telling us hello!
+But now for some sweet keyboard action! Make sure to *turn on the sound on* for
+this one to enjoy the *buckling springy Model M clicking*, telling us hello!
+
+> []($block.attrs('pictures','large'))
+> []($video.siteAsset('img/devlog/2025/2025-09-23_keyboard-input.webm').controls(true))
 
 ---
 
@@ -50,10 +57,13 @@ We're now having a mouse.
 
 And finally: Straight to the mouse on the desktop.
 
+> []($block.attrs('pictures','large'))
+> []($video.siteAsset('img/devlog/2025/2025-09-15_mouse-input.webm').controls(true))
+
 This is a huge milestone as we're now having achieved two things:
 
 - We're semi-ish standalone, still missing the keyboard part (but that's already mostly done)
-- We've validated 90% of the whole backplane and expansion subsystem.
+- We've validated 90% of the whole Backplane and expansion subsystem.
 
 And oh boy it's fragile.
 
@@ -63,36 +73,50 @@ And oh boy it's fragile.
 
 *Looking at it funny?* Explodes.
 
-But i'm now more hyped than ever. I have achieved a huge milestone today, and i'm extremely happy and proud.
-
+But I'm now more hyped than ever. I have achieved a huge milestone today, and I'm extremely happy and proud.
 
 ### [Framing the frames]($section.id('2025-09-14T00:00:00').data('author','xq'))
 
 Tiny progress message for today:
 
-I've got some hardcoded driver logic ready and i can now successfully launch the module firmware embedded in the expansion card eeprom, and i can receive the data sent by the *PS/2 mouse* attached to my expansion card.
+I've got some hardcoded driver logic ready and i can now successfully launch
+the module firmware embedded in the expansion card EEPROM, and I can receive
+the data sent by the *PS/2 mouse* attached to my expansion card.
 
-The screenshot is really ... boring this time, but my excitement is incredibly high.
+The screenshot is really ... boring this time, but my excitement is incredibly
+high:
+
+> []($block.attrs('pictures','large'))
+> []($image.siteAsset('img/devlog/2025/2025-09-14_packetlog.webp').linked(true))
 
 The `014400` and `0144aa` decoded means:
 
-```rb
+```
 01 # frame type 1: write_fifo
 44 # module slot 4, fifo 4 (upstream fifo 0)
 00/AA # 1 byte data from the mouse
 ```
 
-I've also attached a photo of the "expansion card"
+Here's a photo of the current expansion "card":
+
+> []($block.attrs('pictures','large'))
+> []($image.siteAsset('img/devlog/2025/2025-09-14_hw-setup.webp').linked(true))
+
+
 
 ### [Detecting the cards]($section.id('2025-09-12T00:00:00').data('author','xq'))
 
-Finally, some progress report!
+After days of sickness, tiredness and a lot of childcare, i finally had some short
+afternoons to continue working on the project.
 
-After days of sickness, tiredness and a lot of childcare, i finally had some small afternoons to continue working on my project.
+What's new? The Ashet Home Computer now scans the expansion card I²C busses at
+boot and performs card detection that way:
 
-What's new? The Ashet Home Computer now scans the expansion card I²C busses at boot and performs card detection that way.
+> []($block.attrs('pictures','large'))
+> []($image.siteAsset('img/devlog/2025/2025-09-12_card-detect.webp').linked(true))
 
-The card EEPROM contents can now be conveniently described in JSON as such:
+
+The card EEPROM contents can now be conveniently described in JSON:
 
 ```json
 {
@@ -112,25 +136,52 @@ The card EEPROM contents can now be conveniently described in JSON as such:
     "Driver Interface": "none"
 }
 ```
-and can then be compiled with a small tool that will also embed the firmware blob into the EEPROM.
 
-The next steps are loading the firmware from the EEPROM and launching it on the associated southbridge core.
+A small tool will compile the EEPROM image and also embeds the firmware blob.
 
-This means that we're a huge step closer to having a *standalone* system that can just be powered on and boots to desktop, has mouse, keyboard and network support available.
+The next steps are loading the firmware from the EEPROM and launching it on the
+associated Southbridge core.
+
+This means that we're a huge step closer to having a *standalone* system that can
+just be powered on and boots to desktop, has mouse, keyboard and network support
+available.
 
 ---
 
 ### [Evoke 2025]($section.id('2025-08-14T00:00:00').data('author','xq'))
 
+I traveled to the [Evoke demo party](https://2025.evoke.eu/) and socialized a lot over the computer.
+
+When packing the computer, i wondered how i can get both the cable clutter electronics as well as the case to Evoke.
+
+The answer was surprisingly simple: Stuffing!
+
+> []($block.attrs('figures'))
+> [Before]($image.siteAsset('img/devlog/2025/2025-08-14-packing1.webp').linked(true))
+> [After]($image.siteAsset('img/devlog/2025/2025-08-14-packing2.webp').linked(true))
+
+`<sarcasm>`These pictures prove that the electronics will actually fit into the case.`</sarcasm>`
 
 
-Packing for Evoke rn. Here you can see that the cable clutter setup indeed fits into the case! 
-Also i've taken some photos that show how much interior space is available. Except for a smaller PCB behind the  backplane for power regulation, the space will be free and can be filled with goodies like USB drives, wifi adapters, ... :grin: 
-2 USB-A sockets and some QWIIC I2C sockets will be available for that space.
+You can also see how much interior space is available. Except for a smaller PCB
+behind the Backplane for power regulation, the space will be free and can be filled
+with goodies like USB drives, wifi adapters, …
 
-Progress Report:
+2 USB-A sockets and some [QWIIC](https://www.sparkfun.com/qwiic) I²C sockets will
+be available to power that space.
 
-Ashet OS gained I²C support, and we do have an I²C bus scan application soon :grin:
+The computer was displayed on my seat at the party and made a pretty good impression:
+
+> []($block.attrs('figures','large'))
+> [Light Mode]($image.siteAsset('img/devlog/2025/2025-08-15-evoke1.webp').linked(true))
+> [Night Mode]($image.siteAsset('img/devlog/2025/2025-08-17-evoke2.webp').linked(true))
+
+I also did some heavy party coding and implemented I²C support inside Ashet OS.
+
+This means we do have an I²C bus scan application now:
+
+> []($block.attrs('pictures'))
+> []($image.siteAsset('img/devlog/2025/2025-08-16_i2c-log.webp').linked(true))
 
 
 ### [Publishing the Website]($section.id('2025-08-11T00:00:00').data('author','xq'))

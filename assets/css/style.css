@@ -477,6 +477,10 @@ main div.banner img {
   grid-template-columns: repeat(auto-fit, 7em);
 }
 
+.block.figures.large {
+  grid-template-columns: repeat(auto-fit, 14em);
+}
+
 .block.figures p {
   display: none;
 }
