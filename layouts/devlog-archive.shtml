@@ -5,6 +5,12 @@
 </head>
 <main id="body">
 	<h1 :text="$page.title"></h1>
+	<div class="rss-note">
+		<a class="label" href="$site.page('devlog').alternative('rss').link()" target="_blank" title="Subscribe to the RSS newsfeed">Subscribe</a>
+		<img src="$site.asset('img/rss.svg').link()">
+		<a class="label" href="$site.page('devlog').link()" title="Open the devlog archives">Archives</a>
+		<span class="icon">🗄</span>
+	</div>
 	<div :html="$page.content()"></div>
 	<div>
 		<h2>Past years</h2>

@@ -8,58 +8,99 @@
 
 []($section.id('about'))
 ## About this Devlog
-This is a non-exhaustive, curated list of changes meant to help users quickly see what has improved since they last checked.
 
-You can [subscribe the latest devlog via RSS]($link.page('devlog').alternative('rss')).
+This devlog contains reports about progress in the project. It does not cover
+everything that has happened, but it's a heartbeat that shows how the project
+progresses over time.
 
 This page lists entries for the year 2024, for future entries consult the [devlog archive](/devlog/).
 
 ## Entries
 
-### [OpenSCAD]($section.id('2024-12-29T00:00:00'))
+> []($block.attrs('note'))
+> All of these posts were pulled from the [Discord](/community) server and were converted into the
+> devlog in March 2026.
+
+### [OpenSCAD]($section.id('2024-12-29T00:00:00').data('author','xq'))
+
+I've started sketching out a design with actual sizes in OpenSCAD to see if the desired
+components actually fit into the case:
 
 > []($block.attrs('pictures','large'))
-> ![](/img/devlog/2024/2024-12-29_express1.webp)
+> []($image.siteAsset('img/devlog/2024/2024-12-29_express1.webp').linked(true))
 
-### [Christmas Crafting Days!]($section.id('2024-12-25T00:00:00'))
+### [Christmas Crafting Days!]($section.id('2024-12-25T00:00:00').data('author','xq'))
 
-I create a cardboard prototype of what i envision the computer to look like. it's slighty too short on the top-right dimension, but apart from that i'm pretty happy witht the overall layout 
+I create a cardboard prototype of what i envision the computer to look like. it's slightly too short on the top-right dimension, but apart from that i'm pretty happy with the overall layout.
 
 Modules left to right:
-- Mainboard with display, two buttons, usb-c for programming/debugging and usb-a for devices
-- high-end video card with hdmi, vga and rca/cvbs
-- stereo audio in/out with audio on pairs of rca
-- 4-port usb card
-- 2-port rs232
+- Mainboard with display, two buttons, USB-C for programming/debugging and USB-A for devices
+- High-end video card with HDMI, VGA and RCA/CVBS
+- Stereo audio in/out with audio on pairs of RCA
+- 4-port USB card
+- 2-port RS-232
 - 2-port C64 serial
 - DIY board with a perfboard inside
-- digital and analog I/O on pin headers
+- Digital and analog I/O on pin headers
 
 > []($block.attrs('pictures','large'))
-> ![](/img/devlog/2024/2024-12-25-cardboard.webp)
+> []($image.siteAsset('img/devlog/2024/2024-12-25-cardboard.webp').linked(true))
 
-### [Brainstorming a case design]($section.id('2024-11-21T00:00:00'))
 
-i dont have time to code much, but i'm sketching out the case for the home computer
+> []($block.attrs('note','throwback'))
+> I wasn't aware how good of a design this was, and now, two years later, it still holds.
+>
+> The final design doesn't derive much from the christmas vision at all.
 
-the mug is the ikea standard mug, for size reference. the computer will get 7 expansion slots, one which can do video, and one which can do audio
+### [Brainstorming a case design]($section.id('2024-11-21T00:00:00').data('author','xq'))
+
+In the last weeks, not much coding was going on, but i've sketched out the case for the home computer:
 
 > []($block.attrs('pictures'))
-> ![](/img/devlog/2024/2024-11-21-case1.webp)
-> ![](/img/devlog/2024/2024-11-21-case2.webp)
-> ![](/img/devlog/2024/2024-11-21-case3.webp)
-> ![](/img/devlog/2024/2024-11-21-case4.webp)
-> ![](/img/devlog/2024/2024-11-21-case5.webp)
-> ![](/img/devlog/2024/2024-11-21-case6.webp)
+> []($image.siteAsset('img/devlog/2024/2024-11-21-case1.webp').linked(true))
+> []($image.siteAsset('img/devlog/2024/2024-11-21-case2.webp').linked(true))
+> []($image.siteAsset('img/devlog/2024/2024-11-21-case3.webp').linked(true))
+> []($image.siteAsset('img/devlog/2024/2024-11-21-case4.webp').linked(true))
+> []($image.siteAsset('img/devlog/2024/2024-11-21-case5.webp').linked(true))
+> []($image.siteAsset('img/devlog/2024/2024-11-21-case6.webp').linked(true))
 
-### [The beginning of a new era]($section.id("2024-09-05T00:00:00"))
+The mug is the [IKEA standard mug](https://www.ikea.com/de/en/p/vaerdera-mug-white-10277366/), for size reference. The computer will get 7 expansion slots, one which can do video, and one which can do audio.
 
-some different mental tasks ahead:
-planning the Ashet Home Computer™, Mark 4.
+> []($block.attrs('note','throwback'))
+> In hindsight, it's fun to remember that the computer originally was planned vertically like
+> a typical PC system.
+>
+> Also the merge of the dedicated audio/video slots into the first two generic slots
+> happened in the first two months of the design.
+>
+> Back then, the system still was intended to use dedicated USB, I²C and SPI per slot
+> instead of using the Propeller 2 as a general purpose interface.
 
-This is a rough sketch of the mainboard, and it's all built around the absent RP2350 Stamp XL, which should be possible to clip into the large hole in the middle
+### [The beginning of a new era]($section.id("2024-09-05T00:00:00").data('author','xq'))
+
+I was tinkering on the idea of the Ashet Home Computer for a long time, but with the [announcement of the Raspberry Pi Pico 2](https://www.raspberrypi.com/news/raspberry-pi-pico-2-our-new-5-microcontroller-board-on-sale-now/), the project suddenly got a real, exciting chance to get reality.
+
+The RP2350 totally hit my desired target specs:
+
+- 150 MHz RISC-V CPU
+- Support for up to 16 MB of RAM
+- Video output through PIO and HSTX
+
+One thing lead to another and after cooking on the idea for over a month in my head, i've started tinkering.
+
+The **Ashet Home Computer™, Mark 4** design idea was born.
+
+This is a rough sketch of the mainboard, and it's all built around the absent [RP2350 Stamp XL](https://www.solder.party/docs/rp2350-stamp-xl/), which should be possible to clip into the large hole in the middle:
 
 > []($block.attrs('pictures','max'))
-> ![](/img/devlog/2024/2024-09-05_a-new-beginning.webp)
+> []($image.siteAsset('img/devlog/2024/2024-09-05_a-new-beginning.webp').linked(true))
 
+The initial design featured 9 expansion ports:
 
+- 1 dedicated video expansion card port
+- 1 dedicated audio expansion card port
+- 7 regular expansion card ports
+
+It also had mountable slots for flash and RAM chips.
+
+Shout-out to _Arturo_ from [Solder Party](https://www.solder.party/) for coming up so quickly with the Stamp XL design!

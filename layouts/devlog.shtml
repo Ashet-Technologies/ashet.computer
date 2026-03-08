@@ -8,13 +8,22 @@
 		<ctx :text="$page.title"></ctx>
 		at Ashet Technologies
 	</h1>
+	<div class="rss-note">
+		<a class="label" href="$site.page('devlog').alternative('rss').link()" target="_blank" title="Subscribe to the RSS newsfeed">Subscribe</a>
+		<img src="$site.asset('img/rss.svg').link()">
+		<a class="label" href="$site.page('devlog').link()" title="Open the devlog archives">Archives</a>
+		<span class="icon">🗄</span>
+	</div>
 	<div :html="$page.contentSection('about')"></div>
 	<div class="feed" :loop="$page.contentSections().slice(1)">
-		<section id="$loop.it.id">
-			<h3><a href="$loop.it.id.prefix('#')">
-				<span class="date" :text="$loop.it.id.parseDate().format('2nd January 2006')"></span>:
-				<ctx :html="$loop.it.heading()"></ctx>
-			</a></h3>
+		<section class="post" id="$loop.it.id">
+			<div class="title">
+				<p class="date" :text="$loop.it.id.parseDate().format('2nd January 2006')"></p>
+				<h3><a href="$loop.it.id.prefix('#')" :html="$loop.it.heading()"></a></h3>
+				<ctx :if="$loop.it.data.get?('author')">
+					<p class="author">Author: <span :text="$if"></span></p>
+				</ctx>
+			</div>
 
 			<ctx :html="$loop.it.htmlNoHeading()"></ctx>
 		</section>
