@@ -195,7 +195,7 @@ The website is live and it's possible to subscribe to the [newsletter](https://b
 Next global update will be the fundraiser launch.
 
 > []($block.attrs('note','throwback'))
-> Well, that last promise was a false one. I've haven't had the time and energy yet
+> Well, that last promise was a false one. I haven't had the time and energy yet
 > that is required to set up a fundraiser campaign.
 >
 > The introduction of the devlog is the first announcement since then that was
@@ -239,7 +239,7 @@ Also, this is how the computer looks right now:
 > []($image.siteAsset('img/devlog/2025/2025-08-08_cable-clutter2.webp').linked(true))
 
 
-### [Photoshooting]($section.id('2025-08-08T00:00:00').data('author','xq'))
+### [Computer Photoshoot]($section.id('2025-08-08T00:00:00').data('author','xq'))
 
 We did a photoshoot of the prototypes today, with some better setup than just having a smartphone camera.
 
@@ -251,7 +251,7 @@ I guess with these images, i can convince everyone to get their *brand new* **As
 > []($image.siteAsset('img/devlog/2025/2025-08-08_shooting-front.webp').linked(true))
 
 > []($block.attrs('note','throwback'))
-> These are the pictures that are stilled used on the [front page](/) and the [gallery](/gallery).
+> These are the pictures that are still used on the [front page](/) and the [gallery](/gallery).
 
 ### [Ethernet through ENC28J60]($section.id('2025-08-05T00:00:00').data('author','xq'))
 

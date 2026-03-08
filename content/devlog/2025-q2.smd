@@ -24,7 +24,7 @@ This page lists entries for the second quarter of 2025, for past and future entr
 ### [Mocking the Connectors]($section.id('2025-06-27T00:00:00').data('author','xq'))
 
 After searching through my part collection in my lab, I've found two types of
-connectors that would suite the front panels of the case mockup fairly well:
+connectors that would suit the front panels of the case mockup fairly well:
 
 > []($block.attrs('pictures','large'))
 > []($image.siteAsset('img/devlog/2025/2025-06-27_connectors.webp').linked(true))
@@ -103,7 +103,7 @@ use them with the Southbridge setup.
 
 Result: **We're having comms, Sire!**
 
-I'm testing with two really different mice, one is brand new, the other one so old that HP doesn't know that it build it in the past.
+I'm testing with two really different mice, one is brand new, the other one so old that HP doesn't know that they've built it in the past.
 
 > []($block.attrs('pictures'))
 > []($image.siteAsset('img/devlog/2025/2025-05-14_mouse-1.webp').linked(true))
@@ -138,7 +138,7 @@ This means, my Southbridge concept is viable and works. I can even change the sl
 
 Hell yeah!
 
-### [Case Photoshooting]($section.id('2025-05-08T00:00:00').data('author','xq'))
+### [Case Photoshoot]($section.id('2025-05-08T00:00:00').data('author','xq'))
 
 Made some better photos of the case:
 

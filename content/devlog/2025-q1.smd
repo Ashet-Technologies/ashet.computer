@@ -38,7 +38,7 @@ panels of the expansion cards:
 
 ### [GUI Editor?!]($section.id('2025-03-24T12:00:00').data('author','xq'))
 
-More work on the GUI editor lead to a more usable tool. I guess it's time to create
+More work on the GUI editor led to a more usable tool. I guess it's time to create
 a serialization format to save GUI designs:
 
 > []($block.attrs('pictures','large'))
@@ -62,7 +62,7 @@ Only missing parts are the front panels for the modules now, and everything seem
 
 ### [GUI Editor?]($section.id('2025-03-23T00:00:00').data('author','xq'))
 
-As i'm planning to write more applications, ive started to work on a GUI editor for apps:
+As I'm planning to write more applications, I've started to work on a GUI editor for apps:
 
 > []($block.attrs('pictures'))
 > []($image.siteAsset('img/devlog/2025/2025-03-23_gui-editor.webp').linked(true))
@@ -121,7 +121,7 @@ palette of the RP2350 HSTX encoder:
 
 ### [Ashet OS can boot on RP2350 with HDMI/DVI video output!]($section.id('2025-02-10T00:00:00').data('author','xq'))
 
-So today's the day! I finally and successfully proofed a point.
+So today's the day! I finally and successfully proved a point.
 
 Ashet OS can boot on RP2350 with HDMI/DVI video output!
 
@@ -184,7 +184,7 @@ I've exported the design to blender and added shiny materials to the OpenSCAD ex
 > []($image.siteAsset('img/devlog/2025/2025-01-25_rendering4.webp').linked(true))
 
 > []($block.attrs('note','throwback'))
-> These are the pictures that are stilled used on the [front page](/) and the [gallery](/gallery).
+> These are the pictures that are still used on the [front page](/) and the [gallery](/gallery).
 
 ### [Hands-on the Case]($section.id('2025-01-11T00:00:00').data('author','xq'))
 

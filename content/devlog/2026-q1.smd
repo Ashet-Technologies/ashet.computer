@@ -85,7 +85,7 @@ $ (cd src/tools/emulator/ && zig build -Drelease)
 ./src/tools/emulator/zig-out/bin/emulator ./zig-out/rv32-ashet-base/kernel.bin --disk0 ./zig-out/rv32-ashet-base/disk.img
 ```
 
-This should then proceed to boot Ashet OS in a unpredictable time. You can play around with the speed sligher, and if you hold ctrl and click it, you can actually enter any number you want (i use 150 to 200).
+This should then proceed to boot Ashet OS in an unpredictable time. You can play around with the speed slider, and if you hold ctrl and click it, you can actually enter any number you want (i use 150 to 200).
 
 
 ### [OS Documentation Website]($section.id('2026-03-01T00:00:00').data('author','xq'))

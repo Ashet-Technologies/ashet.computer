@@ -18,7 +18,7 @@ This page lists all the devlog quarters that are present on this site.
 > []($block.attrs('note'))
 > The latest devlog quarter is also available [via RSS feed]($link.alternative('rss')).
 
-## Project Milestones
+## [Project Milestones]($section.id('milestones'))
 
 Here's a collection of bigger, noteworthy project milestones:
 

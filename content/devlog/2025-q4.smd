@@ -110,7 +110,7 @@ ul {
 
 ### [Magic the Countering]($section.id('2025-12-16T12:00:00').data('author','xq'))
 
-Ashet OS now has it's first production-ready application!
+Ashet OS now has its first production-ready application!
 
 A *Magic The Gathering Life Counter*!
 
@@ -172,7 +172,7 @@ Wish me luck!
 > []($block.attrs('note','throwback'))
 > The timing couldn't have been better. While writing all of the devlog stuff 
 > in March 2026, i received the mail informing me that the Ashet Home Computer
-> has [reached the secondstage of project selection](/devlog/2026-q1#2026-03-08T10:00:00).
+> has [reached the second stage of project selection](/devlog/2026-q1#2026-03-08T10:00:00).
 >
 > What a coincidence!
 
@@ -261,8 +261,8 @@ Most soldering work is done, and a good amount of stuff also works again:
 
 What's yet missing:
 
-- Driver for ENP424J600 (should be fairly easy compared to current one, i've already got reset implemented)
-- Audio subsystem (i routed the pins to a pinheader, but didnt find the right I2S modules yet
+- Driver for ENC424J600 (should be fairly easy compared to current one, i've already got reset implemented)
+- Audio subsystem (i routed the pins to a pinheader, but didn't find the right I2S modules yet
 - ETM trace port (routed to pins, but no testing yet)
 - Dedicated debug probe: Right now, i use the [Raspberry Pi Debug Probe](https://www.raspberrypi.com/documentation/microcontrollers/debug-probe.html) and a 4× UART-USB adapter to emulate what i really want. For now, I'll use a Raspberry Pi Pico for this prototype to emulate the debug probe embedded on the mainboard.
 
@@ -277,7 +277,7 @@ This makes me really happy right now because it looks like I can showcase a stan
 I have dismantled the cable clutter prototype as it was now way, way too
 cluttered for me to keep maintaining it.
 
-Right now, I dont have a working prototype anymore, but i've already started assembling the new second prototype using another RP2350 carrier board, and some adapter PCBs
+Right now, I don't have a working prototype anymore, but i've already started assembling the new second prototype using another RP2350 carrier board, and some adapter PCBs
 
 The goal with this new prototype is:
 

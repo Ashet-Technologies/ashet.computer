@@ -67,8 +67,6 @@ The documentation contains:
 - The [system call / kernel interface](https://os.ashet.computer/syscalls/) documentation.
 - A [live demo](https://os.ashet.computer/livedemo/) where you can try out the latest build of the operating system.
 
-
-
 ## Platforms
 
 | System                                                                   | Architecture | CPU Support                |
