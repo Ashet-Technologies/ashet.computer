@@ -444,7 +444,8 @@ main div.banner img {
   margin-block-start: 0;
 }
 
-.block.pictures p, .block.pictures p>a {
+.block.pictures p,
+.block.pictures p>a {
   display: flex;
   flex-direction: row;
   gap: 1em;
@@ -468,26 +469,47 @@ main div.banner img {
   max-width: 80%;
 }
 
+
+.block.figures {
+  display: grid;
+  gap: 1em;
+  justify-content: space-evenly;
+  grid-template-columns: repeat(auto-fit, 7em);
+}
+
+.block.figures p {
+  display: none;
+}
+
+.block.figures figcaption {
+  font-size: 80%;
+  text-align: center;
+}
+
+
 .block.note {
   border: 1px dashed black;
   padding: 0.5rem 1.0rem;
   font-size: 80%;
   background-color: hsl(60, 100%, 90%);
 }
+
 .block.note::before {
   content: 'Note:';
   font-weight: bold;
   display: block;
 }
 
-.block.note > p {
+.block.note>p {
   margin: 0;
   margin-block: 1em;
 }
-.block.note > p:first-of-type {
+
+.block.note>p:first-of-type {
   margin-block-start: 0;
 }
-.block.note > p:last-of-type {
+
+.block.note>p:last-of-type {
   margin-block-end: 0;
 }
 

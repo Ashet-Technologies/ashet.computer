@@ -17,7 +17,7 @@ This page lists entries for the year 2024, for past and future entries consult t
 
 ---
 
-### [Christmas Vibecoding]($section.id('2025-12-29T00:00:00'))
+### [Christmas Vibecoding]($section.id('2025-12-29T00:00:00').data('author','xq'))
 
 I'm researching on how good current LLMs are in programming, so i'm doing some Vibecoding.
 
@@ -52,7 +52,7 @@ I am **thoroughly** impressed. Also Ashet OS soon™ ships another useful applic
 
 `# 2048`
 
-### [HyperDoc 2.0]($section.id('2025-12-23T00:00:00'))
+### [HyperDoc 2.0]($section.id('2025-12-23T00:00:00').data('author','xq'))
 
 i got a "slight" derail and started working on HyperDoc 2.0:
 
@@ -140,7 +140,7 @@ ol {
 ```
 
 
-### [Magic the Countering]($section.id('2025-12-16T12:00:00'))
+### [Magic the Countering]($section.id('2025-12-16T12:00:00').data('author','xq'))
 
 Ashet OS now has it's first production-ready application!
 
@@ -149,7 +149,7 @@ A Magic The Gathering Life Counter! 😁
 I guess it's as simple as an application can be, and it's actually useful to some people, so we can definitly say that's close to production-grade software here 🤣  🤣
 
 
-### [Widgets ahoi!]($section.id('2025-12-16T00:00:00'))
+### [Widgets ahoi!]($section.id('2025-12-16T00:00:00').data('author','xq'))
 
 So the widget subsystem seems to work in its basics already!
 
@@ -171,7 +171,7 @@ It... also allows some incredibly stupid things, and it has meme potential.
 Consider the "global radio", a radio button that, assuming network is present, can only be enabled on a single machine in a single radio button instance
 
 
-### [Multi-colored Paintings]($section.id('2025-12-01T00:00:00'))
+### [Multi-colored Paintings]($section.id('2025-12-01T00:00:00').data('author','xq'))
 
 I've finally improved the Paint application to support color selection and palette showcasing 🙂
 
@@ -179,7 +179,7 @@ I've finally improved the Paint application to support color selection and palet
 
 ---
 
-### [NGI Zero Commons Fund application]($section.id('2025-11-26T00:00:00'))
+### [NGI Zero Commons Fund application]($section.id('2025-11-26T00:00:00').data('author','xq'))
 
 So it begins.
 
@@ -187,7 +187,7 @@ I've just applied to the [NGI Zero Commons Fund](https://nlnet.nl/commonsfund/) 
 
 Wish me luck.
 
-### [Hardware Licencing]($section.id('2025-11-25T00:00:00'))
+### [Hardware Licencing]($section.id('2025-11-25T00:00:00').data('author','xq'))
 
 Two new changes on the Meta Front:
 
@@ -196,14 +196,14 @@ https://github.com/Ashet-Technologies/Home-Computer/blob/main/LICENSE
 The hardware designs are now licenced under CERN-OHL-P-2.0 license and we have a social media preview
 
 
-### [GUI Rendering Routines]($section.id('2025-11-09T00:00:00'))
+### [GUI Rendering Routines]($section.id('2025-11-09T00:00:00').data('author','xq'))
 
 The above image was a hand-pixeled image. These three are programmatically generated, so i have the base render routines working for this style.
 
 While implementing it i figured that now that we're using HSL based colors as the base type, we've gained the ability to trivially reskin the UI into 8 colors, and 4 levels of color intensity and 6 different brightness levels
 
 
-### [Graphical redesign]($section.id('2025-11-05T00:00:00'))
+### [Graphical redesign]($section.id('2025-11-05T00:00:00').data('author','xq'))
 
 I'm finally working on the new GUI with the new color scheme and the new palette! \o/
 
@@ -213,11 +213,11 @@ Also i'm super proud of my pretty legible 8x8 icons
 
 ---
 
-### [Visiting Zigtoberfest]($section.id('2025-10-25T00:00:00'))
+### [Visiting Zigtoberfest]($section.id('2025-10-25T00:00:00').data('author','xq'))
 
 Greetings from the Zigtoberfest! 
 
-### [Rework completed]($section.id('2025-10-24T00:00:00'))
+### [Rework completed]($section.id('2025-10-24T00:00:00').data('author','xq'))
 
 
 After one week of intense work, i've managed to fully rebuild what i had before, but now much more structured.
@@ -229,7 +229,7 @@ USB and sound are the next parts of HW development, but i want to focus on some 
 Also there's no userland serial port API yet.
 
 
-### [Rework in progress...]($section.id('2025-10-20T00:00:00'))
+### [Rework in progress...]($section.id('2025-10-20T00:00:00').data('author','xq'))
 
 5 days later, we're in the "booting to desktop again" phase of the rebuild.
 
@@ -253,7 +253,7 @@ this makes me really happy right now because it looks like i can showcase a stan
 
 
 
-### [Dismantle the prototype]($section.id('2025-10-15T00:00:00'))
+### [Dismantle the prototype]($section.id('2025-10-15T00:00:00').data('author','xq'))
 
 i have dismantled the cable clutter prototype as it was now way, way too cluttered for me to keep maintaining it.
 

@@ -29,7 +29,7 @@ links to the RSS feed and to the devlog archive from the copy above.
 ---
 
 
-### [Selfhosted RISC-V Emulator]($section.id('2026-03-06T00:00:00'))
+### [Selfhosted RISC-V Emulator]($section.id('2026-03-06T00:00:00').data('author','xq'))
 
 I've got a week of Claude Pro sponsored by a friend and i've used it to fulfill me a long-standing dream of shipping our own emulator with Ashet OS.
 
@@ -55,7 +55,7 @@ $ (cd src/tools/emulator/ && zig build -Drelease)
 This should then proceed to boot Ashet OS in a unpredictable time. You can play around with the speed sligher, and if you hold ctrl and click it, you can actually enter any number you want (i use 150 to 200).
 
 
-### [OS Documentation Website]($section.id('2026-03-01T00:00:00'))
+### [OS Documentation Website]($section.id('2026-03-01T00:00:00').data('author','xq'))
 
 - <https://os.ashet.computer/>
 
@@ -70,7 +70,7 @@ Source code of the website is in src/website
 
 ---
 
-### [Backplane schematic nearly complete]($section.id('2026-02-16T00:00:00'))
+### [Backplane schematic nearly complete]($section.id('2026-02-16T00:00:00').data('author','xq'))
 
 
 That's not a layout yet, but just an estimation of space for the Backplane.
@@ -88,7 +88,7 @@ The PCB would cost 3.13 € per backplane with 4 layers/ENIG or 3.98 € with 6 
 Now i need an estimation for the assembly cost, then we'll have reliable numbers for the final backplane PCB 😮
 
 
-### [Zig 0.15.2 Update]($section.id('2026-02-04T00:00:00'))
+### [Zig 0.15.2 Update]($section.id('2026-02-04T00:00:00').data('author','xq'))
 
 https://github.com/Ashet-Technologies/Ashet-OS?tab=readme-ov-file#contributing
 

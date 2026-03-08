@@ -19,7 +19,7 @@ thumbnails:
 [working-directory: 'assets-src']
 devlog-images:
     for file in $(find -name "*.jpg" -or -name "*.png"); do \
-        mkdir -p "../content/${file%/*}" ; \
+        mkdir -p "../assets/${file%/*}" ; \
         echo "processing ${file}..." ; \
         magick "${file}" -resize "720x720>" "../assets/${file%.*}.webp"; \
     done

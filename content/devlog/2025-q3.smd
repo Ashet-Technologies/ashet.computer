@@ -8,15 +8,21 @@
 
 []($section.id('about'))
 ## About this Devlog
-This is a non-exhaustive, curated list of changes meant to help users quickly see what has improved since they last checked.
 
-You can [subscribe the latest devlog via RSS]($link.page('devlog').alternative('rss')).
+This devlog contains reports about progress in the project. It does not cover
+everything that has happened, but it's a heartbeat that shows how the project
+progresses over time.
 
-This page lists entries for the year 2024, for future entries consult the [devlog archive](/devlog/).
+This page lists entries for the third quarter of 2025, for past and future entries consult the [devlog archive](/devlog/).
 
+## Entries
+
+> []($block.attrs('note'))
+> All of these posts were pulled from the [Discord](/community) server and were converted into the
+> devlog in March 2026.
 ---
 
-### [PS/2 Keyboard Input]($section.id('2025-09-23T00:00:00'))
+### [PS/2 Keyboard Input]($section.id('2025-09-23T00:00:00').data('author','xq'))
 
 After some days of reading and table hacking, we're one step closer yet again!
 
@@ -28,7 +34,7 @@ But now for some sweet keyboard action!  Make sure to turn on the sound on this 
 
 ---
 
-### [Proofing the expansion concept]($section.id('2025-09-15T00:00:00'))
+### [Proofing the expansion concept]($section.id('2025-09-15T00:00:00').data('author','xq'))
 
 We're now having a mouse.
 
@@ -60,7 +66,7 @@ And oh boy it's fragile.
 But i'm now more hyped than ever. I have achieved a huge milestone today, and i'm extremely happy and proud.
 
 
-### [Framing the frames]($section.id('2025-09-14T00:00:00'))
+### [Framing the frames]($section.id('2025-09-14T00:00:00').data('author','xq'))
 
 Tiny progress message for today:
 
@@ -78,7 +84,7 @@ The `014400` and `0144aa` decoded means:
 
 I've also attached a photo of the "expansion card"
 
-### [Detecting the cards]($section.id('2025-09-12T00:00:00'))
+### [Detecting the cards]($section.id('2025-09-12T00:00:00').data('author','xq'))
 
 Finally, some progress report!
 
@@ -114,7 +120,9 @@ This means that we're a huge step closer to having a *standalone* system that ca
 
 ---
 
-### [Evoke 2025]($section.id('2025-08-14T00:00:00'))
+### [Evoke 2025]($section.id('2025-08-14T00:00:00').data('author','xq'))
+
+
 
 Packing for Evoke rn. Here you can see that the cable clutter setup indeed fits into the case! 
 Also i've taken some photos that show how much interior space is available. Except for a smaller PCB behind the  backplane for power regulation, the space will be free and can be filled with goodies like USB drives, wifi adapters, ... :grin: 
@@ -125,72 +133,124 @@ Progress Report:
 Ashet OS gained I²C support, and we do have an I²C bus scan application soon :grin:
 
 
-### [Publishing the Website]($section.id('2025-08-11T00:00:00'))
+### [Publishing the Website]($section.id('2025-08-11T00:00:00').data('author','xq'))
 
-@everyone
 First milestone in publishing done!
 
-The website is live and it's possible to subscribe to the newsletter.
+> []($block.attrs('pictures','large'))
+> []($image.siteAsset('img/devlog/2025/2025-08-11_website.webp').linked(true))
 
-https://ashet.computer/
-
-Newsletter won't be updated very often, the same as the @everyone won't be used often.
+The website is live and it's possible to subscribe to the [newsletter](https://buttondown.com/ashet.computer) (which won't be updated very often).
 
 Next global update will be the fundraiser launch.
 
-### [Fixing the NTP]($section.id('2025-08-10T14:00:00'))
-
-after fixing the zig-network ntp exampley i've ported it to Ashet OS.
-
-we can now run ntp queries when starting the "ntp-client" app 🙂
-
-
-### [ELF Stack]($section.id('2025-08-10T08:00:00'))
-
-Also during all the debugging of the HDMI, a new tool called "elfstack" emerged, which is currently hardcoded on showing memory allocations in physical and virtual memory in your elf file's memory sections:
+> []($block.attrs('note','throwback'))
+> Well, that last promise was a false one. I've haven't had the time and energy yet
+> that is required to set up a fundraiser campaign.
+>
+> The introduction of the devlog is the first announcement since then that was
+> made through the newsletter.
 
 
-### [Integrating ENC28J60 Driver]($section.id('2025-08-10T00:00:00'))
+### [Fixing the NTP]($section.id('2025-08-10T14:00:00').data('author','xq'))
 
-So after a weekend of failures getting the new HDMI driver running, i took the low hanging fruit of integrating the ENC28J60 driver.
+After fixing the [`zig-network`](https://github.com/ikskuh/zig-network/) NTP example, I've ported it to Ashet OS.
 
-This means… :drum:  I can now go online with my own computer :scream:
+We can now run NTP queries when starting the "ntp-client" app:
 
-
-### [Photoshooting]($section.id('2025-08-08T00:00:00'))
-
-We did a photoshoot of the prototypes today, with some better setup than just having a smartphone camera :grin: 
-
-I guess with these images, i can convince everyone to get their *brand new* **Ashet Home Computer** :smile:
+> []($block.attrs('pictures','large'))
+> > []($image.siteAsset('img/devlog/2025/2025-08-10_ntp-request.webp').linked(true))
 
 
-### [Ethernet through ENC28J60]($section.id('2025-08-05T00:00:00'))
+### [ELF Stack]($section.id('2025-08-10T08:00:00').data('author','xq'))
 
-Some more success! I've managed to get the ENC28J60 up and running today, which means i've got a really shitty and basic ethernet driver :metal:
+During all the debugging of the HDMI, a new tool called "elfstack" emerged.
+
+It is currently hardcoded on showing memory allocations in physical and
+virtual memory in your elf file's memory sections:
+
+> []($block.attrs('pictures','large'))
+> []($image.siteAsset('img/devlog/2025/2025-08-10_elfstack.webp').linked(true))
+
+### [Integrating ENC28J60 Driver]($section.id('2025-08-10T00:00:00').data('author','xq'))
+
+So after a weekend of failures getting the new HDMI driver running with Ashet OS,
+I took the low hanging fruit of integrating the ENC28J60 driver.
+
+This means… I can now go online with my own computer!
+
+> []($block.attrs('pictures','large'))
+> []($image.siteAsset('img/devlog/2025/2025-08-10_ethernet.webp').linked(true))
+
+Also, this is how the computer looks right now:
+
+> []($block.attrs('pictures'))
+> []($image.siteAsset('img/devlog/2025/2025-08-08_cable-clutter1.webp').linked(true))
+> []($image.siteAsset('img/devlog/2025/2025-08-08_cable-clutter2.webp').linked(true))
+
+
+### [Photoshooting]($section.id('2025-08-08T00:00:00').data('author','xq'))
+
+We did a photoshoot of the prototypes today, with some better setup than just having a smartphone camera.
+
+I guess with these images, i can convince everyone to get their *brand new* **Ashet Home Computer**:
+
+> []($block.attrs('pictures'))
+> []($image.siteAsset('img/devlog/2025/2025-08-08_shooting-desktop_square.webp').linked(true))
+> []($image.siteAsset('img/devlog/2025/2025-08-08_shooting-front.webp').linked(true))
+> []($image.siteAsset('img/devlog/2025/2025-08-08_shooting-front.webp').linked(true))
+
+> []($block.attrs('note','throwback'))
+> These are the pictures that are stilled used on the [front page](/) and the [gallery](/gallery).
+
+### [Ethernet through ENC28J60]($section.id('2025-08-05T00:00:00').data('author','xq'))
+
+I've managed to get the ENC28J60 up and running today in a standalone prototype, which means i've got a really bad and basic ethernet driver:
+
+> []($block.attrs('pictures'))
+> []($image.siteAsset('img/devlog/2025/2025-08-05_ethernet.webp').linked(true))
 
 ---
 
-### [Ashet Express going super fast]($section.id('2025-07-30T00:00:00'))
+### [Ashet Express going super fast]($section.id('2025-07-30T00:00:00').data('author','xq'))
 
 Okay, time for more diagrams!
 
-I'm still doing "just" the ping-pong over cog 0 and 1 in the propeller, and measuring bandwidth.
+> []($block.attrs('pictures','large'))
+> []($image.siteAsset('img/devlog/2025/2025-07-30_express1.webp').linked(true))
 
-I use 5 MBaud transfer speed, and i do only send as soon as i have fully received the previous frame completely and have validated its contents.
+I'm still doing "just" the ping-pong over cog 0 and 1 in the propeller,
+and measuring bandwidth.
 
-I do 10 000 transfers of 253 bytes payload in about 5.61 s which means we get a total transfer size of 2.53 MB, so we have a bandwidth of 450.5 kB/s, which means 3.6 Mbps, so we get a true bus utilization of 90% including control flow and protocol overhead.
+I use 5 MBaud transfer speed, and i do only send as soon as i have fully received
+the previous frame completely and have validated its contents.
 
-The maximum raw bandwidth we can get is 4 Mbps, as UART uses 10 bits per datum, 8 data bits + one start + one stop bit.
+> []($block.attrs('pictures','large'))
+> []($image.siteAsset('img/devlog/2025/2025-07-30_express2.webp').linked(true))
 
-That's actually pretty good! I don't think i need to put more time into that part of the project for now, that's already pretty good to work with. Assuming my calculations are correct, we can go up to 10 times faster in the end, meaning we could go up to 4.5 MB/s realistic bandwidth from and to the southbridge in full-duplex manner.
+I do 10 000 transfers of 253 bytes payload in about 5.61 s which means we get a
+total transfer size of 2.53 MB, so we have a bandwidth of 450.5 kB/s, which means
+3.6 Mbps, so we get a true bus utilization of 90% including control flow and
+protocol overhead.
+
+The maximum raw bandwidth we can get is 4 Mbps, as UART uses 10 bits per datum,
+8 data bits + one start + one stop bit.
+
+That's actually pretty good! I don't think I need to put more time into that part
+of the project for now, that's already pretty good to work with. Assuming my calculations
+are correct, we can go up to 10 times faster in the end, meaning we could go up to 4.5 MB/s
+realistic bandwidth from and to the southbridge in full-duplex manner.
 
 
 
-the debug out is broken as the baud isn't right anymore. it looks quite cyberpunk 😮
+The debug out is broken as the baud isn't right anymore. it looks quite cyberpunk:
 
 
+> []($block.attrs('pictures','large'))
+> []($video.siteAsset('img/devlog/2025/2025-07-30_matrix.webm').controls(true))
 
-Time: 00:20
+
+*Skipping forward to 20 minutes past midnight...*
 
 Okay, last update for today! The test's still going strong:
 ```
@@ -200,73 +260,123 @@ that's a whopping 4.8 GiB in 3 hours without any error :smile:
 
 
 
-Time: 08:04
+*Skipping forward to 8 o'clock in the morning...*
 
 Still going strong!
 
 ```
 [37777.431058] info: loopback status: 67501000 / 67501000 successful. 0 bytes error
 ```
+
 Running for 10.5h, transferring 16.8 GB up- and downstream each, zero bit flips or errors detected.
-I'd say this is stable and works :muscle:
+I'd say this is stable and works.
 
-### [Ashet Express]($section.id('2025-07-20T00:00:00'))
 
-Even more showcasing!
+
+### [Ashet Express]($section.id('2025-07-20T00:00:00').data('author','xq'))
+
+A decision was made: The physical and logical protocol between the RP2350 and the Propeller 2 is now called **Ashet Express**.
+
+Or, if we feel fancy, we can call it *Ashet Express Gen1 x1* (first generation, one data lane per direction).
 
 I've measured the roundtrip latencies in my current setup. The P2 just echos back the data sent by the RP2350. The RP2350 responds to each received frame with a new frame.
 
-Current roundtrip time at 500 kBaud is around 400µs, so about 16 fully transferred bytes for a message length of 10 bytes. This is pretty pretty good
+Current roundtrip time at 500 kBaud is around 400µs, so about 16 fully transferred bytes for a message length of 10 bytes. This is pretty pretty good:
+
+> []($block.attrs('pictures','large'))
+> []($image.siteAsset('img/devlog/2025/2025-07-20_express1.webp').linked(true))
 
 
+### [Mocking all the connectors]($section.id('2025-07-19T00:00:00').data('author','xq'))
 
-### [Mocking all the connectors]($section.id('2025-07-19T00:00:00'))
+The parts i've ordered [some days ago](/devlog/2025-q2#2025-06-27T00:00:00) arrived
+and I finally had time to assemble the whole case mockup:
 
-I finally had time to assemble the whole case mockup. 
+> []($block.attrs('pictures','large'))
+> []($image.siteAsset('img/devlog/2025/2025-07-19_case-1.webp').linked(true))
 
 On the outside, it's shiny and is pretty close to the CAD files.
 
-On the inside, it's all hotmelt 🤣 
+On the inside, it's all hotmelt:
 
-But i'm so fucking proud right now. This feels haptic, it looks like a computer and it makes me really really happy
+> []($block.attrs('pictures'))
+> []($image.siteAsset('img/devlog/2025/2025-07-19_case-2.webp').linked(true))
+> []($image.siteAsset('img/devlog/2025/2025-07-19_case-3.webp').linked(true))
 
-### [Integrations]($section.id('2025-07-18T00:00:00'))
+
+But i'm so proud right now. This feels haptic, it looks like a computer and it makes me really, really happy.
+
+### [Integrations]($section.id('2025-07-18T00:00:00').data('author','xq'))
 
 Some progress on the integration front!
 
 I'm currently integrating all of my prototype work regarding the Southbridge stuff.
 
-I think i made the most complex "Hello, World!" application i've ever done. Distributed over 3 machines, 3 CPU architectures and 4 CPU cores.
+I think I made the most complex "Hello, World!" application i've ever done. Distributed over 3 machines, 3 CPU architectures and 4 CPU cores:
 
-x86/PC: Debugging
-Arm/RP2350: Main System CPU
-Propeller 2 Core 0: Southbridge Manager
-Propeller 2 Core 2: Expansion Module Controller
+> []($block.attrs('pictures','large'))
+> []($image.siteAsset('img/devlog/2025/2025-07-18_sequence.webp').linked(true))
+
+
+- PC (x86): Debugging
+- RP2350 (Arm Cortex-M33): Main System CPU
+- Propeller 2 Core 0: Southbridge Manager
+- Propeller 2 Core 2: Expansion Module Controller
 
 The setup is "fairly simple" and will basically bootstrap the P2, upload the module code and write to a FIFO.
 
 The module will just bounce back all FIFO data received on FIFO 0 into FIFO 4, the manager core will then put the FIFO 4 data into frames and send it back to the RP2350. This will then print a debug log.
 
-All of that is visualized in the sequence diagram above :rofl: 
+All of that is visualized in the sequence diagram above.
+
+> []($block.attrs('pictures','large'))
+> []($image.siteAsset('img/devlog/2025/2025-07-18_tracing.webp').linked(true))
 
 As you can maybe see from the screenshot, the whole process between "system reset" and "module is launched and has responded with FIFO data" is less than 100ms, so it's all pretty fast and can be done blockingly for the first draft.
 
-I also attached a photo of the current ~~system setup~~ spaghetti syndrome, enjoy the cursed view :smile:
+I also attached a photo of the current ~~system setup~~ spaghetti syndrome, enjoy the cursed view:
 
-All in all i'm pretty happy with the current progress. Slow, but steady with little delays when i actually work on something which is really nice.
+> []($block.attrs('pictures','large'))
+> []($image.siteAsset('img/devlog/2025/2025-07-18_spaghetti.webp').linked(true))
 
+All in all i'm pretty happy with the current progress.
+It's slow, but steady with little to no dropouts when I have focus time.
 
-### [Dependencies? Gone.]($section.id('2025-07-09T00:00:00'))
+> []($block.attrs('note','throwback'))
+> This is actually a huge milestone as it proves the whole Southbridge architecture
+> is the right direction.
+>
+> Also signs of watching over the baby again while it sleeps.
 
-Ashet OS is now only depending on Zig 0.14 and an internet connection, to build the OS for arm-ashet-hc, arm-ashet-vhc, arm-qemu-virt, rv32-qemu-virt, x86-hosted-linux, x86-hosted-windows, x86-pc-bios and yields full disk images.
+### [Dependencies? Gone.]($section.id('2025-07-09T00:00:00').data('author','xq'))
 
+Ashet OS is now only depending on Zig 0.14 and an internet connection:
 
-### [The ABI Mapper]($section.id('2025-07-08T00:00:00'))
+To build the OS for all supported 7 platforms including complete full disk images, one just has to invoke `zig build`:
 
-Some late-night progress on the ABI mapper. I'm getting back to where i came from, but the code is now so much cleaner \o/
+> []($block.attrs('pictures'))
+> []($image.siteAsset('img/devlog/2025/2025-07-09_meme.webp').linked(true))
+> []($image.siteAsset('img/devlog/2025/2025-07-09_only-zig.webp').linked(true))
 
+### [The ABI Mapper]($section.id('2025-07-08T00:00:00').data('author','xq'))
 
-### [Shipments Arrived (again)]($section.id('2025-07-06T00:00:00'))
+I'm working on the so called ABI mapper, a tool that converts a DSL containing
+the system call interface of Ashet OS into actual code.
 
-new shipment of parts! i got a bunch of eeproms for the expansion cards, and some more RP2350 boards i can use to assemble the prototype 🙂
+The new changes are supporting non-C ABI compatible types like Zig-style slices (pointers + length) and options.
 
+> []($block.attrs('pictures'))
+> []($image.siteAsset('img/devlog/2025/2025-07-08_abi-mapper-1.webp').linked(true))
+> []($image.siteAsset('img/devlog/2025/2025-07-08_abi-mapper-2.webp').linked(true))
+> []($image.siteAsset('img/devlog/2025/2025-07-08_abi-mapper-3.webp').linked(true))
+
+I'm slowly getting back to where I came from, but the ABI definition is now so much cleaner now.
+
+### [Shipments Arrived (again)]($section.id('2025-07-06T00:00:00').data('author','xq'))
+
+A while ago, I've ordered more parts for the prototyping phase:
+
+I got a bunch of EEPROMs for the expansion cards, and some more RP2350 boards I can use to assemble a new prototype:
+
+> []($block.attrs('pictures'))
+> []($image.siteAsset('img/devlog/2025/2025-07-06_shipments.webp').linked(true))
