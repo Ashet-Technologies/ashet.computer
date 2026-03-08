@@ -8,25 +8,44 @@
     .layout = "devlog.xml", 
     .output = "index.xml",
 }],
-.draft = true,
+.draft = false,
 --- 
 
-This page lists all the devlog years that are present on this site.
-Note how the top navigation menu doesn't link to this page, but instead links
-to the latest devlog year directly.
+## About the Archive
 
-The reason for adopting this structure is to make sure that links that exist in
-the wild to entries to our devlog don't become invalidated when a new year comes
-around and we rotate the devlog feed.
+This page lists all the devlog quarters that are present on this site.
 
-Devlog rotation ensures that you don't have a single page that grows
-indefinitely, eventually compromising your editing expreience and worsening your
-user's browsing experience. You can use any arbitrary policy (even deleting old
-entries if you are fine with having a more ephemeral devlog), but cutting them
-by year is a good default option. 
+> []($block.attrs('note'))
+> The latest devlog quarter is also available [via RSS feed]($link.alternative('rss')).
 
-When rotating a devlog all you have to do is create a new page with a newer
-date set in the frontmatter `date` field, and update the page description to let
-people know that this page is not the current year's devlog anymore.
+## [Project Milestones]($section.id('milestones'))
 
-The latest devlog year is also available [via RSS feed]($link.alternative('rss')).
+Here's a collection of bigger, noteworthy project milestones:
+
+- 2024-09-05: [Project Launch](/devlog/2024/#2024-09-05T00:00:00)
+- 2024-12-25: [The Initial Design](/devlog/2024/#2024-12-25T00:00:00)
+- 2025-02-10: [First OS Boot](/devlog/2025-q1/#2025-02-10T00:00:00) ✅
+- 2025-04-19: [GUI Design](/devlog/2025-q2/#2025-04-19T00:00:00)
+- 2025-06-02: [DVI Video Driver &amp; Palette Selection](/devlog/2025-q2/#2025-06-02T00:00:00)
+- 2025-07-09: [OS without Dependencies](/devlog/2025-q3/#2025-07-09T00:00:00)
+- 2025-07-18: [Southbridge Design Validated](/devlog/2025-q3/#2025-07-18T00:00:00) ✅
+- 2025-08-10: [Ethernet on the Computer](/devlog/2025-q3/#2025-08-10T14:00:00)
+- 2025-08-11: [Website Launch](/devlog/2025-q3/#2025-08-11T00:00:00) 📣
+- 2025-08-14: [Visiting Evoke 2025](/devlog/2025-q3/#2025-08-14T00:00:00) 👥
+- 2025-09-15: [Expansion Concept Validation](/devlog/2025-q3/#2025-09-15T00:00:00) ✅
+- 2025-10-24: [Second Prototype](/devlog/2025-q4/#2025-10-24T00:00:00)
+- 2025-10-25: [Visiting Zigtoberfest](/devlog/2025-q4/#2025-10-25T00:00:00) 👥
+- 2025-11-25: [Open Hardware Licencing](/devlog/2025-q4/#2025-11-25T00:00:00) 📣
+- 2025-11-26: [NGI Zero Commons Fund Application](/devlog/2025-q4/#2025-11-26T00:00:00) 📣
+- 2025-12-16: [Widgets API Concept Validated](/devlog/2025-q4/#2025-12-16T00:00:00) ✅
+- 2026-02-04: [Zig 0.15.2 Update](/devlog/2026-q1/#2026-02-04T00:00:00)
+- 2026-02-16: [First Realistic Price Estimation](/devlog/2026-q1/#2026-02-16T00:00:00)
+- 2026-03-01: [OS Documentation Website Launch](/devlog/2026-q1/#2026-03-01T00:00:00) 📣
+- 2026-03-08: [Devlog Launch](/devlog/2026-q1/#2026-03-08T00:00:00) 📣
+- 2026-03-08: [Reaching NGI Zero Commons Fund Second Stage](/devlog/2026-q1/#2026-03-08T10:00:00) 📣
+
+Some entries are marked with emojis:
+
+- ✅: A validation checkpoints that has validated a concept or design of the computer.
+- 👥: A social event where i was displaying the computer and spreading the word.
+- 📣: Publicity and project reach.

@@ -1,0 +1,214 @@
+---
+.title = "2025/Q2",
+.date = @date("2025-04-01T00:00:00"),
+.author = "Felix Queißner",
+.layout = "devlog.shtml",
+.draft = false,
+--- 
+
+[]($section.id('about'))
+## About this Devlog
+
+This devlog contains reports about progress in the project. It does not cover
+everything that has happened, but it's a heartbeat that shows how the project
+progresses over time.
+
+This page lists entries for the second quarter of 2025, for past and future entries consult the [devlog archive](/devlog/).
+
+## Entries
+
+> []($block.attrs('note'))
+> All of these posts were pulled from the [Discord](/community) server and were converted into the
+> devlog in March 2026.
+
+### [Mocking the Connectors]($section.id('2025-06-27T00:00:00').data('author','xq'))
+
+After searching through my part collection in my lab, I've found two types of
+connectors that would suit the front panels of the case mockup fairly well:
+
+> []($block.attrs('pictures','large'))
+> []($image.siteAsset('img/devlog/2025/2025-06-27_connectors.webp').linked(true))
+
+This made me order more parts i can put into the front panel.
+
+### [DocGen 1.0]($section.id('2025-06-20T00:00:00').data('author','xq'))
+
+As I've grown tired of sending people raw code blocks to talk about the API,
+I started working on a web documentation generator:
+
+> []($block.attrs('pictures'))
+> []($image.siteAsset('img/devlog/2025/2025-06-20_autodoc-1.webp').linked(true))
+> []($image.siteAsset('img/devlog/2025/2025-06-20_autodoc-2.webp').linked(true))
+
+> []($block.attrs('note','throwback'))
+> It never went live, and [two weeks ago](/devlog/2026-q1#2026-03-01T00:00:00) I've thrown out the old code and
+> replaced it with an improved version.
+>
+> This version is now hosted on <https://os.ashet.computer/>.
+
+### [Palette 2.0 and DVI Driver 2.0]($section.id('2025-06-02T00:00:00').data('author','xq'))
+
+After a long time of tinkering, I've successfully implemented a 640x400 video mode
+with 8 bpp on the RP2350.
+
+But this time we have a custom palette and way more memory bandwidth than before!
+
+Took me some time to get all the timings correctly. This isn't integrated into
+Ashet OS yet, but that's the next step. But this is huge, as we can now use a
+custom palette.
+
+The palette I use now is called "HSV332m" where "m" stands for modified:
+
+> []($block.attrs('figures'))
+> [New: HSV332m]($image.siteAsset('img/devlog/2025/2025-06-02-palette-new.webp').linked(true))
+> [Old: RGB332]($image.siteAsset('img/devlog/2025/2025-06-02-palette-old.webp').linked(true))
+
+It's a mathematical palette, so you can compute the palette index based off RGB
+values (or even better: HSV values).
+
+It encodes 3 bits of hue (so we get 8 shades of color), 3 bits value (so we get
+9 brightness levels) and 2 bits of saturation, so we can have grayscale, pastel
+and full bright colors.
+
+The trick is that the encoding scheme uses two modifications:
+
+- The 3 bits for *value* are mapped to [12.5%, …, 50%, …,  87.5%, 100%], so we do
+  not map `value=0` to black, but to "dark".
+- The 2 bits for saturation work as expected, but use another modification:
+  `saturation=0` would yield the same colors for any *hue* for a given *value*.
+  This means, we have 6 bits (64 values) which can be mapped to 8 shades of gray.
+  This isn't optimal. So we switch the encoding of *hue* and *value* when `saturation=0`
+  into a linear, 64-shade grayscale ramp.
+
+This way we get a really large grayscale shade, which is cool. Also we get 8 hues in
+8 shades + black (s=0, hv=0). This should yield fairly good results overall for most
+images:
+
+> []($block.attrs('pictures'))
+> []($image.siteAsset('img/devlog/2025/2025-06-02-videoout-1.webp').linked(true))
+> []($image.siteAsset('img/devlog/2025/2025-06-02-videoout-2.webp').linked(true))
+> []($image.siteAsset('img/devlog/2025/2025-06-02-videoout-3.webp').linked(true))
+> []($image.siteAsset('img/devlog/2025/2025-06-02-videoout-4.webp').linked(true))
+
+---
+
+
+### [PS/2 Front]($section.id('2025-05-14T00:00:00').data('author','xq'))
+
+More work on the PS/2 front:
+
+After making the PS/2 communication work in general, i'm now porting the
+x86-specific drivers in Ashet OS into a more generic framework, so i can
+use them with the Southbridge setup.
+
+Result: **We're having comms, Sire!**
+
+I'm testing with two really different mice, one is brand new, the other one so old that HP doesn't know that they've built it in the past.
+
+> []($block.attrs('pictures'))
+> []($image.siteAsset('img/devlog/2025/2025-05-14_mouse-1.webp').linked(true))
+> []($image.siteAsset('img/devlog/2025/2025-05-14_mouse-2.webp').linked(true))
+
+At this day, there was an offer on Amazon for the HP mouse for only 70 €. Retro stuff is really getting expensive.
+
+### [Progress Report]($section.id('2025-05-11T00:00:00').data('author','xq'))
+
+Another validation milestone was successfully unlocked!
+
+> []($block.attrs('pictures','large'))
+> []($image.siteAsset('img/devlog/2025/2025-05-11_cable-clutter.webp').linked(true))
+
+On the photo you can see the chain of connections:
+
+- Left: A Raspberry Pi Pico clone, playing the role of the Southbridge dongle, connected to my laptop.
+- Center left: The Southbridge / back plane in the form of the P2-EVAL board.
+- Center right: The "expansion card" which provides the electrical interface.
+- Right: A PS/2 mouse.
+
+> []($block.attrs('pictures','large'))
+> []($image.siteAsset('img/devlog/2025/2025-05-11_comms.webp').linked(true))
+
+In the log screenshot you can see how Southbridge firmware is uploaded with `loadp2`, then my `southbridge-pchost` takes over, plays a nice animation on the LEDs and uploads a new module into the Southbridge, using SLOT 3:
+
+Afterwards, the configuration is uploaded for the FIFOs between the Southbridge controller and the module slot, and the module is started.
+
+Then the module starts communicating PS/2 with the connected mouse and periodic `AA 00` messages by the mouse can be seen.
+
+This means, my Southbridge concept is viable and works. I can even change the slot to SLOT 5 and change the plug position of the expansion port and it will magically work. Just making two of the expansion card adapters and i can use up to 4 PS/2 devices already.
+
+Hell yeah!
+
+### [Case Photoshoot]($section.id('2025-05-08T00:00:00').data('author','xq'))
+
+Made some better photos of the case:
+
+> []($block.attrs('pictures'))
+> []($image.siteAsset('img/devlog/2025/2025-05-08_case-1.webp').linked(true))
+> []($image.siteAsset('img/devlog/2025/2025-05-08_case-2.webp').linked(true))
+
+The design really looks neat with the metal front plates and the beige casing.
+
+---
+
+### [GUI Redesign]($section.id('2025-04-19T00:00:00').data('author','xq'))
+
+I'm working on a new design for the UI which is more presentable than what we have right now:
+
+> []($block.attrs('pictures','large'))
+> []($image.siteAsset('img/devlog/2025/2025-04-19_gui-design.webp').linked(true))
+
+The tool used for the pictures is [Aseprite](https://www.aseprite.org/), which I
+can fully recommend for paletted/pixel based image editing.
+
+### [Full Metal Case!]($section.id('2025-04-15T00:00:00').data('author','xq'))
+
+The case prototype is now fully assembled:
+
+> []($block.attrs('pictures'))
+> []($image.siteAsset('img/devlog/2025/2025-04-15_case-1.webp').linked(true))
+> []($image.siteAsset('img/devlog/2025/2025-04-15_case-2.webp').linked(true))
+> []($image.siteAsset('img/devlog/2025/2025-04-15_case-3.webp').linked(true))
+
+This proved the case design works in general, but it still has no connectors,
+which means it's not sure if everything would fit as planned.
+
+### [We're doomed.]($section.id('2025-04-12T00:00:00').data('author','xq'))
+
+GUI branch news flash: We have a "game", running with 3 FPS on the RP2350:
+
+> []($block.attrs('pictures','large'))
+> []($image.siteAsset('img/devlog/2025/2025-04-12_dungeon.webp').linked(true))
+
+> []($block.attrs('note'))
+> The "game" is actually a port of the raycaster from my demo [Burn It Down!](https://demozoo.org/productions/230575/)
+> running on an LPC1768 with 100 MHz and 2 × 32 kB of RAM.
+>
+> The low frame rate on the RP2350 is due to the demo rendering in column-major order,
+> bottom-left to top-right. The PSRAM cache really doesn't like this access order and
+> each pixel written is basically a cache miss.
+
+### [Case Assembly]($section.id('2025-04-09T00:00:00').data('author','xq'))
+
+The metal parts I've ordered in [January](/devlog/2025-q1#2025-01-11T00:00:00) finally arrived
+and I had time to assemble it:
+
+> []($block.attrs('pictures'))
+> []($image.siteAsset('img/devlog/2025/2025-04-09_case-1.webp').linked(true))
+> []($image.siteAsset('img/devlog/2025/2025-04-09_case-2.webp').linked(true))
+> []($image.siteAsset('img/devlog/2025/2025-04-09_case-3.webp').linked(true))
+
+I also figured the PCBs need guides so you can hit the slot in the case much easier.
+
+A friend 3D printed them, but they are a bit too tight in fit.
+
+A problem now is that as soon as the front plate is in, it's basically
+locked tightly and you cannot remove it without a suction plate or shoving
+the PCB out through an open slot next to it.
+
+
+### [GUI Editor!?!]($section.id('2025-04-01T00:00:00').data('author','xq'))
+
+April is starting with some more improvements on the GUI editor:
+
+> []($block.attrs('pictures'))
+> []($image.siteAsset('img/devlog/2025/2025-04-01_gui-editor.webp').linked(true))

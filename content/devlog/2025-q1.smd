@@ -1,0 +1,216 @@
+---
+.title = "2025/Q1",
+.date = @date("2025-01-01T00:00:00"),
+.author = "Felix Queißner",
+.layout = "devlog.shtml",
+.draft = false,
+--- 
+
+[]($section.id('about'))
+## About this Devlog
+
+This devlog contains reports about progress in the project. It does not cover
+everything that has happened, but it's a heartbeat that shows how the project
+progresses over time.
+
+This page lists entries for the first quarter of 2025, for past and future entries consult the [devlog archive](/devlog/).
+
+## Entries
+
+> []($block.attrs('note'))
+> All of these posts were pulled from the [Discord](/community) server and were converted into the
+> devlog in March 2026.
+
+### [Shipments Soldered]($section.id('2025-03-25T00:00:00').data('author','xq'))
+
+I had time to solder the connectors and assemble the full case, excluding the front
+panels of the expansion cards:
+
+> []($block.attrs('pictures'))
+> []($image.siteAsset('img/devlog/2025/2025-03-25_case-parts-1.webp').linked(true))
+> []($image.siteAsset('img/devlog/2025/2025-03-25_case-parts-2.webp').linked(true))
+> []($image.siteAsset('img/devlog/2025/2025-03-25_case-parts-3.webp').linked(true))
+> []($image.siteAsset('img/devlog/2025/2025-03-25_case-parts-4.webp').linked(true))
+
+> []($block.attrs('note'))
+> The PCBs are non-functioning designs that just have the right shapes and right
+> mounting holes to see if the mechanical design fits.
+
+### [GUI Editor?!]($section.id('2025-03-24T12:00:00').data('author','xq'))
+
+More work on the GUI editor led to a more usable tool. I guess it's time to create
+a serialization format to save GUI designs:
+
+> []($block.attrs('pictures','large'))
+> []($image.siteAsset('img/devlog/2025/2025-03-24_gui-editor.webp').linked(true))
+
+### [Shipments Arrived]($section.id('2025-03-24T00:00:00').data('author','xq'))
+
+Together with [the case](#2025-01-04T00:00:00), i've ordered the other parts of the case design.
+
+3 of 4 shipments of components have arrived by now.
+
+Only missing parts are the front panels for the modules now, and everything seems to fit well so far:
+
+> []($block.attrs('pictures'))
+> []($image.siteAsset('img/devlog/2025/2025-03-24_case-parts-1.webp').linked(true))
+> []($image.siteAsset('img/devlog/2025/2025-03-24_case-parts-2.webp').linked(true))
+> []($image.siteAsset('img/devlog/2025/2025-03-24_case-parts-3.webp').linked(true))
+> []($image.siteAsset('img/devlog/2025/2025-03-24_case-parts-4.webp').linked(true))
+
+
+
+### [GUI Editor?]($section.id('2025-03-23T00:00:00').data('author','xq'))
+
+As I'm planning to write more applications, I've started to work on a GUI editor for apps:
+
+> []($block.attrs('pictures'))
+> []($image.siteAsset('img/devlog/2025/2025-03-23_gui-editor.webp').linked(true))
+
+
+> []($block.attrs('note','throwback'))
+> It's 2026 and I still haven't used the GUI editor for productive use.
+> I'm still happy it's there, waiting to be used.
+
+### [Wallpaper support]($section.id('2025-03-21T00:00:00').data('author','xq'))
+
+New features on the GUI branch:
+
+- Desktop wallpaper support
+- Developer-local rootfs parts (add your wallpaper here!)
+- Real mouse cursor instead of three lines
+- Transparency support in the blitter (only Bitmaps, but mouse is now  transparent)
+- Fonts revisited and get correctly translated now
+- System fonts are loaded from disk instead of being embedded into the kernel
+
+> []($block.attrs('pictures','large'))
+> []($image.siteAsset('img/devlog/2025/2025-03-19_ashet-os.webp').linked(true))
+
+> []($block.attrs('pictures'))
+> []($image.siteAsset('img/devlog/2025/2025-03-21_wallpaper1.webp').linked(true))
+> []($image.siteAsset('img/devlog/2025/2025-03-21_wallpaper2.webp').linked(true))
+> []($image.siteAsset('img/devlog/2025/2025-03-21_wallpaper3.webp').linked(true))
+
+Shout-out to [Aurumek](https://www.patreon.com/cw/aurumek) for the amazing artwork!
+
+
+### [Ashet OS - Hosted on Linux + Wayland]($section.id('2025-03-14T00:00:00').data('author','xq'))
+
+New Hotness on the development channel!
+
+We have now native support for Wayland in the x86-hosted-linux target, so playing around with Ashet OS is now 90% easier than before!
+
+> []($block.attrs('pictures','large'))
+> []($video.siteAsset('img/devlog/2025/2025-03-14_wayland.webm').controls(true))
+
+Shout-out to geemili for [shimizu](https://git.sr.ht/~geemili/shimizu)!
+
+
+---
+
+### [Updating the color scheme, Part 1]($section.id('2025-02-19T00:00:00').data('author','xq'))
+
+The OS previously used a dynamically controlled palette. This wasn't possible
+anymore with the first version of the RP2350 video output.
+
+Now i have fixed the colors inside the operating system to match the fixed RGB332
+palette of the RP2350 HSTX encoder:
+
+> []($block.attrs('pictures'))
+> []($image.siteAsset('img/devlog/2025/2025-02-19_colors.webp').linked(true))
+
+### [Ashet OS can boot on RP2350 with HDMI/DVI video output!]($section.id('2025-02-10T00:00:00').data('author','xq'))
+
+So today's the day! I finally and successfully proved a point.
+
+Ashet OS can boot on RP2350 with HDMI/DVI video output!
+
+> []($block.attrs('pictures'))
+> []($image.siteAsset('img/devlog/2025/2025-02-10_first-boot1.webp').linked(true))
+> []($image.siteAsset('img/devlog/2025/2025-02-10_first-boot2.webp').linked(true))
+> []($image.siteAsset('img/devlog/2025/2025-02-10_first-boot3.webp').linked(true))
+
+Booting in 6 seconds (or less), with the slowest part being the screen recognizing the video signal.
+
+Here's a video of the OS running on the system:
+
+> []($block.attrs('pictures','large'))
+> []($video.siteAsset('img/devlog/2025/2025-02-10_first-boot-gui.webm').controls(true))
+
+
+*How i did the mouse input you might wonder…*
+
+Well. It's midnight, and we don't have time for good solutions, but only for ugly hacks!
+
+Just copy the mouse input from my laptop over serial to the RP2350:
+
+```
+[felix@xqwork ~]$ dd if=/dev/input/mouse6 of=/dev/ttyUSB0 bs=3 status=progress
+59148 bytes (59 kB, 58 KiB) copied, 807 s, 0.1 kB/s^C
+19758+0 records in
+19758+0 records out
+59274 bytes (59 kB, 58 KiB) copied, 807.835 s, 0.1 kB/s
+
+[felix@xqwork ~]$
+```
+
+For those who wonder where the stuttering comes from:  
+Excessive debug logging over 115200 Baud UART, which means we have 11520 byte per second transfer rate. Also the mouse is transferred over the same UART:
+
+
+> []($block.attrs('pictures','large'))
+> []($video.siteAsset('img/devlog/2025/2025-02-10_first-boot-log.webm').controls(true))
+
+### [Ashet OS Smoke Testing in CI]($section.id('2025-02-04T00:00:00').data('author','xq'))
+
+I have added smoke testing to the Ashet OS CI infrastructure to see if a PR
+would prevent the operating system from booting:
+
+> []($block.attrs('pictures'))
+> []($image.siteAsset('img/devlog/2025/2025-02-04_smoke-tests-1.webp').linked(true))
+> []($image.siteAsset('img/devlog/2025/2025-02-04_smoke-tests-2.webp').linked(true))
+> []($image.siteAsset('img/devlog/2025/2025-02-04_smoke-tests-3.webp').linked(true))
+
+---
+
+### [Fancy Renderings]($section.id('2025-01-23T00:00:00').data('author','xq'))
+
+I've exported the design to blender and added shiny materials to the OpenSCAD export:
+
+> []($block.attrs('pictures'))
+> []($image.siteAsset('img/devlog/2025/2025-01-25_rendering1.webp').linked(true))
+> []($image.siteAsset('img/devlog/2025/2025-01-25_rendering2.webp').linked(true))
+> []($image.siteAsset('img/devlog/2025/2025-01-25_rendering3.webp').linked(true))
+> []($image.siteAsset('img/devlog/2025/2025-01-25_rendering4.webp').linked(true))
+
+> []($block.attrs('note','throwback'))
+> These are the pictures that are still used on the [front page](/) and the [gallery](/gallery).
+
+### [Hands-on the Case]($section.id('2025-01-11T00:00:00').data('author','xq'))
+
+I got the case, now it's time to figure out the mechanical details \o/
+
+> []($block.attrs('pictures','large'))
+> []($image.siteAsset('img/devlog/2025/2025-01-04_case-closed.webp').linked(true))
+
+> []($block.attrs('note','throwback'))
+> It's always fun to see signs of me being a fresh dad somewhere in the pictures.
+> Here you can see the baby phone and a children's book about a farm. That book
+> even makes sounds!
+
+### [Choosing the Case]($section.id('2025-01-04T00:00:00').data('author','xq'))
+
+I continued working on the case design with OpenSCAD.
+
+Finding a fitting case wasn't that easy as having too much spare space
+inside the case is just wasted space. After a lot of search, i've decided
+to use the [Hammond RM2095L](https://www.hammfg.com/part/RM2095L) case
+which suited my use case perfectly.
+
+With the new case and more connectors, the design starts to feel alive:
+
+> []($block.attrs('pictures'))
+> []($image.siteAsset('img/devlog/2025/2025-01-04_rendering1.webp').linked(true))
+> []($image.siteAsset('img/devlog/2025/2025-01-04_rendering2.webp').linked(true))
+
+I also ordered the case to get a hands-on feeling for it.

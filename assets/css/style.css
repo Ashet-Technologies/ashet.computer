@@ -413,3 +413,183 @@ main div.banner img {
   height: 0.8em;
   vertical-align: baseline;
 }
+
+.feed .post .title {
+  margin-top: 1rem;
+  margin-bottom: 0;
+}
+
+.feed .post .title h3 {
+  margin: 0;
+  border-bottom: 1px dashed gray;
+}
+
+.feed .post .title p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.feed .post .title p.date {
+  font-size: 70%;
+  font-weight: bold;
+}
+
+.feed .post .title p.author {
+  font-size: 70%;
+  font-weight: bold;
+}
+
+.feed section {
+  margin-block: 4rem;
+  margin-block-start: 0;
+}
+
+.block.pictures p,
+.block.pictures p>a {
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-content: flex-start;
+}
+
+.block.pictures p :is(img, video) {
+  max-width: 100%;
+  max-height: 7em;
+  /* border: 1px solid black; */
+  box-shadow: 5px 5px 10px black;
+}
+
+.block.pictures.two>p {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.block.pictures.two p :is(img, video) {
+  max-width: 100%;
+  max-height: 75vh;
+}
+
+.block.pictures.three>p {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.block.pictures.three p :is(img, video) {
+  max-width: 100%;
+  max-height: 75vh;
+}
+
+.block.pictures.large p :is(img, video) {
+  max-height: 75vh;
+}
+
+.block.pictures.max p :is(img, video) {
+  max-height: 100vh;
+  max-width: 80%;
+}
+
+
+.block.figures {
+  display: grid;
+  gap: 1em;
+  justify-content: space-evenly;
+  grid-template-columns: repeat(auto-fit, 7em);
+}
+
+.block.figures.large {
+  grid-template-columns: repeat(auto-fit, 14em);
+}
+
+.block.figures p {
+  display: none;
+}
+
+.block.figures figcaption {
+  font-size: 80%;
+  text-align: center;
+}
+
+
+.block.note {
+  border: 1px dashed black;
+  padding: 0.5rem 1.0rem;
+  font-size: 80%;
+  background-color: hsl(60, 100%, 90%);
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.block.note::before {
+  content: 'Note:';
+  font-weight: bold;
+  display: block;
+}
+
+.block.note>p {
+  margin: 0;
+  margin-block: 1em;
+}
+
+.block.note>p:first-of-type {
+  margin-block-start: 0;
+}
+
+.block.note>p:last-of-type {
+  margin-block-end: 0;
+}
+
+.block.note.throwback {
+  background-color: hsl(296, 100%, 90%);
+}
+
+.block.note.throwback::before {
+  content: 'Throwback:';
+
+}
+
+
+.rss-note {
+  display: grid;
+  float: right;
+  font-size: 80%;
+  line-height: 1rem;
+  grid-template-columns: max-content 1rem;
+  grid-template-rows: max-content;
+  text-align: right;
+  gap: 3pt;
+}
+
+.rss-note :is(img, .icon) {
+  height: 100%;
+  width: 100%;
+  display: inline;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.feed section.post>pre {
+  border: 1px solid black;
+  padding: 0.5rem;
+  overflow-x: scroll;
+}
+
+.feed .post blockquote {
+
+  padding: 0.5em;
+
+  border-left: 3px solid green;
+  background-color: rgb(0, 128, 0, 15%);
+
+}
+
+.feed .post blockquote p:first-of-type {
+  margin-block-start: 0;
+}
+
+.feed .post blockquote p:first-of-type {
+  margin-block-end: 0;
+}
+
+img.badge {
+  display: inline-block;
+}

@@ -1,0 +1,168 @@
+---
+.title = "2026/Q1",
+.date = @date("2026-01-01T00:00:00"),
+.author = "Felix Queißner",
+.layout = "devlog.shtml",
+.draft = false,
+--- 
+
+
+[]($section.id('about'))
+## About this Devlog
+
+This devlog contains reports about progress in the project. It does not cover
+everything that has happened, but it's a heartbeat that shows how the project
+progresses over time.
+
+This page lists entries for the first quarter of 2026, for past and future entries consult the [devlog archive](/devlog/).
+
+## Entries
+
+### [Reaching NGI Zero Commons Fund Second Stage!]($section.id('2026-03-08T10:00:00').data('author','xq'))
+
+While writing this devlog, i've been contacted by the [nlnet Foundation](https://nlnet.nl/)
+informing me that i've **reached the second stage** of the selection for the 
+[NGI Zero Commons Fund](https://nlnet.nl/commonsfund/)!
+
+**This is really really great news!**
+
+For those who didn't know:  
+I've applied to the 2025 round of the fund back in [November 2025](/devlog/2025-q4#2025-11-26T00:00:00).
+
+### [The Devlog]($section.id('2026-03-08T00:00:00').data('author','xq'))
+
+I've finally started working on a thing that i wanted to have for so long now:
+
+**A devlog**
+
+The idea started at new years eve, where I decided that I want to use the
+[newsletter](https://buttondown.com/ashet.computer) to inform the people interested
+in the project that I'm alive, the project is alive and is performing well.
+
+This yielded the idea of making a "2025 at Ashet Technologies" blog post or
+newsletter email, and after scrolling through the whole
+[Discord #showcase](https://discord.com/channels/1042072811897880576/1042076164442832926)
+back until summer 2024, i've figured that this much content would never fit into
+a basic newsletter.
+
+This meant that i had to do the devlog and retro-actively backfill it until the
+project launch.
+
+This is only fair as [Discord had some bad press](https://www.bbc.com/news/articles/cvgv0yg4n9lo)
+after a forceful introduction of age verification. This means that in the future, even fewer
+people will join the [Ashet Technologies Research Center](https://discord.gg/TMa5FZTUdq).
+
+To make the project updates available to everyone, I've now made this devlog and also
+made an account on [Hackaday](https://hackaday.io/) where I'm trying to push more fine grained
+updates than in the devlog itself.
+
+*Enjoy reading!*
+
+> []($block.attrs('note','throwback'))
+> It was an incredible journey up till today, and I'm curious how the project
+> will turn out in the future.
+
+### [Selfhosted RISC-V Emulator]($section.id('2026-03-06T00:00:00').data('author','xq'))
+
+I've got a week of Claude Pro sponsored by a friend and i've used it to fulfill me a long-standing dream of shipping our own emulator with Ashet OS.
+
+It's still in a work branch, but the screenshot should explain basically everything.
+
+The emulator is … surprisingly fast considering it's not optimized for performance, but for flexibility.
+
+On my laptop i can achieve roughly 160 MIPS stable, which makes Ashet OS fairly usable.
+
+We have a new port for the emulator supporting the minimum viable feature set, allowing introspection of how the OS is integrated into new hardware.
+
+It's not merged yet into the master branch, but if you want to try it out today, you can check out work/rv32-emulator and build like this:
+
+```
+# build kernel:
+$ zig build -Doptimize-kernel -Doptimize-apps=ReleaseSafe rv32-ashet-base tools
+# build emulator:
+$ (cd src/tools/emulator/ && zig build -Drelease)
+# run emulator:
+./src/tools/emulator/zig-out/bin/emulator ./zig-out/rv32-ashet-base/kernel.bin --disk0 ./zig-out/rv32-ashet-base/disk.img
+```
+
+This should then proceed to boot Ashet OS in an unpredictable time. You can play around with the speed slider, and if you hold ctrl and click it, you can actually enter any number you want (i use 150 to 200).
+
+
+### [OS Documentation Website]($section.id('2026-03-01T00:00:00').data('author','xq'))
+
+A task started back in [June 2025](/devlog/2025-q2#2025-06-20T00:00:00) is
+finally coming an end! The website for the OS documentation is now live at
+<https://os.ashet.computer/>.
+
+> []($block.attrs('pictures','large'))
+> []($image.siteAsset('img/devlog/2026/2026-03-01_website1.webp').linked(true))
+
+It is automatically generated and will be now be refreshed with every PR merged into the `master` branch.
+
+The website contains three important parts:
+
+> []($block.attrs('figures','large'))
+> [System Calls]($image.siteAsset('img/devlog/2026/2026-03-01_website2.webp').linked(true))
+> [Project Documentation]($image.siteAsset('img/devlog/2026/2026-03-01_website3.webp').linked(true))
+> [Live Demo]($image.siteAsset('img/devlog/2026/2026-03-01_website4.webp').linked(true))
+
+
+The source code of the website is located in [`src/website`](https://github.com/Ashet-Technologies/Ashet-OS/tree/master/src/website).
+
+---
+
+### [Backplane schematic nearly complete]($section.id('2026-02-16T00:00:00').data('author','xq'))
+
+I've been working in silence on the Backplane schematic for months now.
+
+Now I'm confident it won't change much anymore and I've performed a lot of
+[BOM refinement](https://www.designtodevice.com/blog/bom-optimization-strategies) to reduce the
+complexity of the board and also decrease the manufacturing price.
+
+To estimate the required PCB space the parts will take, i've roughly layouted 
+the connectors and all required parts onto the PCB shape:
+
+> []($block.attrs('pictures','large'))
+> []($image.siteAsset('img/devlog/2026/2026-02-16_pcb-is-full.webp').linked(true))
+
+Tight, but most likely doable.
+
+The schematic is also making great progress, with only some minor touchups and
+refinements necessary for a first produced version.
+
+Now that this state is reached, I've finally got a fairly reliable estimation for the price of the Backplane materials:
+
+> []($block.attrs('figures','large'))
+> [Price at DigiKey for 1]($image.siteAsset('img/devlog/2026/2026-02-16_price-1.webp').linked(true))
+> [Price at DigiKey for 100]($image.siteAsset('img/devlog/2026/2026-02-16_price-100.webp').linked(true))
+
+My original estimation was "80€ for 100 PCBs", but it looks like i'm down to "50€ for the parts on the PCBs" which is really really awesome.
+
+The bare PCB would cost 3.13 € per Backplane with 4 layers/ENIG or 3.98 € with 6 layers/ENIG.
+
+Now I need an estimation for the assembly cost, then we'll have reliable numbers for the final Backplane PCB prices.
+
+### [Zig 0.15.2 Update]($section.id('2026-02-04T00:00:00').data('author','xq'))
+
+With only 169 days of delay, we've managed to upgrade Ashet OS to Zig 0.15.2.
+
+> []($block.attrs('pictures','two'))
+> []($image.siteAsset('img/devlog/2026/2026-02-04_zig-update.webp').linked(true))
+> []($image.siteAsset('img/devlog/2026/2026-02-04_zig-update2.webp').linked(true))
+
+---
+
+### [Ashet Express communication fixed]($section.id('2026-01-10'))
+
+Did someone order a slideshow?
+
+> []($block.attrs('pictures','large'))
+> []($video.siteAsset('img/devlog/2026/2026-01-10_slideshow.webm').controls(true))
+
+I finally fixed the bug that mouse movement would overrun the kernel and crash it.
+
+But the GUI branch merge contained a strong simplification of the rendering core,
+which is now incredibly slow.
+
+Thus, it flickers and flackers and everything lags on the real hardware. This is
+not supposed to stay that way.
