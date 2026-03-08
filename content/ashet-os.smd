@@ -55,6 +55,20 @@ The result is a project born of curiosity, inspiration, and a touch of rebellion
 * **Networking:** Native TCP and UDP support.
 * **Filesystem:** Supports multiple filesystem types for real-world use cases.
 
+## Documentation
+
+The OS documentation is growing stronger with every [pull request](https://github.com/Ashet-Technologies/Ashet-OS/pulls).
+
+It is hosted on [os.ashet.computer](https://os.ashet.computer/), updated through the continuous integration.
+
+The documentation contains:
+
+- The [Ashet OS documentation wiki](https://os.ashet.computer/wiki/) (which will also be preinstalled on the OS later).
+- The [system call / kernel interface](https://os.ashet.computer/syscalls/) documentation.
+- A [live demo](https://os.ashet.computer/livedemo/) where you can try out the latest build of the operating system.
+
+
+
 ## Platforms
 
 | System                                                                   | Architecture | CPU Support                |
@@ -76,6 +90,10 @@ The result is a project born of curiosity, inspiration, and a touch of rebellion
 
 ## Progress So Far
 
+```=html
+<img class="badge" src="https://github.com/Ashet-Technologies/Ashet-OS/actions/workflows/pages.yml/badge.svg"> <img class="badge" src="https://github.com/Ashet-Technologies/Ashet-OS/actions/workflows/smoketest.yml/badge.svg"> <img class="badge" src="https://github.com/Ashet-Technologies/Ashet-OS/actions/workflows/build.yml/badge.svg">
+```
+
 * OS boots into desktop
 * GUI is running and supports window management and desktop elements
 * Networking stack is integrated and can open TCP/UDP sockets
@@ -86,8 +104,14 @@ Screenshots can be found in the [gallery]($link.page('gallery').unsafeRef('ashet
 
 ## Try It Yourself
 
+The easiest way to try Ashet OS is using the [Live Demo](https://os.ashet.computer/livedemo/) in the
+[OS documentation](https://os.ashet.computer/) running in the browser.
+
 Ashet OS is fully open source and surprisingly easy to try -- no installation or virtual machine required!
 You can run it as a regular desktop application on Linux and Windows. [Download](https://github.com/Ashet-Technologies/Ashet-OS/releases/), play, hack, and explore.
+
+> []($block.attrs('note'))
+> The hosted windows application mode is currently degraded and will be fixed in the future.
 
 Want to shape the project, provide feedback, or just see what it’s about? Jump in, share your ideas, and help build something new:
 
