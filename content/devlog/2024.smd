@@ -1,6 +1,6 @@
 ---
-.title = "2024/Q1",
-.date = @date("2026-03-07T00:00:00"),
+.title = "2024",
+.date = @date("2024-09-05T00:00:00"),
 .author = "Felix Queißner",
 .layout = "devlog.shtml",
 .draft = false,

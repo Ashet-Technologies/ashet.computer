@@ -11,6 +11,8 @@
 .draft = false,
 --- 
 
+## Overview
+
 This page lists all the devlog years that are present on this site.
 Note how the top navigation menu doesn't link to this page, but instead links
 to the latest devlog year directly.
@@ -30,3 +32,8 @@ date set in the frontmatter `date` field, and update the page description to let
 people know that this page is not the current year's devlog anymore.
 
 The latest devlog year is also available [via RSS feed]($link.alternative('rss')).
+
+## Project Milestones
+
+- [Project Launch](/devlog/2024/#2024-09-05T00:00:00)
+

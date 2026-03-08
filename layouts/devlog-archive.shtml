@@ -14,7 +14,7 @@
 	<div :html="$page.content()"></div>
 	<div>
 		<h2>Past years</h2>
-		<ul :loop="$page.subpagesAlphabetic()">
+		<ul :loop="$page.subpages()">
 			<li><a class="title" href="$loop.it.link()" :text="$loop.it.title"></a></li>
 		</ul>
 	</div>
